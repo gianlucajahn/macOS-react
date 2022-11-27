@@ -8,6 +8,9 @@
 # testing
 /coverage
 
+# keys
+/utils/keys/.ts
+
 # production
 /build
 
@@ -17,7 +20,6 @@
 .env.development.local
 .env.test.local
 .env.production.local
-/utils/keys/.ts
 
 npm-debug.log*
 yarn-debug.log*
