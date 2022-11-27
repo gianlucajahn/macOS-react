@@ -9,7 +9,7 @@
 /coverage
 
 # keys
-/utils/keys/.ts
+/src/utils/keys/.ts
 
 # production
 /build
