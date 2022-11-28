@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { ChakraProvider } from '@chakra-ui/react'
 import apiKey from "./utils/keys/key";
-import './App.css';
+import './App.scss';
 
 function App() {
   const [query, setQuery] = useState("");
@@ -92,10 +93,12 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <input type="text" onChange={(e) => setQuery(e.currentTarget.value)} placeholder="Your City" />
-      <button type="button" onClick={getCityData}>Submit</button>
-    </div>
+    <ChakraProvider>
+        <div className="App">
+            <input type="text" onChange={(e) => setQuery(e.currentTarget.value)} placeholder="Your City" />
+            <button type="button" onClick={getCityData}>Submit</button>
+        </div>
+    </ChakraProvider>
   );
 }
 
