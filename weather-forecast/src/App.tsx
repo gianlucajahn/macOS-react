@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { ChakraProvider } from '@chakra-ui/react'
+import { useSelector, useDispatch, TypedUseSelectorHook } from 'react-redux';
+import { geolocate } from './actions';
 import apiKey from "./utils/keys/key";
 import './App.scss';
 
 function App() {
+  const dispatch = useDispatch();
+
   const [query, setQuery] = useState("");
   const [currentData, setCurrentData] = useState();
   const [dailyData, setDailyData] = useState();
@@ -83,13 +87,7 @@ function App() {
   }
 
   useEffect(() => {
-    // check if client browser supports geolocation
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(getUserLocation, () => { throw new Error("A error occured while trying to get the user's current position!") });
-    } else {
-      // alert user that geolocation isn't working, defaulting to standard location
-      alert("It seems like Geolocation, which is required for this page, is not enabled in your browser. Please use a browser which supports it.")
-    }
+    dispatch(geolocate())
   }, []);
 
   return (
