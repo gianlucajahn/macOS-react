@@ -13,12 +13,12 @@ const reducer = (state = sampleStore, action: AnyAction) => {
       // return updated state
       return newLocation; 
     case 'query/SUBMIT':
-      const newLocation2 = {
+      const newSubmission = {
         ...state,
         weather: action.payload
       }
       // return updated state
-      return newLocation2; 
+      return newSubmission; 
     case 'query/SEARCH':
       const updatedQuery = {
         ...state,
