@@ -22,8 +22,10 @@ function App() {
     <ChakraProvider>
       <StoreProvider>
         <div className="page">
-          <QueryBoard />
-          <WeatherBoard />
+          <div className="window">
+            <QueryBoard />
+            <WeatherBoard />
+          </div>
         </div>
       </StoreProvider>
     </ChakraProvider>
