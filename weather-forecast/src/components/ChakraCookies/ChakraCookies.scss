@@ -1,0 +1,16 @@
+.cookies-btn {
+    margin-left: 10em;
+    width: 41px !important;
+
+    .cookies {
+        height: 19px;
+        margin-bottom: 1px;
+    }
+}
+
+.confirm {
+
+    &:hover {
+        background-color: #808080;
+    }
+}

@@ -1,0 +1,104 @@
+.cookies-btn {
+    margin-left: 10em;
+    width: 41px !important;
+
+    .cookies {
+        height: 19px;
+        margin-bottom: 1px;
+    }
+}
+
+.fullscreen-btn {
+    margin-left: 0.4em;
+    width: 41px !important;
+
+    .fullscreen {
+        height: 18px;
+        margin-bottom: 2px;
+    }
+}
+
+.dot {
+    border-radius: 9999px;
+    border: none;
+    height: 0.83em;
+    width: 0.81em;
+    margin-right: 9px;
+    cursor: pointer;
+
+    &:hover {
+        box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.22);
+    }
+}
+
+.red {
+    background-color: rgb(255, 69, 58);
+}
+
+.yellow {
+    background-color: rgb(255, 214, 10);
+}
+
+.green {
+    background-color: rgb(48, 209, 88);
+    margin-right: 0.9em;
+}
+
+.nav {
+    height: 24px;
+    width: 27px;
+    background-color: #5b5c60;
+    border-radius: 4px;
+    border-top: 1px solid #747579;
+    margin-right: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.25s all;
+    cursor: pointer;
+    &:hover {
+        background-color: #636466;
+    }
+
+    .arrow {
+        height: 14px;
+        margin-bottom: 1px;
+    }
+
+    .forward {
+        margin-left: 1px;
+        fill: #848589;
+    }
+
+    .back {
+        rotate: (180deg);
+        fill: white;
+    }
+
+    .chat {
+        height: 16px;
+        width: 18px;
+        margin-bottom: 1px;
+    }
+
+    .cat {
+        height: 20px;
+        margin-bottom: 1px;
+        fill: white;
+    }
+}
+
+.chat-btn {
+    margin-left: 0.5625em;
+    margin-right: 1.365em;
+    width: 40px;
+}
+
+.github-btn {
+    width: 40px;
+    margin-right: 0.525em;
+}
+
+.forward-btn {
+    cursor: not-allowed;
+}

@@ -26,6 +26,7 @@ export default function InputField () {
           id="input"
           className="inputField"
           placeholder="Your City" 
+          spellCheck="false"
           value={state.query} 
           onChange={(e) => dispatch({ 
             type: "query/SEARCH", 
