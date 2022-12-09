@@ -55,5 +55,8 @@
         margin-bottom: 1px;
         letter-spacing: 0.015em;
         color: white;
+        ::placeholder {
+            color: #969696 !important;
+        }
     }
 }

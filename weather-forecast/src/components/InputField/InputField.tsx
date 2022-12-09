@@ -12,10 +12,18 @@ export default function InputField () {
     <div className="input-container">
         <Search className="search" />
         <Lock className="lock" />
-        <img className="refresh" src={require("../../resources/images/refresh.png")} />
+        <img className="refresh" src={require("../../resources/images/refresh.png")} onClick={(e) => 
+            inputWork(state.query).then((weather) => {
+                dispatch({
+                    type: 'query/SUBMIT',
+                    payload: weather
+                });
+            })} 
+        />
 
         <input 
           type="text" 
+          id="input"
           className="inputField"
           placeholder="Your City" 
           value={state.query} 
