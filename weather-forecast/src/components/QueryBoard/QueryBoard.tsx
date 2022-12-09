@@ -22,13 +22,17 @@ export default function QueryBoard () {
         <Arrow className="arrow forward svg" id="svg" />
       </button>
 
+      <a href="https://www.linkedin.com/in/gianlucajahn/" target="_blank">
       <button className="nav chat-btn">
         <img className="chat" src={require("../../resources/images/linkedin.png")} />
       </button>
+      </a>
 
+      <a href="https://www.github.com/gianlucajahn" target="_blank">
       <button className="nav github-btn">
         <Cat className="cat svg" id="svg" />
       </button>
+      </a>
 
       <InputField />
     </div>
