@@ -16,10 +16,10 @@ export default function QueryBoard () {
       <div className="dot green" />
 
       <button className="nav back-btn">
-        <Arrow className="arrow back" />
+        <Arrow className="arrow back svg" id="svg" />
       </button>
       <button className="nav forward-btn">
-        <Arrow className="arrow forward" />
+        <Arrow className="arrow forward svg" id="svg" />
       </button>
 
       <button className="nav chat-btn">
@@ -27,7 +27,7 @@ export default function QueryBoard () {
       </button>
 
       <button className="nav github-btn">
-        <Cat className="cat" />
+        <Cat className="cat svg" id="svg" />
       </button>
 
       <InputField />

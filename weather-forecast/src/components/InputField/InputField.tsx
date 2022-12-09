@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { store } from '../../App';
 import inputWork from '../../utils/keys/helpers/inputWork';
+import './InputField.scss';
 
 export default function InputField () {
   const [state, dispatch] = useContext(store);
@@ -8,6 +9,7 @@ export default function InputField () {
   return (
     <input 
     type="text" 
+    className="inputField"
     placeholder="Your City" 
     value={state.query} 
     onChange={(e) => dispatch({ 

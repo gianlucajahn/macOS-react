@@ -23,7 +23,11 @@ function App() {
     <ChakraProvider>
       <StoreProvider>
         <div className="page">
-          <Draggable handle="#handle">
+          <Draggable handle="#handle" onStart={(e: any) => { 
+            if (e.target.id !== "handle") { 
+              return false 
+            } 
+          }}>
             <div className="window">
               <QueryBoard />
               <WeatherBoard />
