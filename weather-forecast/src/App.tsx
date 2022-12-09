@@ -6,6 +6,7 @@ import reducer from './reducers/reducer';
 import sampleStore from './utils/keys/samples/sampleStore';
 import WeatherBoard from './components/WeatherBoard/WeatherBoard';
 import QueryBoard from './components/QueryBoard/QueryBoard';
+import Draggable from 'react-draggable';
 
 // Create store (redux naming convention)
 export const store = createContext<any>(null);
@@ -22,10 +23,12 @@ function App() {
     <ChakraProvider>
       <StoreProvider>
         <div className="page">
-          <div className="window">
-            <QueryBoard />
-            <WeatherBoard />
-          </div>
+          <Draggable handle="#handle">
+            <div className="window">
+              <QueryBoard />
+              <WeatherBoard />
+            </div>
+          </Draggable>
         </div>
       </StoreProvider>
     </ChakraProvider>

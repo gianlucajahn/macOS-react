@@ -10,7 +10,7 @@ export default function QueryBoard () {
   const [state, dispatch] = useContext(store);
 
   return (
-    <div className="query-board">
+    <div className="query-board" id="handle">
       <div className="dot red" />
       <div className="dot yellow" />
       <div className="dot green" />
@@ -23,7 +23,7 @@ export default function QueryBoard () {
       </button>
 
       <button className="nav chat-btn">
-        <Chat className="chat" />
+        <img className="chat" src={require("../../resources/images/linkedin.png")} />
       </button>
 
       <button className="nav github-btn">

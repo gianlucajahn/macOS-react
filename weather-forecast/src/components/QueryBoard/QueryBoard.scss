@@ -1,6 +1,7 @@
 .query-board {
     width: 100%;
     display: flex;
+    cursor: move;
     align-items: center;
     border-top: 1px solid #696971;
     border-bottom: 1px solid #141318;
@@ -70,7 +71,7 @@
 
         .chat {
             height: 16px;
-            width: 20px;
+            width: 18px;
             margin-bottom: 1px;
         }
 
