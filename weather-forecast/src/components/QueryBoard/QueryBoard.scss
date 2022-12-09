@@ -67,6 +67,29 @@
             rotate: (180deg);
             fill: white;
         }
+
+        .chat {
+            height: 16px;
+            width: 20px;
+            margin-bottom: 1px;
+        }
+
+        .cat {
+            height: 20px;
+            margin-bottom: 1px;
+            fill: white;
+        }
+    }
+
+    .chat-btn {
+        margin-left: 0.5625em;
+        margin-right: 1.365em;
+        width: 40px;
+    }
+
+    .github-btn {
+        width: 40px;
+        margin-right: 0.525em;
     }
 
     .forward-btn {

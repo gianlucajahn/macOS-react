@@ -2,6 +2,8 @@ import React, { useState, useReducer,useContext, useEffect } from 'react';
 import { store } from '../../App';
 import inputWork from '../../utils/keys/helpers/inputWork';
 import { ReactComponent as Arrow } from '../../resources/images/svg/arrow.svg';
+import { ReactComponent as Chat } from '../../resources/images/svg/chat.svg';
+import { ReactComponent as Cat } from '../../resources/images/svg/githubcat.svg';
 import './QueryBoard.scss';
 
 export default function QueryBoard () {
@@ -18,6 +20,14 @@ export default function QueryBoard () {
       </button>
       <button className="nav forward-btn">
         <Arrow className="arrow forward" />
+      </button>
+
+      <button className="nav chat-btn">
+        <Chat className="chat" />
+      </button>
+
+      <button className="nav github-btn">
+        <Cat className="cat" />
       </button>
 
       <input 
