@@ -11,15 +11,15 @@
         fill: #969696;
         height: 17px;
         left: 7.6em;
-        top: 0.25em;
+        top: 0.3em;
         cursor: url("../../resources/images/cursor.png"), auto;
     }
 
     .lock {
         fill: white;
-        height: 14px;
+        height: 15px;
         left: 8.6em;
-        top: 0.4em;
+        top: 0.35em;
         cursor: url("../../resources/images/cursor.png"), auto;
     }
 
@@ -42,6 +42,7 @@
         border: none;
         overflow: hidden;
         padding-right: 2.5em;
+        padding-bottom: 1px;
         border-radius: 4px;
         outline: none;
         height: 24px;

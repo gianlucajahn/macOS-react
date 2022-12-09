@@ -7,6 +7,7 @@ import sampleStore from './utils/keys/samples/sampleStore';
 import WeatherBoard from './components/WeatherBoard/WeatherBoard';
 import QueryBoard from './components/QueryBoard/QueryBoard';
 import Draggable from 'react-draggable';
+import NavBar from './components/NavBar/NavBar';
 
 // Create store (redux naming convention)
 export const store = createContext<any>(null);
@@ -23,6 +24,7 @@ function App() {
     <ChakraProvider >
       <StoreProvider>
         <div className="page" id="page" style={{ position: "relative" }}>
+          <NavBar />
           <Draggable handle="#handle" onStart={(e: any) => { 
             if (e.target.id !== "handle") { 
               return false 

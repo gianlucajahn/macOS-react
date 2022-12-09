@@ -1,0 +1,44 @@
+.filter {
+    z-index: 8;
+    width: 100vw;
+    height: 29px;
+    position: absolute;
+    top: 0;
+    opacity: 0.3;
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+}
+
+.nav-bar {
+    width: 100vw;
+    height: 29px;
+    z-index: 12;
+    background-color: rgba(0, 0, 0, .15);
+    -webkit-backdrop-filter: blur(16px);
+    position: absolute;
+    top: 0;
+    display: flex;
+
+    .section {
+        padding: 5px 8px;
+        font-size: 13px;
+        font-family: "SF Regular";
+        color: white;
+        cursor: url("../../resources/images/pointing.png"), auto;
+    }
+
+    .finder {
+        font-family: "SF Bold";
+        margin-right: 4px;
+    }
+
+    .logo {
+        margin-left: 10px;
+        padding: 5px 12px;
+        margin-right: 8px;
+    }
+}
+
+.apple {
+    height: 16px;
+}
