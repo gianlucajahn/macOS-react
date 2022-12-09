@@ -1,7 +1,7 @@
 .query-board {
     width: 100%;
     display: flex;
-    cursor: move;
+    cursor: url("../../resources//images//grabbing.png"), auto;
     align-items: center;
     border-top: 1px solid #696971;
     border-bottom: 1px solid #141318;
@@ -30,7 +30,7 @@
         height: 0.83em;
         width: 0.81em;
         margin-right: 9px;
-        cursor: pointer;
+        cursor: url("../../resources/images/pointing.png"), auto;
 
         &:hover {
             box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.22);
@@ -61,9 +61,14 @@
         justify-content: center;
         align-items: center;
         transition: 0.25s all;
-        cursor: pointer;
+        cursor: url("../../resources/images/pointing.png"), auto;
+
         &:hover {
             background-color: #636466;
+        }
+
+        &:active {
+            transform: scale(0.95);
         }
 
         .arrow {

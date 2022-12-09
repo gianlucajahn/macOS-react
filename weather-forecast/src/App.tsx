@@ -22,7 +22,7 @@ function App() {
   return (
     <ChakraProvider >
       <StoreProvider>
-        <div className="page" id="page">
+        <div className="page" id="page" style={{ position: "relative" }}>
           <Draggable handle="#handle" onStart={(e: any) => { 
             if (e.target.id !== "handle") { 
               return false 

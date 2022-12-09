@@ -12,7 +12,7 @@
         height: 17px;
         left: 7.6em;
         top: 0.25em;
-        cursor: default;
+        cursor: url("../../resources/images/cursor.png"), auto;
     }
 
     .lock {
@@ -20,14 +20,14 @@
         height: 14px;
         left: 8.6em;
         top: 0.4em;
-        cursor: default;
+        cursor: url("../../resources/images/cursor.png"), auto;
     }
 
     .refresh {
         height: 13px;
         right: 0.4em;
         top: 0.4em;
-        cursor: pointer;
+        cursor: url("../../resources/images/pointing.png"), auto;
         transition: 0.2s all;
 
         &:active {
