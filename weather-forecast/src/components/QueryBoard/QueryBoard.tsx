@@ -5,9 +5,9 @@ import { ReactComponent as Arrow } from '../../resources/images/svg/arrow.svg';
 import { ReactComponent as Chat } from '../../resources/images/svg/chat.svg';
 import { ReactComponent as Cat } from '../../resources/images/svg/githubcat.svg';
 import './QueryBoard.scss';
+import InputField from '../InputField/InputField';
 
 export default function QueryBoard () {
-  const [state, dispatch] = useContext(store);
 
   return (
     <div className="query-board" id="handle">
@@ -30,23 +30,7 @@ export default function QueryBoard () {
         <Cat className="cat" />
       </button>
 
-      <input 
-        type="text" 
-        placeholder="Your City" 
-        value={state.query} 
-        onChange={(e) => dispatch({ 
-          type: "query/SEARCH", 
-          payload: e.currentTarget.value 
-        })} 
-        onKeyUp={(e) => { if(e.key === "Enter") {
-          inputWork(state.query).then((weather) => {
-            dispatch({
-              type: 'query/SUBMIT',
-              payload: weather
-            });
-          });
-        }}}
-      />
+      <InputField />
     </div>
   );
 }
