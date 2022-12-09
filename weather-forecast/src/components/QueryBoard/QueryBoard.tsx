@@ -6,9 +6,9 @@ import { ReactComponent as Chat } from '../../resources/images/svg/chat.svg';
 import { ReactComponent as Cat } from '../../resources/images/svg/githubcat.svg';
 import './QueryBoard.scss';
 import InputField from '../InputField/InputField';
+import toggleFullscreen from '../../utils/keys/helpers/toggleFullscreen';
 
 export default function QueryBoard () {
-
   return (
     <div className="query-board" id="handle">
       <div className="dot red" />
@@ -35,6 +35,14 @@ export default function QueryBoard () {
       </a>
 
       <InputField />
+
+      <button className="nav cookies-btn">
+        <img className="cookies" src={require("../../resources/images/cookies.png")} />
+      </button>
+
+      <button className="nav fullscreen-btn" onClick={toggleFullscreen}>
+        <img className="fullscreen" src={require("../../resources/images/fullscreen.png")} />
+      </button>
     </div>
   );
 }

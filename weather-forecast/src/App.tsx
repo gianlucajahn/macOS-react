@@ -20,9 +20,9 @@ const StoreProvider = ({ children }: any) => (
 
 function App() {
   return (
-    <ChakraProvider>
+    <ChakraProvider >
       <StoreProvider>
-        <div className="page">
+        <div className="page" id="page">
           <Draggable handle="#handle" onStart={(e: any) => { 
             if (e.target.id !== "handle") { 
               return false 
