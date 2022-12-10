@@ -2,5 +2,5 @@
 
 ![](/src/Resources/image/preview1.png)
 <p align="center">
-  An over-engineered weather app built with TypeScript React, Context, SCSS and ChakraUI
+  A macOS clone built with React, Context, SCSS and ChakraUI
 </p>
