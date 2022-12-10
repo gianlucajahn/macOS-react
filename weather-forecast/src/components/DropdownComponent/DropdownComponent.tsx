@@ -8,16 +8,21 @@ export default function DropdownComponent () {
   const content = getDropdownContent(state);
 
   return (
-    <div className={`dropdown-menu ${state.section === "logo" ? "logo-dd" : state.section === "finder" ? "finder-dd"  : state.section === "file" ? "file-dd" : state.section === "edit" ? "edit-dd" : state.section === "view" ? "view-dd" : state.section === "go" ? "go-dd" : state.section === "windows" ? "windows-dd" : state.section === "help" ? "help-dd" : ""}`}>
+    <div className={`dd dropdown-menu ${state.section === "logo" ? "dd-logo" : state.section === "finder" ? "dd-finder"  : state.section === "file" ? "dd-file" : state.section === "edit" ? "dd-edit" : state.section === "view" ? "dd-view" : state.section === "go" ? "dd-go" : state.section === "windows" ? "dd-windows" : state.section === "help" ? "dd-help" : ""}`}>
       {content.map((item, i) => {
         if (item.name === "divider") {
             return (
-                <div className="divider" />
+                <div className="divider dd" />
             )
         }
 
         return (
-            <div className="dropdown-item" style={{ color: item.available ? "white" : "rgb(153, 153, 153)" }}>
+            <div className={`dropdown-item dd ${state.section === "logo" ? "di-logo" : state.section === "finder" ? "di-finder"  : state.section === "file" ? "di-file" : state.section === "edit" ? "di-edit" : state.section === "view" ? "di-view" : state.section === "go" ? "di-go" : state.section === "windows" ? "di-windows" : state.section === "help" ? "di-help" : ""}`} style={{ color: item.available ? "white" : "rgb(153, 153, 153)" }} onClick={(e) => {
+              dispatch({
+                type: 'section/CHECK',
+                payload: e.target
+              });
+            }}>
                 {item.name}
             </div>
         )

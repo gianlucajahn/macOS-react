@@ -33,6 +33,12 @@ const reducer = (state = sampleStore, action: AnyAction) => {
       };
       // return updated state
       return updatedSection;
+    case 'section/RESET':
+      const checkedSection = {
+        ...state,
+        section: "none"
+      };
+      return checkedSection;
     default:
       return state;
   }

@@ -11,7 +11,10 @@ export default function () {
   const [state, dispatch] = useContext(store);
 
   const dispatchAction = (e: React.MouseEvent<HTMLElement>) => {
-    const selectedSection = e.target as HTMLDivElement
+    const selectedSection = e.target as HTMLElement;
+    if (selectedSection.classList.contains('dd')) {
+        return;
+    }
     dispatch({
         type: 'section/SELECT',
         payload: selectedSection.id

@@ -8,6 +8,8 @@ import WeatherBoard from './components/WeatherBoard/WeatherBoard';
 import QueryBoard from './components/QueryBoard/QueryBoard';
 import Draggable from 'react-draggable';
 import NavBar from './components/NavBar/NavBar';
+import checkDropdown from './utils/keys/helpers/checkDropdown';
+import Page from './components/Page/Page';
 
 // Create store (redux naming convention)
 export const store = createContext<any>(null);
@@ -23,7 +25,7 @@ function App() {
   return (
     <ChakraProvider >
       <StoreProvider>
-        <div className="page" id="page" style={{ position: "relative" }}>
+        <Page>
           <NavBar />
           <Draggable handle="#handle" onStart={(e: any) => { 
             if (e.target.id !== "handle") { 
@@ -35,7 +37,7 @@ function App() {
               <WeatherBoard />
             </div>
           </Draggable>
-        </div>
+        </Page>
       </StoreProvider>
     </ChakraProvider>
   );
