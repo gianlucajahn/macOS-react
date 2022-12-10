@@ -13,7 +13,7 @@
     background-color: rgba(0, 0, 0, 0.275);
     position: absolute;
     width: 200px;
-    padding: 11px 8px 8px 8px;
+    padding: 11px 4px 8px 7px;
     left: 0;
     top: 30px;
     box-shadow: 0px 0px 7px black;
@@ -30,6 +30,31 @@
         font-family: "SF Regular";
         transform: scaleY(1.03);
     }
+}
+
+.logo-dd {
+    left: -10px;
+}
+
+.finder-dd {
+    left: -6px;
+}
+
+.logo-dd,
+.finder-dd,
+.file-dd,
+.edit-dd,
+.view-dd {
+    width: 257px;
+}
+
+.go-dd,
+.help-dd {
+    width: 255px;
+}
+
+.windows-dd {
+    width: 292px;
 }
 
 .dropdown-menu::after {
