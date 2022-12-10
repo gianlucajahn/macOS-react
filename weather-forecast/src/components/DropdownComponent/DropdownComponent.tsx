@@ -17,7 +17,7 @@ export default function DropdownComponent () {
         }
 
         return (
-            <div className="dropdown-item" style={{ color: item.available ? "white" : "#ccc" }}>
+            <div className="dropdown-item" style={{ color: item.available ? "white" : "rgb(153, 153, 153)" }}>
                 {item.name}
             </div>
         )
