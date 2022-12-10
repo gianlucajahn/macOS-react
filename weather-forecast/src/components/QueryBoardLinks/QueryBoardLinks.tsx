@@ -2,14 +2,25 @@ import React from 'react';
 import { ReactComponent as Arrow } from '../../resources/images/svg/arrow.svg';
 import { ReactComponent as Chat } from '../../resources/images/svg/chat.svg';
 import { ReactComponent as Cat } from '../../resources/images/svg/githubcat.svg';
+import { ReactComponent as Close } from '../../resources/images/svg/close.svg';
+import { ReactComponent as Minimize } from '../../resources/images/svg/minimize.svg';
+import { ReactComponent as Stretch } from '../../resources/images/svg/stretch.svg';
 import "./QueryBoardLinks.scss";
 
 export default function QueryBoardLinks () {
   return (
     <>
-    <div className="dot red" />
-      <div className="dot yellow" />
-      <div className="dot green" />
+      <div className="dots">
+         <div className="dot red">
+          <Close className="close" />
+         </div>
+         <div className="dot yellow">
+          <Minimize className="minimize" />
+         </div>
+         <div className="dot green">
+          <Stretch className="stretch" />
+         </div>
+      </div>
 
       <button className="nav back-btn">
         <Arrow className="arrow back svg" id="svg" />

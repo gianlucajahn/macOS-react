@@ -25,9 +25,16 @@
     width: 0.81em;
     margin-right: 9px;
     cursor: url("../../resources/images/pointing.png"), auto;
+    transition: 0.2s all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    &:hover {
-        box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.22);
+    .close,
+    .minimize,
+    .stretch {
+        opacity: 0;
+        transition: 0.15s all;
     }
 }
 
@@ -101,4 +108,18 @@
 
 .forward-btn {
     cursor: not-allowed;
+}
+
+.dots {
+    display: flex
+}
+
+.dots:hover .dot {
+    transform: scale(1.16);
+
+    .close,
+    .minimize,
+    .stretch {
+        opacity: 1;
+    }
 }
