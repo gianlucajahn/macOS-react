@@ -1,0 +1,25 @@
+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    z-index: 14;
+    position: absolute;
+    width: 1200px;
+    height: 1000px;
+    left: 0;
+    top: 30px;
+
+    .divider {
+        margin: 4px 6px;
+        height: 1px;
+        background-color: #ccc;
+    }
+
+    .dropdown-item {
+        padding: 2px 4px;
+        
+    }
+}
