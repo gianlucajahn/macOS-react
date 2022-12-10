@@ -189,3 +189,7 @@
 .apple {
     height: 16px;
 }
+
+.not-selected {
+    pointer-events: none;
+}
