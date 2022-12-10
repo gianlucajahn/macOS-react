@@ -1,4 +1,4 @@
-<h1 align="center">⛅ React Weather App</h1>
+<h1 align="center"> macOS in React</h1>
 
 ![](/src/Resources/image/preview1.png)
 <p align="center">
