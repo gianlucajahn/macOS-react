@@ -26,6 +26,13 @@ const reducer = (state = sampleStore, action: AnyAction) => {
       }
       // return updated state
       return updatedQuery; 
+    case 'section/SELECT':
+      const updatedSection = {
+        ...state,
+        section: action.payload
+      };
+      // return updated state
+      return updatedSection;
     default:
       return state;
   }

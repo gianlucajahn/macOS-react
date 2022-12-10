@@ -9,6 +9,10 @@
   background-image: url("./resources/images/background.jpg");
   background-repeat: no-repeat;
 
+  * {
+    user-select: none;
+  }
+
   .window {
     border: 1px solid #3f3f47;
     background-color: #1e1f23;
