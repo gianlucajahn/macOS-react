@@ -17,7 +17,7 @@ export default function DropdownComponent () {
         }
 
         return (
-            <div className={`dropdown-item dd ${state.section === "logo" ? "di-logo" : state.section === "finder" ? "di-finder"  : state.section === "file" ? "di-file" : state.section === "edit" ? "di-edit" : state.section === "view" ? "di-view" : state.section === "go" ? "di-go" : state.section === "windows" ? "di-windows" : state.section === "help" ? "di-help" : ""}`} style={{ color: item.available ? "white" : "rgb(153, 153, 153)" }} onClick={(e) => {
+            <div className={`dropdown-item dd ${state.section === "logo" ? "di-logo" : state.section === "finder" ? "di-finder"  : state.section === "file" ? "di-file" : state.section === "edit" ? "di-edit" : state.section === "view" ? "di-view" : state.section === "go" ? "di-go" : state.section === "windows" ? "di-windows" : state.section === "help" ? "di-help" : ""} ${item.available ? "selectable" : "unselectable"}`} style={{ color: item.available ? "white" : "rgb(153, 153, 153)" }} onClick={(e) => {
               dispatch({
                 type: 'section/CHECK',
                 payload: e.target
