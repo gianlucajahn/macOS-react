@@ -4,3 +4,6 @@
 <p align="center">
   A macOS clone built with TypeScript React, Context, SCSS and ChakraUI
 </p>
+<p align="center">
+  Work in Progress!
+</p>
