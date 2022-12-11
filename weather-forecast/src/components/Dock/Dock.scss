@@ -26,6 +26,24 @@
         margin-bottom: 5px;
         margin-top: 4px;
         transition: 0.175s all ease-in-out;
+        position: relative;
+
+        .tool-tip {
+            position: absolute;
+            top: -40px;
+            border-radius: 6px;
+            background-color: rgba(0, 0, 0, 0.4);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px 8px 3px 8px;
+            border: 1px solid #707272;
+            backdrop-filter: blur(20px);
+            transition: 0.2s all;
+            opacity: 0;
+            visibility: hidden;
+        }
     }
 
     .no-point {
@@ -51,6 +69,11 @@
     margin-bottom: 35px;
 
     &:hover {
+
+        .tool-tip {
+            opacity: 1;
+            visibility: visible;
+        }
 
         .dock-icon {
             height: 90px;
