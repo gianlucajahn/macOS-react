@@ -8,10 +8,21 @@ import { ReactComponent as Stretch } from '../../resources/images/svg/stretch.sv
 import "./QueryBoardLinks.scss";
 
 export default function QueryBoardLinks () {
+  const toggleVisibility = (e: React.MouseEvent) => {
+    const target = document.getElementById('weather-window');
+    if (target?.classList.contains('window')) {
+      target.classList.remove('window');
+      target.classList.add('window-closed');
+    } else if (target?.classList.contains('window-closed')) {
+      target.classList.remove('window-closed');
+      target.classList.add('window');
+    }
+  }
+
   return (
     <>
       <div className="dots">
-         <div className="dot red">
+         <div className="dot red" onClick={toggleVisibility}>
           <Close className="close" />
          </div>
          <div className="dot yellow">

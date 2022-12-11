@@ -35,6 +35,7 @@
     .stretch {
         opacity: 0;
         transition: 0.15s all;
+        pointer-events: none;
     }
 }
 

@@ -32,7 +32,7 @@ function App() {
               return false 
             } 
           }}>
-            <div className="window">
+            <div className={`window weather-window`} id="weather-window">
               <QueryBoard />
               <WeatherBoard />
             </div>
