@@ -11,23 +11,31 @@
     min-width: 618px;
     margin-top: 50px;
     position: absolute;
-    bottom: 6px;
+    bottom: 9px;
     backdrop-filter: blur(20px);
+    overflow-y: visible !important;
 
     .finder {
         margin-right: 1px;
+    }
+
+    .dock-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5px;
+        margin-top: 4px;
+        transition: 0.175s all ease-in-out;
+    }
+
+    .no-point {
+        margin-bottom: 9px;
     }
 
     .dock-icon {
         height: 3.59rem;
         cursor: url("../../resources//images/pointing.png"), auto;
         transition: 0.175s all ease-in-out;
-
-        &:hover {
-            height: 90px;
-            width: 89px;
-            margin-bottom: 30px;
-        }
     }
 
     .division {
@@ -39,6 +47,23 @@
     }
 }
 
-.dock-icon:hover .dock {
-    width: 900px;
+.dock-item:hover {
+    margin-bottom: 35px;
+
+    &:hover {
+
+        .dock-icon {
+            height: 90px;
+            width: 88px;
+        }
+    }
+}
+
+.point {
+    height: 4px;
+    width: 4px;
+    border-radius: 9999px;
+    background-color: white;
+    justify-self: center;
+    margin-right: 2px;
 }

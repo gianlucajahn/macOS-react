@@ -8,21 +8,21 @@
     flex-direction: column;
     gap: 3px;
     cursor: url("../../resources/images/cursor.png"), auto;
-    border: 1px solid rgb(95, 94, 94);
+    border: 1px solid rgba(255, 255, 255, 0.335);
     border-radius: 8px;
     z-index: 20 !important;
-    background-color: rgba(0, 0, 0, 0.275);
+    background-color: rgba(0, 0, 0, 0.19);
     position: absolute;
     width: 200px;
     padding: 11px 4px 8px 7px;
     left: 0;
     top: 30px;
-    box-shadow: 0px 0px 7px black;
+    box-shadow: 0px 0px 3.35px black;
 
     .divider {
-        margin: -2px 0px 1px 0px;
+        margin: -2px 3px 1px 0px;
         height: 1px;
-        background-color: rgb(95, 94, 94);
+        background-color: rgba(255, 255, 255, 0.335);
     }
 
     .dropdown-item {
