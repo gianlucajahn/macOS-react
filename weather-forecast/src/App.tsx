@@ -24,7 +24,7 @@ const StoreProvider = ({ children }: any) => (
 
 function App() {
   return (
-    <ChakraProvider >
+    <ChakraProvider>
       <StoreProvider>
         <Page>
           <NavBar />
