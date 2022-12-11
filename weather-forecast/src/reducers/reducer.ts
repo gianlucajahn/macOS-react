@@ -39,6 +39,18 @@ const reducer = (state = sampleStore, action: AnyAction) => {
         section: "none"
       };
       return checkedSection;
+    case 'dock/SELECT':
+      const selectedDockItem = {
+        ...state,
+        dockItem: action.payload
+      };
+      return selectedDockItem;
+    case 'dock/RESET':
+      const resetDockItems = {
+        ...state,
+        dockItem: undefined
+      };
+      return resetDockItems;
     default:
       return state;
   }

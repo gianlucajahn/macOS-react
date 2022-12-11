@@ -6,6 +6,7 @@ interface storeType {
     query: string;
     loading: boolean;
     section: string;
+    dockItem: number | undefined;
 }
 
 export default storeType;
