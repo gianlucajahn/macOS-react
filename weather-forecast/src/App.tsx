@@ -10,6 +10,7 @@ import Draggable from 'react-draggable';
 import NavBar from './components/NavBar/NavBar';
 import checkDropdown from './utils/keys/helpers/checkDropdown';
 import Page from './components/Page/Page';
+import Dock from './components/Dock/Dock';
 
 // Create store (redux naming convention)
 export const store = createContext<any>(null);
@@ -37,6 +38,8 @@ function App() {
               <WeatherBoard />
             </div>
           </Draggable>
+
+          <Dock />
         </Page>
       </StoreProvider>
     </ChakraProvider>

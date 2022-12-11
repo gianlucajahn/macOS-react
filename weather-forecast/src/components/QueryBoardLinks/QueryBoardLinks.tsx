@@ -19,13 +19,24 @@ export default function QueryBoardLinks () {
     }
   }
 
+  const toggleMinimize = (e: React.MouseEvent) => {
+    const target = document.getElementById('weather-window');
+    if (target?.classList.contains('window')) {
+      target.classList.remove('window');
+      target.classList.add('window-minimized');
+    } else if (target?.classList.contains('window-minimized')) {
+      target.classList.remove('window-minimized');
+      target.classList.add('window');
+    }
+  }
+
   return (
     <>
       <div className="dots">
          <div className="dot red" onClick={toggleVisibility}>
           <Close className="close" />
          </div>
-         <div className="dot yellow">
+         <div className="dot yellow" onClick={toggleMinimize}>
           <Minimize className="minimize" />
          </div>
          <div className="dot green">
