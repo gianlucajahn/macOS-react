@@ -6,30 +6,10 @@ import { ReactComponent as Close } from '../../resources/images/svg/close.svg';
 import { ReactComponent as Minimize } from '../../resources/images/svg/minimize.svg';
 import { ReactComponent as Stretch } from '../../resources/images/svg/stretch.svg';
 import "./QueryBoardLinks.scss";
+import toggleVisibility from '../../utils/keys/helpers/toggleVisibility';
+import toggleMinimize from '../../utils/keys/helpers/toggleMinimize';
 
 export default function QueryBoardLinks () {
-  const toggleVisibility = (e: React.MouseEvent) => {
-    const target = document.getElementById('weather-window');
-    if (target?.classList.contains('window')) {
-      target.classList.remove('window');
-      target.classList.add('window-closed');
-    } else if (target?.classList.contains('window-closed')) {
-      target.classList.remove('window-closed');
-      target.classList.add('window');
-    }
-  }
-
-  const toggleMinimize = (e: React.MouseEvent) => {
-    const target = document.getElementById('weather-window');
-    if (target?.classList.contains('window')) {
-      target.classList.remove('window');
-      target.classList.add('window-minimized');
-    } else if (target?.classList.contains('window-minimized')) {
-      target.classList.remove('window-minimized');
-      target.classList.add('window');
-    }
-  }
-
   return (
     <>
       <div className="dots">
