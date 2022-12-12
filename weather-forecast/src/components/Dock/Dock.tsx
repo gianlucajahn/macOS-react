@@ -5,6 +5,21 @@ import './Dock.scss';
 export default function Dock () {
   const [state, dispatch] = useContext(store);
 
+  const openWeatherApp = (e: MouseEvent) => {
+    const weatherApp = document.getElementById('weather-window');
+    if (weatherApp?.classList.contains('window-minimized')) {
+        weatherApp.classList.remove('window-minimized');
+        weatherApp.classList.add('window');
+        return;
+    }
+
+    if (weatherApp?.classList.contains('window-closed')) {
+        weatherApp.classList.remove('window-closed');
+        weatherApp.classList.add('window');
+        return;
+    }
+  }
+
   const selectDockItem = (e: MouseEvent) => {
     let target = e.target as any;
 
@@ -61,9 +76,10 @@ export default function Dock () {
               <img className="dock-icon" src={require("../../resources/images/webp/applemusic.png")} />
             </div>
             <div className="division" />
-            <div className={`dock-item no-point ${state.dockItem === 6 ? "hovered" : ""} ${state.dockItem === 4 ? "distance-2" : state.dockItem === 5 ? "distance-1" : state.dockItem === 7 ? "distance-1" : state.dockItem === 8 ? "distance-2" : ""}`} id="6" onMouseEnter={selectDockItem} onMouseLeave={resetDock}>
+            <div className={`dock-item ${state.dockItem === 6 ? "hovered" : ""} ${state.dockItem === 4 ? "distance-2" : state.dockItem === 5 ? "distance-1" : state.dockItem === 7 ? "distance-1" : state.dockItem === 8 ? "distance-2" : ""}`} id="6" onMouseEnter={selectDockItem} onMouseLeave={resetDock} onClick={openWeatherApp}>
               <div className="tool-tip">Weather</div>
               <img className="dock-icon" src={require("../../resources/images/webp/weather.png")} />
+              <div className="point" style={{ visibility: document.getElementById('weather-window')?.classList.contains('window') ? "visible" : "hidden" }} />
             </div>
             <div className={`dock-item ${state.dockItem === 7 ? "hovered" : ""} ${state.dockItem === 5 ? "distance-2" : state.dockItem === 6 ? "distance-1" : state.dockItem === 8 ? "distance-1" : state.dockItem === 9 ? "distance-2" : ""}`} id="7" onMouseEnter={selectDockItem} onMouseLeave={resetDock}>
               <div className="tool-tip">GitHub</div>
