@@ -1,24 +1,10 @@
 import React, { MouseEvent, useContext } from 'react';
 import { store } from '../../App';
+import openWeatherApp from '../../utils/keys/helpers/openWeatherApp';
 import './Dock.scss';
 
 export default function Dock () {
   const [state, dispatch] = useContext(store);
-
-  const openWeatherApp = (e: MouseEvent) => {
-    const weatherApp = document.getElementById('weather-window');
-    if (weatherApp?.classList.contains('window-minimized')) {
-        weatherApp.classList.remove('window-minimized');
-        weatherApp.classList.add('window');
-        return;
-    }
-
-    if (weatherApp?.classList.contains('window-closed')) {
-        weatherApp.classList.remove('window-closed');
-        weatherApp.classList.add('window');
-        return;
-    }
-  }
 
   const selectDockItem = (e: MouseEvent) => {
     let target = e.target as any;
