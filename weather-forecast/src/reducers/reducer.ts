@@ -2,6 +2,7 @@ import getPosition from "../utils/keys/helpers/getPosition";
 import { AnyAction } from "@reduxjs/toolkit";
 import apiKey from "../utils/keys/key";
 import sampleStore from "../utils/keys/samples/sampleStore";
+import getDate from "../utils/keys/helpers/getDate";
 
 const reducer = (state = sampleStore, action: AnyAction) => {
   switch(action.type) {
@@ -51,6 +52,13 @@ const reducer = (state = sampleStore, action: AnyAction) => {
         dockItem: undefined
       };
       return resetDockItems;
+    case 'date/SET':
+      const date = getDate();
+      const updatedDate = {
+        ...state,
+        date: date
+      };
+      return updatedDate;
     default:
       return state;
   }

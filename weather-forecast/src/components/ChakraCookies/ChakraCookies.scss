@@ -16,7 +16,7 @@
     width: 100px;
     top: -42px;
     backdrop-filter: blur(50px);
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
     text-align: center;
     padding: 3px 7px;
@@ -26,8 +26,7 @@
     border: 1px solid #ccc;
     box-shadow: 0px 0px 5px black;
     border-radius: 6px;
-   
-    /* Position the tooltip text - see examples below! */
+
     position: absolute;
     z-index: 1;
 }

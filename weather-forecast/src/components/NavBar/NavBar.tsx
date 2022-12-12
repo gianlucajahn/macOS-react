@@ -1,14 +1,24 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { store } from '../../App';
 import './NavBar.scss';
 import { ReactComponent as Settings} from "../../resources/images/svg/settings.svg";
 import getDate from '../../utils/keys/helpers/getDate';
 import DropdownComponent from '../DropdownComponent/DropdownComponent';
 
-const date = getDate();
-
 export default function () {
   const [state, dispatch] = useContext(store);
+
+  useEffect(() => {
+    dispatch({
+        type: 'date/SET'
+      });
+  }, []);
+
+  setInterval(() => {
+    dispatch({
+        type: 'date/SET'
+    })
+  }, 60000);
 
   const dispatchAction = (e: React.MouseEvent<HTMLElement>) => {
     const selectedSection = e.target as HTMLElement;
@@ -74,8 +84,8 @@ export default function () {
 
             <div className="right">
                 <Settings className="settings" />
-                <h3 className="date">{date[0]}</h3>
-                <h3>{date[1]}</h3>
+                <h3 className="date">{state.date[0]}</h3>
+                <h3>{state.date[1]}</h3>
             </div>
         </div>
     </>

@@ -7,6 +7,7 @@ interface storeType {
     loading: boolean;
     section: string;
     dockItem: number | undefined;
+    date: any;
 }
 
 export default storeType;
