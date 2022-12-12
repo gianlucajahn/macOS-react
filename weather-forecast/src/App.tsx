@@ -11,6 +11,7 @@ import NavBar from './components/NavBar/NavBar';
 import checkDropdown from './utils/keys/helpers/checkDropdown';
 import Page from './components/Page/Page';
 import Dock from './components/Dock/Dock';
+import ContextMenu from './components/ContextMenu/ContextMenu';
 
 // Create store (redux naming convention)
 export const store = createContext<any>(null);
@@ -38,6 +39,8 @@ function App() {
               <WeatherBoard />
             </div>
           </Draggable>
+
+          <ContextMenu />
 
           <Dock />
         </Page>

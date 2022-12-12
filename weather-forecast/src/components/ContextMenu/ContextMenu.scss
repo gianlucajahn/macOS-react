@@ -1,0 +1,52 @@
+.context-menu {
+    width: 16em;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    cursor: url("../../resources/images/cursor.png"), auto;
+    border: 1px solid rgba(255, 255, 255, 0.335);
+    border-radius: 8px;
+    z-index: 20 !important;
+    background-color: rgba(0, 0, 0, 0.19);
+    position: absolute;
+    padding: 11px 4px 8px 7px;
+    left: 0;
+    opacity: 1;
+    top: 30px;
+    box-shadow: 0px 0px 3.35px black;
+    backdrop-filter: blur(15px);
+
+    .first {
+        margin-top: 2px;
+    }
+
+    .context-item {
+        color: white;
+        margin-bottom: 3px;
+        padding: 0px 8px;
+        font-size: 14.6px;
+        font-family: "SF Regular";
+        transform: scaleY(1.03);
+        border: none;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: #0a85ff;
+            color: black !important;
+            cursor: url("../../resources/images/pointing.png"), auto;
+        }
+    }
+
+    .context-divider {
+        margin-bottom: 3px;
+        margin-top: 2px;
+        margin: 2px 3px 3px 0px;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.335);
+    }
+}
+
+#context-menu {
+   visibility: hidden; 
+   position: absolute;
+}
