@@ -1,5 +1,6 @@
 import React, { MouseEvent, useContext } from 'react';
 import { store } from '../../App';
+import identifyDockItem from '../../utils/keys/helpers/identifyDockItem';
 import openWeatherApp from '../../utils/keys/helpers/openWeatherApp';
 import './Dock.scss';
 
@@ -7,19 +8,7 @@ export default function Dock () {
   const [state, dispatch] = useContext(store);
 
   const selectDockItem = (e: MouseEvent) => {
-    let target = e.target as any;
-
-    // return if the dock bar is hovered
-    if (target.classList.contains('dock')) {
-        return;
-    }
-
-    if (!target.classList.contains('dock-item')) {
-        target = target.parentNode;
-    }
-
-    const id = parseInt(target.id);
-    console.log(id);
+    const id = identifyDockItem(e.target);
     dispatch({
         type: 'dock/SELECT',
         payload: id
