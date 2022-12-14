@@ -19,6 +19,7 @@ const reducer = (state = sampleStore, action: AnyAction) => {
         weather: action.payload
       }
       // return updated state
+      console.log(newSubmission);
       return newSubmission; 
     case 'query/SEARCH':
       const updatedQuery = {
