@@ -1,0 +1,49 @@
+.selected-day-forecast {
+    border-radius: 26px;
+    background: rgb(34,39,60);
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background: rgb(34,39,60);
+    background: linear-gradient(0deg, rgba(34,39,60,1) 0%, rgba(18,22,47,1) 100%);
+    padding: 4px 20px 4px 20px;
+    transition: 0.25s all;
+
+    .intervals {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+
+        .interval-container {
+            display: flex;
+            padding: 10px 16px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+
+            .time {
+                font-family: "SF Semibold";
+                color: rgba(255, 255, 255, 0.7);
+                font-size: 18px;
+            }
+
+            .current-con {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                * {
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+
+            .temp {
+                margin-top: 2px;
+                font-family: "SF Semibold";
+                color: white;
+                font-size: 18px;
+            }
+        }
+    }
+}

@@ -1,9 +1,7 @@
 import React, { useContext } from 'react';
 import { store } from '../../App';
-import './SelectedWeatherSlice.scss';
+import './SelectedDayForecast.scss';
 // SVG Imports
-import Search from "../../resources/images/svg/search.svg";
-import { ReactComponent as Location } from "../../resources/images/svg/location.svg";
 import { ReactComponent as Ash } from "../../resources/images/svg/weather/Ash.svg";
 import { ReactComponent as Clear } from "../../resources/images/svg/weather/Clear.svg";
 import { ReactComponent as Clouds } from "../../resources/images/svg/weather/Clouds.svg";
@@ -19,13 +17,8 @@ import { ReactComponent as Snow } from "../../resources/images/svg/weather/Snow.
 import { ReactComponent as Squall } from "../../resources/images/svg/weather/Squall.svg";
 import { ReactComponent as Thunderstorm } from "../../resources/images/svg/weather/Thunderstorm.svg";
 import { ReactComponent as Tornado } from "../../resources/images/svg/weather/Tornado.svg";
-import { ReactComponent as Humidity } from "../../resources/images/svg/weather/humidity.svg";
-import { ReactComponent as Wind } from "../../resources/images/svg/weather/wind.svg";
-import { ReactComponent as Highest } from "../../resources/images/svg/weather/highest.svg";
-import { ReactComponent as Lowest } from "../../resources/images/svg/weather/lowest.svg";
-import { ReactComponent as Raindrops } from "../../resources/images/svg/weather/raindrops.svg";
- 
-export default function SelectedWeatherSlice () {
+
+export default function SelectedDayForecast () {
   const [state, dispatch] = useContext(store);
 
   const returnCurrentCon = (weather: string) => {
@@ -64,41 +57,23 @@ export default function SelectedWeatherSlice () {
   }
 
   return (
-    <div className="selected-weather-slice">
-        <nav className='top'>
-            <div className="location-container">
-              <h3>{state.weather.current.town}, {state.weather.current.country}</h3>
-              <Location className="location" fill="white" />
-            </div>
+    <div className="selected-day-forecast">
+    
+      <section className="intervals">
+      {state.weather.forecast[0] ? state.weather.forecast[0].map((interval: any, i: number) => {
+        return (
+            <div className="interval-container">
+                <h3 className="time">{interval.hours}</h3>
 
-            <div className="current-con">
-                {returnCurrentCon(state.weather.current.weather)}
-            </div>
-        </nav>
-
-        <div className="details">
-            <h1>{state.weather.current.temp}°</h1>  
-
-            <div className="data">
-                <h3 className="con">{state.weather.current.weather}</h3>
-                
-                <div className="humidity-container">
-                    <h3>Humidity: {state.weather.current.humidity}%</h3>
+                <div className="current-con">
+                    {returnCurrentCon(interval.weather)}
                 </div>
 
-                <div className="rain-container">
-                    <h3>Rain Probability: {state.weather.current.rain}%</h3>
-                </div>
-
-                <div className="temp-container">
-                    <Highest className="highest-icon icon" />
-                    <h3 className="high">{state.weather.current.maxTemp}°</h3>
-
-                    <Lowest className="lowest-icon icon" />
-                    <h3>{state.weather.current.minTemp}°</h3>
-                </div>
+                <h3 className="temp">{interval.temp}°</h3>
             </div>
-        </div>
+        )
+      }) : null}
+      </section>
     </div>
   );
 }
