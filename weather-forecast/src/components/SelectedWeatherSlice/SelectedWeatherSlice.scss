@@ -1,0 +1,106 @@
+.selected-weather-slice {
+    width: inherit;
+    border: none;
+    border-radius: 26px;
+    background-color: rgba(0, 0, 0, 0.45);
+    padding: 22px 34px 26px 34px;
+    transition: 0.25s all;
+
+    &:hover {
+        transform: scale(1.01);
+    }
+
+    .top {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .location-container {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+
+            h3 {
+                color: white;
+                font-size: 26px;
+                font-family: "SF Bold";
+                cursor: pointer;
+            }
+    
+            .location {
+                height: 22px;
+                cursor: pointer;
+            }
+        }
+
+        .current-con {
+            padding-top: 2px;
+
+            * {
+                height: 36px;
+                width: 36px;
+                fill: white;
+            }
+        }
+    }
+
+    .details {
+        display: flex;
+        justify-content: space-between;
+
+        h1 {
+            color: white;
+            font-size: 72px;
+            font-family: "SF Light";
+            margin-top: -22px;
+        }
+
+        .data {
+            margin-top: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            text-align: end;
+
+            h3 {
+                color: white;
+                font-size: 17px;
+                font-family: "SF Medium";
+            }
+
+            .con {
+                margin-bottom: 4px;
+                font-size: 21px;
+            }
+
+            .humidity-container,
+            .rain-container,
+            .temp-container {
+                margin-top: -2px;
+                padding-top: 0;
+                padding-bottom: 0;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                text-align: end;
+                justify-content: flex-end;
+
+                h3 {
+                    font-family: "SF Regular";
+                }
+
+                .icon {
+                    height: 20px;
+                    fill: white;
+                    margin-bottom: 1px;
+                }
+            }
+
+            .temp-container {
+                h3.high {
+                    margin-right: 6px;
+                }
+            }
+        }
+    }
+}

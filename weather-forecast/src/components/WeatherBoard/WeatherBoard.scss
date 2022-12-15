@@ -4,5 +4,12 @@ h3 {
 }
 
 .weather-board {
-    padding-top: 14px;
+    padding: 17px 22px 17px 22px;
+    width: 100%;
+
+    .daily {
+        padding: 12px 13px;
+        border-radius: 34px;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
 }

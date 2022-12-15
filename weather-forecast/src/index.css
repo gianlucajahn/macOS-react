@@ -32,3 +32,9 @@ code {
   font-family: 'SF Semibold';
   src: local("sfsemibold"), url(./resources/fonts/sfsemibold.otf) format('opentype');
 }
+
+@font-face {
+  font-family: 'SF Light';
+  src: local("sflight"), url(./resources/fonts/sflight.otf) format('opentype');
+}
+
