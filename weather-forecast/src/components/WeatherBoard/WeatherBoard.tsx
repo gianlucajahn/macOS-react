@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react';
 import { store } from '../../App';
 import './WeatherBoard.scss';
-import positionWork from '../../utils/keys/helpers/positionWork';
+import positionWork from '../../utils/helpers/positionWork';
 
 export default function WeatherBoard () {
   const [state, dispatch] = useContext(store)
@@ -18,8 +18,8 @@ export default function WeatherBoard () {
 
   return (
     <div className="weather-board">
-        <h3>Data was last fetched for: {state.weather.current.name}</h3>
-        <h3>Current query: {state.query}</h3>
+        <h3>Data was last fetched for: {state.weather.current.town}, {state.weather.current.country}</h3>
+        <h3>Current query: {state.query}, {state.weather.current.country}</h3>
     </div>
   );
 }

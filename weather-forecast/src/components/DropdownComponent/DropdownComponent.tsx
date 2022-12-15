@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import getDropdownContent from '../../utils/keys/helpers/getDropdownContent';
+import getDropdownContent from '../../utils/helpers/getDropdownContent';
 import { store } from '../../App';
 import './DropdownComponent.scss';
 

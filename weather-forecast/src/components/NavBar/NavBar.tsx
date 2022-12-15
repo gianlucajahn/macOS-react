@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import { store } from '../../App';
 import './NavBar.scss';
 import { ReactComponent as Settings} from "../../resources/images/svg/settings.svg";
-import getDate from '../../utils/keys/helpers/getDate';
+import getDate from '../../utils/helpers/getDate';
 import DropdownComponent from '../DropdownComponent/DropdownComponent';
 
 export default function () {

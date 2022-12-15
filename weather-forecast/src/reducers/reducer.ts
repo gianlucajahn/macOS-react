@@ -1,8 +1,8 @@
-import getPosition from "../utils/keys/helpers/getPosition";
+import getPosition from "../utils/helpers/getPosition";
 import { AnyAction } from "@reduxjs/toolkit";
 import apiKey from "../utils/keys/key";
 import sampleStore from "../utils/keys/samples/sampleStore";
-import getDate from "../utils/keys/helpers/getDate";
+import getDate from "../utils/helpers/getDate";
 
 const reducer = (state = sampleStore, action: AnyAction) => {
   switch(action.type) {

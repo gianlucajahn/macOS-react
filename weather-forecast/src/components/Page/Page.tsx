@@ -1,6 +1,6 @@
 import React, { Children, useContext, MouseEvent } from 'react';
 import { store } from '../../App';
-import checkDropdown from '../../utils/keys/helpers/checkDropdown';
+import checkDropdown from '../../utils/helpers/checkDropdown';
 import './Page.scss';
 
 export default function Page ({children}: any) {

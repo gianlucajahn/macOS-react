@@ -1,7 +1,7 @@
 import React, { MouseEvent, useContext } from 'react';
 import { store } from '../../App';
-import identifyDockItem from '../../utils/keys/helpers/identifyDockItem';
-import openWeatherApp from '../../utils/keys/helpers/openWeatherApp';
+import identifyDockItem from '../../utils/helpers/identifyDockItem';
+import openWeatherApp from '../../utils/helpers/openWeatherApp';
 import './Dock.scss';
 
 export default function Dock () {

@@ -6,8 +6,8 @@ import { ReactComponent as Close } from '../../resources/images/svg/close.svg';
 import { ReactComponent as Minimize } from '../../resources/images/svg/minimize.svg';
 import { ReactComponent as Stretch } from '../../resources/images/svg/stretch.svg';
 import "./QueryBoardLinks.scss";
-import toggleVisibility from '../../utils/keys/helpers/toggleVisibility';
-import toggleMinimize from '../../utils/keys/helpers/toggleMinimize';
+import toggleVisibility from '../../utils/helpers/toggleVisibility';
+import toggleMinimize from '../../utils/helpers/toggleMinimize';
 
 export default function QueryBoardLinks () {
   return (

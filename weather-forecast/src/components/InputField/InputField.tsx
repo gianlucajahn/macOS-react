@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { store } from '../../App';
-import inputWork from '../../utils/keys/helpers/inputWork';
+import inputWork from '../../utils/helpers/inputWork';
 import { ReactComponent as Lock } from "../../resources/images/svg/lock.svg";
 import { ReactComponent as Search } from "../../resources/images/svg/search.svg";
 import './InputField.scss';
