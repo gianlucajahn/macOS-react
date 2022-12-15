@@ -21,6 +21,7 @@ const positionWork = async function () {
       feelsTemp: Math.round(current.main.feels_like),
       maxTemp: Math.round(current.main.temp_max),
       minTemp: Math.round(current.main.temp_min),
+      hours: new Date(current.dt * 1000).getHours() > 12 ? new Date(current.dt * 1000).getHours() - 12 + "PM" :  new Date(current.dt * 1000).getHours() + "AM",
       humidity: current.main.humidity,
       rain: current.clouds["all"],
     };

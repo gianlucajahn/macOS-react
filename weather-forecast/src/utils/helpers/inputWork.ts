@@ -13,6 +13,7 @@ const inputWork = async function (query: string) {
       weather: current.weather[0].main,
       temp: Math.round(current.main.temp),
       feelsTemp: Math.round(current.main.feels_like),
+      hours: new Date(current.dt * 1000).getHours() > 12 ? new Date(current.dt * 1000).getHours() - 12 + "PM" :  new Date(current.dt * 1000).getHours() + "AM",
       maxTemp: Math.round(current.main.temp_max),
       minTemp: Math.round(current.main.temp_min),
       humidity: current.main.humidity,

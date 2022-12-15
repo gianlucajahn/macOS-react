@@ -24,12 +24,18 @@
                 color: white;
                 font-size: 26px;
                 font-family: "SF Bold";
-                cursor: pointer;
+                cursor: url("../../resources/images/pointing.png"), auto;
             }
     
             .location {
                 height: 22px;
                 cursor: pointer;
+                transition: 0.25s all;
+                cursor: url("../../resources/images/pointing.png"), auto;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
             }
         }
 
@@ -40,6 +46,12 @@
                 height: 36px;
                 width: 36px;
                 fill: white;
+                transition: 0.25s all;
+                cursor: url("../../resources/images/pointing.png"), auto;
+
+                &:hover {
+                    transform: scale(1.03);
+                }
             }
         }
     }

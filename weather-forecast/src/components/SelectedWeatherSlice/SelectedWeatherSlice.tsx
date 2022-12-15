@@ -6,6 +6,7 @@ import Search from "../../resources/images/svg/search.svg";
 import { ReactComponent as Location } from "../../resources/images/svg/location.svg";
 import { ReactComponent as Ash } from "../../resources/images/svg/weather/Ash.svg";
 import { ReactComponent as Clear } from "../../resources/images/svg/weather/Clear.svg";
+import { ReactComponent as ClearNight } from "../../resources/images/svg/weather/Clear_night.svg";
 import { ReactComponent as Clouds } from "../../resources/images/svg/weather/Clouds.svg";
 import { ReactComponent as Drizzle } from "../../resources/images/svg/weather/Drizzle.svg";
 import { ReactComponent as Dust } from "../../resources/images/svg/weather/Dust.svg";
@@ -24,6 +25,7 @@ import { ReactComponent as Wind } from "../../resources/images/svg/weather/wind.
 import { ReactComponent as Highest } from "../../resources/images/svg/weather/highest.svg";
 import { ReactComponent as Lowest } from "../../resources/images/svg/weather/lowest.svg";
 import { ReactComponent as Raindrops } from "../../resources/images/svg/weather/raindrops.svg";
+import nightTimes from '../../utils/helpers/nightTimes';
  
 export default function SelectedWeatherSlice () {
   const [state, dispatch] = useContext(store);
@@ -31,6 +33,9 @@ export default function SelectedWeatherSlice () {
   const returnCurrentCon = (weather: string) => {
     switch (weather) {
         case 'Clear':
+            if (nightTimes.includes(state.weather.current.hours)) {
+                return <ClearNight />
+            }
             return <Clear />;
         case 'Clouds':
             return <Clouds />;

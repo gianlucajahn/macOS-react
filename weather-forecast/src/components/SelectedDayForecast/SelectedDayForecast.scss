@@ -12,6 +12,7 @@
         display: flex;
         justify-content: center;
         gap: 16px;
+        overflow: hidden;
 
         .interval-container {
             display: flex;
@@ -20,6 +21,11 @@
             justify-content: center;
             align-items: center;
             gap: 8px;
+            transition: 0.25s all;
+
+            &:hover {
+                transform: scale(1.05);
+            }
 
             .time {
                 font-family: "SF Semibold";

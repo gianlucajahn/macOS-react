@@ -4,6 +4,7 @@ import './SelectedDayForecast.scss';
 // SVG Imports
 import { ReactComponent as Ash } from "../../resources/images/svg/weather/Ash.svg";
 import { ReactComponent as Clear } from "../../resources/images/svg/weather/Clear.svg";
+import { ReactComponent as ClearNight } from "../../resources/images/svg/weather/Clear_night.svg";
 import { ReactComponent as Clouds } from "../../resources/images/svg/weather/Clouds.svg";
 import { ReactComponent as Drizzle } from "../../resources/images/svg/weather/Drizzle.svg";
 import { ReactComponent as Dust } from "../../resources/images/svg/weather/Dust.svg";
@@ -17,13 +18,17 @@ import { ReactComponent as Snow } from "../../resources/images/svg/weather/Snow.
 import { ReactComponent as Squall } from "../../resources/images/svg/weather/Squall.svg";
 import { ReactComponent as Thunderstorm } from "../../resources/images/svg/weather/Thunderstorm.svg";
 import { ReactComponent as Tornado } from "../../resources/images/svg/weather/Tornado.svg";
+import nightTimes from '../../utils/helpers/nightTimes';
 
 export default function SelectedDayForecast () {
   const [state, dispatch] = useContext(store);
 
-  const returnCurrentCon = (weather: string) => {
+  const returnCurrentCon = (weather: string, i: number) => {
     switch (weather) {
         case 'Clear':
+            if (nightTimes.includes(state.weather.forecast[0][i].hours)) {
+                return <ClearNight />
+            }
             return <Clear />;
         case 'Clouds':
             return <Clouds />;
@@ -66,7 +71,7 @@ export default function SelectedDayForecast () {
                 <h3 className="time">{interval.hours}</h3>
 
                 <div className="current-con">
-                    {returnCurrentCon(interval.weather)}
+                    {returnCurrentCon(interval.weather, i)}
                 </div>
 
                 <h3 className="temp">{interval.temp}°</h3>
