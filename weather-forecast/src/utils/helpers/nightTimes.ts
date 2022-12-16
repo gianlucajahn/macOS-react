@@ -1,4 +1,4 @@
-const nightTimes = [
+const nightTimes: string[] = [
     "10PM",
     "1AM",
     "4AM",

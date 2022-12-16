@@ -18,9 +18,10 @@ import { ReactComponent as Snow } from "../../resources/images/svg/weather/Snow.
 import { ReactComponent as Squall } from "../../resources/images/svg/weather/Squall.svg";
 import { ReactComponent as Thunderstorm } from "../../resources/images/svg/weather/Thunderstorm.svg";
 import { ReactComponent as Tornado } from "../../resources/images/svg/weather/Tornado.svg";
+import sortedIntervalType from '../../types/sortedInterval';
 
 export interface DailyConProps {
-    day: any;
+    day: sortedIntervalType[]
 }
 
 export default function DailyCon (props: DailyConProps) {
@@ -59,9 +60,9 @@ export default function DailyCon (props: DailyConProps) {
     return result;
   }
 
-  const determineDailyCon = (day: any) => {
+  const determineDailyCon = (day: sortedIntervalType[]) => {
     const conditions: string[] = [];
-    day.map((interval: any, i: number ) => {
+    day.map((interval: sortedIntervalType, i: number ) => {
         conditions.push(interval.weather);
     })
 

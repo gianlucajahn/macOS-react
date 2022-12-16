@@ -2,9 +2,10 @@ import React, { useContext } from 'react';
 import './DailyTemps.scss';
 import { ReactComponent as Highest } from "../../resources/images/svg/weather/highest.svg";
 import { ReactComponent as Lowest } from "../../resources/images/svg/weather/lowest.svg";
+import sortedIntervalType from '../../types/sortedInterval';
 
 export interface DailyTempsProps {
-    day: any
+    day: sortedIntervalType[]
 }
 
 export default function DailyTemps (props: DailyTempsProps) {
@@ -15,7 +16,7 @@ export default function DailyTemps (props: DailyTempsProps) {
   const determineTemps = () => {
     let lowestTemp: number = 100;
     let highestTemp: number = -100;
-    day.forEach((interval: any, i: number) => {
+    day.forEach((interval: sortedIntervalType, i: number) => {
         if (interval.minTemp < lowestTemp) {
             lowestTemp = interval.minTemp;
         }

@@ -1,4 +1,5 @@
 import intervalType from "../../types/intervalType";
+import sortedIntervalType from "../../types/sortedInterval";
 import apiKey from "../keys/key";
 
 const inputWork = async function (query: string) {
@@ -39,7 +40,7 @@ const inputWork = async function (query: string) {
 
     // create (unordered) cleaned up forecastArray with exclusively noteworthy informations
     // based on forecast array from the response object
-    let forecastArray: any = [];
+    let forecastArray: sortedIntervalType[] = [];
     forecast.list.forEach((interval: intervalType, i: number) => {
       const newIntervalObject = {
         wind: interval.wind.speed,
@@ -60,7 +61,7 @@ const inputWork = async function (query: string) {
     });
 
     // declare variable to save forecast objects in, sorted after days
-    const daysArray: any = [];
+    const daysArray: sortedIntervalType[] = [];
 
     // populate sorted forecast array with values from cleaned forecast array
     let previousDayName = forecastArray[0].dateName;
@@ -68,13 +69,13 @@ const inputWork = async function (query: string) {
     for (const interval of forecastArray) {
 
       if (daysArray.length === 0) {
-        todaysIntervals = forecastArray.filter((element: any) => element.dateName === previousDayName);
+        todaysIntervals = forecastArray.filter((element: sortedIntervalType) => element.dateName === previousDayName);
         daysArray.push(todaysIntervals);
       }
 
       if (interval.dateName !== previousDayName) {
         previousDayName = interval.dateName
-        todaysIntervals = forecastArray.filter((element: any) => element.dateName === previousDayName);
+        todaysIntervals = forecastArray.filter((element: sortedIntervalType) => element.dateName === previousDayName);
         daysArray.push(todaysIntervals);
       }
     };
