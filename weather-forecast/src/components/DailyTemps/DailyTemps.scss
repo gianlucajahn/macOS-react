@@ -1,0 +1,36 @@
+.daily-temps {
+    display: flex;
+    gap: 20px;
+
+    div {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+
+        h3 {
+            position: absolute;
+        }
+
+        .highest-h3 {
+            right: 68px;
+        }
+
+        .lowest-h3 {
+            right: 146px;
+        }
+
+        .icon {
+            fill: white;
+            height: 17px;
+            position: absolute;
+        }
+
+        .highest-icon {
+            right: 108px;
+        }
+
+        .lowest-icon {
+            right: 187px;
+        }
+    }
+}

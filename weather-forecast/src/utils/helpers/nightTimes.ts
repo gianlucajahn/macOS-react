@@ -5,7 +5,8 @@ const nightTimes = [
     "11PM",
     "9PM",
     "2AM",
-    "3AM"
+    "3AM",
+    "0AM"
 ];
 
 export default nightTimes;

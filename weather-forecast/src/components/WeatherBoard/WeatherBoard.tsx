@@ -4,6 +4,7 @@ import './WeatherBoard.scss';
 import positionWork from '../../utils/helpers/positionWork';
 import SelectedWeatherSlice from '../SelectedWeatherSlice/SelectedWeatherSlice';
 import SelectedDayForecast from '../SelectedDayForecast/SelectedDayForecast';
+import ForecastList from '../ForecastList/ForecastList';
 
 export default function WeatherBoard () {
   const [state, dispatch] = useContext(store)
@@ -24,6 +25,8 @@ export default function WeatherBoard () {
         <SelectedWeatherSlice />
         <SelectedDayForecast />
       </div>
+
+      <ForecastList />
     </div>
   );
 }

@@ -1,5 +1,27 @@
 .forecast-list {
-    padding: 6px 12px;
+    margin-top: 10px;
+    padding: 12px 12px;
+    border-radius: 34px;
+    background-color: rgba(0, 0, 0, 0.3);
 
-    
+    .weekly {
+        padding: 14px 32px 17px 32px;
+        border: none;
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        background: rgb(52,59,87);
+        background: linear-gradient(0deg, rgba(52,59,87,1) 0%, rgba(27,32,54,1) 100%);
+    }
+
+    .day-container {
+        display: flex;
+        justify-content: space-between;
+
+        h3 {
+            color: white;
+            font-family: "SF Medium";
+        }
+    }
 }

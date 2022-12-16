@@ -82,7 +82,10 @@ export default function SelectedWeatherSlice () {
         </nav>
 
         <div className="details">
-            <h1>{state.weather.current.temp}°</h1>  
+            <div className="temps">
+                <h3>{state.date[1]}</h3>
+                <h1>{state.weather.current.temp}°</h1>  
+            </div>
 
             <div className="data">
                 <h3 className="con">{state.weather.current.weather}</h3>
