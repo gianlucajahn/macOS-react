@@ -1,127 +1,131 @@
 .selected-weather-slice {
-    width: inherit;
-    border: none;
-    border-radius: 26px;
-    background: rgb(18,22,47);
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    background: rgb(18,22,47);
-    background: linear-gradient(0deg, rgba(18,22,47,1) 0%, rgba(0,5,34,1) 100%);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45);
-    padding: 22px 34px 26px 34px;
-    transition: 0.25s all;
+  width: inherit;
+  border: none;
+  border-radius: 26px;
+  background: rgb(18, 22, 47);
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background: rgb(18, 22, 47);
+  background: linear-gradient(
+    0deg,
+    rgba(18, 22, 47, 1) 0%,
+    rgba(0, 5, 34, 1) 100%
+  );
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.45);
+  padding: 22px 34px 26px 34px;
+  transition: 0.25s all;
 
-    .top {
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
+  .top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 
-        .location-container {
-            display: flex;
-            gap: 12px;
-            align-items: center;
+    .location-container {
+      display: flex;
+      gap: 12px;
+      align-items: center;
 
-            h3 {
-                color: white;
-                font-size: 26px;
-                font-family: "SF Bold";
-                cursor: url("../../resources/images/pointing.png"), auto;
-            }
-    
-            .location {
-                height: 22px;
-                cursor: pointer;
-                transition: 0.25s all;
-                cursor: url("../../resources/images/pointing.png"), auto;
+      h3 {
+        color: white;
+        font-size: 26px;
+        font-family: "SF Bold";
+        cursor: url("../../resources/images/pointing.png"), auto;
+      }
 
-                &:hover {
-                    transform: scale(1.05);
-                }
-            }
+      .location {
+        height: 22px;
+        cursor: pointer;
+        transition: 0.25s all;
+        cursor: url("../../resources/images/pointing.png"), auto;
+
+        &:hover {
+          transform: scale(1.05);
         }
-
-        .current-con {
-            padding-top: 2px;
-
-            * {
-                height: 36px;
-                width: 36px;
-                fill: white;
-                transition: 0.25s all;
-                cursor: url("../../resources/images/pointing.png"), auto;
-
-                &:hover {
-                    transform: scale(1.03);
-                }
-            }
-        }
+      }
     }
 
-    .details {
-        display: flex;
-        justify-content: space-between;
+    .current-con {
+      padding-top: 2px;
 
-        h1 {
-            color: white;
-            font-size: 72px;
-            font-family: "SF Light";
-            margin-top: -22px;
+      * {
+        height: 36px;
+        width: 36px;
+        fill: white;
+        transition: 0.25s all;
+        cursor: url("../../resources/images/pointing.png"), auto;
+
+        &:hover {
+          transform: scale(1.03);
         }
-
-        .data {
-            margin-top: 12px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            text-align: end;
-
-            h3 {
-                color: white;
-                font-size: 17px;
-                font-family: "SF Medium";
-            }
-
-            .con {
-                margin-bottom: 4px;
-                font-size: 21px;
-            }
-
-            .humidity-container,
-            .rain-container,
-            .temp-container {
-                margin-top: -2px;
-                padding-top: 0;
-                padding-bottom: 0;
-                display: flex;
-                align-items: center;
-                gap: 4px;
-                text-align: end;
-                justify-content: flex-end;
-
-                h3 {
-                    font-family: "SF Regular";
-                }
-
-                .icon {
-                    height: 20px;
-                    fill: white;
-                    margin-bottom: 1px;
-                }
-            }
-
-            .temp-container {
-                h3.high {
-                    margin-right: 6px;
-                }
-            }
-        }
+      }
     }
+  }
+
+  .details {
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+      color: white;
+      font-size: 72px;
+      font-family: "SF Light";
+      margin-top: -22px;
+    }
+
+    .data {
+      margin-top: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      text-align: end;
+
+      h3 {
+        color: white;
+        font-size: 17px;
+        font-family: "SF Medium";
+      }
+
+      .con {
+        margin-bottom: 4px;
+        font-size: 21px;
+      }
+
+      .humidity-container,
+      .rain-container,
+      .temp-container {
+        margin-top: -2px;
+        padding-top: 0;
+        padding-bottom: 0;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        text-align: end;
+        justify-content: flex-end;
+
+        h3 {
+          font-family: "SF Regular";
+        }
+
+        .icon {
+          height: 20px;
+          fill: white;
+          margin-bottom: 1px;
+        }
+      }
+
+      .temp-container {
+        h3.high {
+          margin-right: 6px;
+        }
+      }
+    }
+  }
 }
 
 .temps {
-    h3 {
-        font-family: "SF Light";
-        margin-top: -2px;
-        margin-bottom: 4px;
-    }
+  h3 {
+    font-family: "SF Light";
+    margin-top: -2px;
+    margin-bottom: 4px;
+  }
 }

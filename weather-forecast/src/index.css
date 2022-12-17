@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -9,32 +9,33 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 @font-face {
-  font-family: 'SF Regular';
-  src: local("sfregular"), url(./resources/fonts/sfregular.otf) format('opentype');
+  font-family: "SF Regular";
+  src: local("sfregular"),
+    url(./resources/fonts/sfregular.otf) format("opentype");
 }
 
 @font-face {
-  font-family: 'SF Medium';
-  src: local("sfmedium"), url(./resources/fonts/sfmedium.otf) format('opentype');
+  font-family: "SF Medium";
+  src: local("sfmedium"), url(./resources/fonts/sfmedium.otf) format("opentype");
 }
 
 @font-face {
-  font-family: 'SF Bold';
-  src: local("sfbold"), url(./resources/fonts/sfbold.otf) format('opentype');
+  font-family: "SF Bold";
+  src: local("sfbold"), url(./resources/fonts/sfbold.otf) format("opentype");
 }
 
 @font-face {
-  font-family: 'SF Semibold';
-  src: local("sfsemibold"), url(./resources/fonts/sfsemibold.otf) format('opentype');
+  font-family: "SF Semibold";
+  src: local("sfsemibold"),
+    url(./resources/fonts/sfsemibold.otf) format("opentype");
 }
 
 @font-face {
-  font-family: 'SF Light';
-  src: local("sflight"), url(./resources/fonts/sflight.otf) format('opentype');
+  font-family: "SF Light";
+  src: local("sflight"), url(./resources/fonts/sflight.otf) format("opentype");
 }
-

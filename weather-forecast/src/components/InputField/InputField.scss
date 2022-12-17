@@ -1,67 +1,71 @@
 .input-container {
-    position: relative;
+  position: relative;
 
-    .search,
-    .lock,
-    .refresh {
-        position: absolute;
+  .search,
+  .lock,
+  .refresh {
+    position: absolute;
+  }
+
+  .search {
+    fill: #969696;
+    height: 17px;
+    left: 7.6em;
+    top: 0.3em;
+    cursor: url("../../resources/images/cursor.png"), auto;
+  }
+
+  .lock {
+    fill: white;
+    height: 15px;
+    left: 8.6em;
+    top: 0.35em;
+    cursor: url("../../resources/images/cursor.png"), auto;
+  }
+
+  .refresh {
+    height: 13px;
+    right: 0.4em;
+    top: 0.4em;
+    cursor: url("../../resources/images/pointing.png"), auto;
+    transition: 0.2s all;
+
+    &:active {
+      transform: scale(0.935);
     }
+  }
 
-    .search {
-        fill: #969696;
-        height: 17px;
-        left: 7.6em;
-        top: 0.3em;
-        cursor: url("../../resources/images/cursor.png"), auto;
-    }
-
-    .lock {
-        fill: white;
-        height: 15px;
-        left: 8.6em;
-        top: 0.35em;
-        cursor: url("../../resources/images/cursor.png"), auto;
-    }
-
-    .refresh {
-        height: 13px;
-        right: 0.4em;
-        top: 0.4em;
-        cursor: url("../../resources/images/pointing.png"), auto;
-        transition: 0.2s all;
-
-        &:active {
-            transform: scale(0.935);
-        }
-    }
-
-    .inputField {
-        width: 351.68px;
-        padding-top: 2px;
-        margin-left: 1px;
-        border: none;
-        overflow: hidden;
-        padding-right: 2.5em;
-        padding-bottom: 1px;
-        border-radius: 4px;
-        outline: none;
-        height: 24px;
-        border-top: 1px solid #79797b;
-        background: rgb(92,92,94);
-        background: linear-gradient(360deg, rgba(92,92,94,1) 0%, rgba(97,97,99,1) 100%);
-        border-bottom: 1px solid #616163;
-        padding-left: 12.1em;
-        font-size: 13.2px;
-        font-family: "SF Medium";
-        margin-bottom: 1px;
-        letter-spacing: 0.015em;
-        color: white;
-        ::placeholder {
-            color: #969696 !important;
-        }
-    }
-
+  .inputField {
+    width: 351.68px;
+    padding-top: 2px;
+    margin-left: 1px;
+    border: none;
+    overflow: hidden;
+    padding-right: 2.5em;
+    padding-bottom: 1px;
+    border-radius: 4px;
+    outline: none;
+    height: 24px;
+    border-top: 1px solid #79797b;
+    background: rgb(92, 92, 94);
+    background: linear-gradient(
+      360deg,
+      rgba(92, 92, 94, 1) 0%,
+      rgba(97, 97, 99, 1) 100%
+    );
+    border-bottom: 1px solid #616163;
+    padding-left: 12.1em;
+    font-size: 13.2px;
+    font-family: "SF Medium";
+    margin-bottom: 1px;
+    letter-spacing: 0.015em;
+    color: white;
     ::placeholder {
-        color: #969696 !important;
+      color: #969696 !important;
     }
+  }
+
+  ::placeholder {
+    color: #969696 !important;
+  }
 }

@@ -1,6 +1,6 @@
 type weatherType = {
-    current: any;
-    forecast: any;
-}
+  current: any;
+  forecast: any;
+};
 
-export default weatherType; 
+export default weatherType;

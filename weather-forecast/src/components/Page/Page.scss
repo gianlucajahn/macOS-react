@@ -1,67 +1,70 @@
 .page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-image: url("../../resources/images/catalina.jpg");
+  background-repeat: no-repeat;
+
+  * {
+    user-select: none;
+  }
+
+  .weather-window {
+    max-height: 690px;
+    min-height: 620px;
+    width: 45.785vw;
+  }
+
+  .window {
+    border: 1px solid #3f3f47;
+    background-color: #1e1f23;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    transition: transform none;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 8px 15px #050505, 0px 12px 15px #050505,
+      0px 40px 70px #050505;
+    margin-bottom: 10.35vh;
+    opacity: 1;
+  }
+
+  .window-closed {
+    border: 1px solid #3f3f47;
+    background-color: #1e1f23;
+    border-radius: 4px;
+    transition: 0.4s all;
+    transform: scale(0.01) !important;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    background-image: url("../../resources/images/catalina.jpg");
-    background-repeat: no-repeat;
-
-    * {
-      user-select: none;
-    }
-
-    .weather-window {
-        max-height: 690px;
-        min-height: 620px;
-        width: 45.785vw;
-    }
-  
-    .window {
-      border: 1px solid #3f3f47;
-      background-color: #1e1f23;
-      border-radius: 4px;
-      box-sizing: border-box;
-      display: flex;
-      transition: transform none;
-      flex-direction: column;
-      align-items: center;
-      box-shadow: 0px 8px 15px #050505, 0px 12px 15px #050505, 0px 40px 70px #050505;
-      margin-bottom: 10.35vh;
-      opacity: 1;
-    }
-
-    .window-closed {
-        border: 1px solid #3f3f47;
-        background-color: #1e1f23;
-        border-radius: 4px;
-        transition: 0.4s all;
-        transform: scale(0.01) !important;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-shadow: 0px 8px 15px #050505, 0px 12px 15px #050505, 0px 40px 70px #050505;
-        margin-bottom: 6.5vh;
-        opacity: 0;
-    }
-
-    .window-minimized {
-        border: 1px solid #3f3f47;
-        background-color: #1e1f23;
-        border-radius: 4px;
-        transition: 0.7s all;
-        margin-top: 900px;
-        margin-left: 200px;
-        transform: scale(0.01) !important;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-shadow: 0px 8px 15px #050505, 0px 12px 15px #050505, 0px 40px 70px #050505;
-        margin-bottom: 6.5vh;
-        opacity: 0;
-    }
+    box-shadow: 0px 8px 15px #050505, 0px 12px 15px #050505,
+      0px 40px 70px #050505;
+    margin-bottom: 6.5vh;
+    opacity: 0;
   }
+
+  .window-minimized {
+    border: 1px solid #3f3f47;
+    background-color: #1e1f23;
+    border-radius: 4px;
+    transition: 0.7s all;
+    margin-top: 900px;
+    margin-left: 200px;
+    transform: scale(0.01) !important;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 8px 15px #050505, 0px 12px 15px #050505,
+      0px 40px 70px #050505;
+    margin-bottom: 6.5vh;
+    opacity: 0;
+  }
+}

@@ -1,36 +1,36 @@
 .daily-temps {
+  display: flex;
+  gap: 20px;
+
+  div {
     display: flex;
-    gap: 20px;
+    gap: 6px;
+    align-items: center;
 
-    div {
-        display: flex;
-        gap: 6px;
-        align-items: center;
-
-        h3 {
-            position: absolute;
-        }
-
-        .highest-h3 {
-            right: 4.25em;
-        }
-
-        .lowest-h3 {
-            right: 9.125em;
-        }
-
-        .icon {
-            fill: white;
-            height: 17px;
-            position: absolute;
-        }
-
-        .highest-icon {
-            right: 6.75em;
-        }
-
-        .lowest-icon {
-            right: 11.6875em;
-        }
+    h3 {
+      position: absolute;
     }
+
+    .highest-h3 {
+      right: 4.25em;
+    }
+
+    .lowest-h3 {
+      right: 9.125em;
+    }
+
+    .icon {
+      fill: white;
+      height: 17px;
+      position: absolute;
+    }
+
+    .highest-icon {
+      right: 6.75em;
+    }
+
+    .lowest-icon {
+      right: 11.6875em;
+    }
+  }
 }

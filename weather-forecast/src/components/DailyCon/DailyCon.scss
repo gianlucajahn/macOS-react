@@ -1,15 +1,15 @@
 .daily-con {
-    display: flex;
-    gap: 8px;
+  display: flex;
+  gap: 8px;
 
-    h3 {
-        position: absolute !important;
-        left: 415px !important;
-    }
+  h3 {
+    position: absolute !important;
+    left: 415px !important;
+  }
 
-    * {
-        position: absolute;
-        left: 365px;
-        height: 24px;
-    }
+  * {
+    position: absolute;
+    left: 365px;
+    height: 24px;
+  }
 }

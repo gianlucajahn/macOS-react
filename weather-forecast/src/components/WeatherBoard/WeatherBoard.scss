@@ -1,16 +1,16 @@
 h3 {
-    color: white;
-    font-family: Helvetica, sans-serif;
+  color: white;
+  font-family: Helvetica, sans-serif;
 }
 
 .weather-board {
-    padding: 17px 22px 17px 22px;
-    width: 100%;
-    overflow: hidden;
+  padding: 17px 22px 17px 22px;
+  width: 100%;
+  overflow: hidden;
 
-    .daily {
-        padding: 12px 13px;
-        border-radius: 34px;
-        background-color: rgba(0, 0, 0, 0.3);
-    }
+  .daily {
+    padding: 12px 13px;
+    border-radius: 34px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 }

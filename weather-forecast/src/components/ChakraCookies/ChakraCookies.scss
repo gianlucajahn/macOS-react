@@ -1,38 +1,38 @@
 .cookies-btn {
-    margin-left: 10em;
-    width: 41px !important;
-    position: relative;
-    transition: 0.25s all;
+  margin-left: 10em;
+  width: 41px !important;
+  position: relative;
+  transition: 0.25s all;
 
-    .cookies {
-        height: 17px;
-        margin-bottom: 2px;
-    }
+  .cookies {
+    height: 17px;
+    margin-bottom: 2px;
+  }
 }
 
 .tooltip {
-    visibility: hidden;
-    opacity: 0;
-    width: 100px;
-    top: -42px;
-    backdrop-filter: blur(50px);
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    text-align: center;
-    padding: 3px 7px;
-    font-family: "SF Regular";
-    font-size: 14px;
-    transition: 0.3s all ease-in-out;
-    border: 1px solid #ccc;
-    box-shadow: 0px 0px 5px black;
-    border-radius: 6px;
+  visibility: hidden;
+  opacity: 0;
+  width: 100px;
+  top: -42px;
+  backdrop-filter: blur(50px);
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  padding: 3px 7px;
+  font-family: "SF Regular";
+  font-size: 14px;
+  transition: 0.3s all ease-in-out;
+  border: 1px solid #ccc;
+  box-shadow: 0px 0px 5px black;
+  border-radius: 6px;
 
-    position: absolute;
-    z-index: 1;
+  position: absolute;
+  z-index: 1;
 }
 
 .cookies-btn:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
-    top: -50px;
-  }
+  visibility: visible;
+  opacity: 1;
+  top: -50px;
+}

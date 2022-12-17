@@ -1,6 +1,6 @@
-import React, { useContext } from 'react';
-import { store } from '../../App';
-import './SelectedWeatherSlice.scss';
+import React, { useContext } from "react";
+import { store } from "../../App";
+import "./SelectedWeatherSlice.scss";
 // SVG Imports
 import Search from "../../resources/images/svg/search.svg";
 import { ReactComponent as Location } from "../../resources/images/svg/location.svg";
@@ -25,88 +25,90 @@ import { ReactComponent as Wind } from "../../resources/images/svg/weather/wind.
 import { ReactComponent as Highest } from "../../resources/images/svg/weather/highest.svg";
 import { ReactComponent as Lowest } from "../../resources/images/svg/weather/lowest.svg";
 import { ReactComponent as Raindrops } from "../../resources/images/svg/weather/raindrops.svg";
-import nightTimes from '../../utils/helpers/nightTimes';
- 
-export default function SelectedWeatherSlice () {
+import nightTimes from "../../utils/helpers/nightTimes";
+
+export default function SelectedWeatherSlice() {
   const [state, dispatch] = useContext(store);
 
   const returnCurrentCon = (weather: string) => {
     switch (weather) {
-        case 'Clear':
-            if (nightTimes.includes(state.weather.current.hours)) {
-                return <ClearNight />
-            }
-            return <Clear />;
-        case 'Clouds':
-            return <Clouds />;
-        case 'Ash':
-            return <Ash />;
-        case 'Drizzle':
-            return <Drizzle />;
-        case 'Dust':
-            return <Dust />;
-        case 'Fog':
-            return <Fog />;
-        case 'Snow':
-            return <Snow />;
-        case 'Haze':
-            return <Haze />;
-        case 'Mist':
-            return <Mist />;
-        case 'Rain':
-            return <Rain />;
-        case 'Sand':
-            return <Sand />;
-        case 'Smoke':
-            return <Smoke />;
-        case 'Squall':
-            return <Squall />;
-        case 'Thunderstorm':
-            return <Thunderstorm />;
-        case 'Tornado':
-            return <Tornado />;
-      }
-  }
+      case "Clear":
+        if (nightTimes.includes(state.weather.current.hours)) {
+          return <ClearNight />;
+        }
+        return <Clear />;
+      case "Clouds":
+        return <Clouds />;
+      case "Ash":
+        return <Ash />;
+      case "Drizzle":
+        return <Drizzle />;
+      case "Dust":
+        return <Dust />;
+      case "Fog":
+        return <Fog />;
+      case "Snow":
+        return <Snow />;
+      case "Haze":
+        return <Haze />;
+      case "Mist":
+        return <Mist />;
+      case "Rain":
+        return <Rain />;
+      case "Sand":
+        return <Sand />;
+      case "Smoke":
+        return <Smoke />;
+      case "Squall":
+        return <Squall />;
+      case "Thunderstorm":
+        return <Thunderstorm />;
+      case "Tornado":
+        return <Tornado />;
+    }
+  };
 
   return (
     <div className="selected-weather-slice">
-        <nav className='top'>
-            <div className="location-container">
-              <h3>{state.weather.current.town}, {state.weather.current.country}</h3>
-              <Location className="location" fill="white" />
-            </div>
-
-            <div className="current-con">
-                {returnCurrentCon(state.weather.current.weather)}
-            </div>
-        </nav>
-
-        <div className="details">
-            <div className="temps">
-                <h3>{state.date[1]}</h3>
-                <h1>{state.weather.current.temp}°</h1>  
-            </div>
-
-            <div className="data">
-                <h3 className="con">{state.weather.current.weather}</h3>
-                
-                <div className="humidity-container">
-                    <h3>Humidity: {state.weather.current.humidity}%</h3>
-                </div>
-
-                <div className="rain-container">
-                    <h3>Rain Probability: {state.weather.current.rain}%</h3>
-                </div>
-
-                <div className="temp-container">
-                    <Highest className="highest-icon icon" />
-                    <h3 className="high">{state.weather.current.maxTemp}°</h3>
-
-                    <Lowest className="lowest-icon icon" />
-                    <h3>{state.weather.current.minTemp}°</h3>
-                </div>
-            </div>
+      <nav className="top">
+        <div className="location-container">
+          <h3>
+            {state.weather.current.town}, {state.weather.current.country}
+          </h3>
+          <Location className="location" fill="white" />
         </div>
+
+        <div className="current-con">
+          {returnCurrentCon(state.weather.current.weather)}
+        </div>
+      </nav>
+
+      <div className="details">
+        <div className="temps">
+          <h3>{state.date[1]}</h3>
+          <h1>{state.weather.current.temp}°</h1>
+        </div>
+
+        <div className="data">
+          <h3 className="con">{state.weather.current.weather}</h3>
+
+          <div className="humidity-container">
+            <h3>Humidity: {state.weather.current.humidity}%</h3>
+          </div>
+
+          <div className="rain-container">
+            <h3>Rain Probability: {state.weather.current.rain}%</h3>
+          </div>
+
+          <div className="temp-container">
+            <Highest className="highest-icon icon" />
+            <h3 className="high">{state.weather.current.maxTemp}°</h3>
+
+            <Lowest className="lowest-icon icon" />
+            <h3>{state.weather.current.minTemp}°</h3>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
