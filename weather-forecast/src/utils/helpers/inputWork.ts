@@ -14,7 +14,8 @@ const inputWork = async function (query: string) {
     return;
   }
 
-  if (current.cod === "404") {
+  console.log(current);
+  if (current.cod === "404" || current.cod === "400") {
     const newWeather = {
       current: undefined,
       forecast: undefined

@@ -15,14 +15,26 @@ export default function InputField() {
       <img
         className="refresh"
         src={require("../../resources/images/refresh.png")}
-        onClick={(e) =>
-          inputWork(state.query).then((weather) => {
-            dispatch({
-              type: "query/SUBMIT",
-              payload: weather,
-            });
+        onClick={(e) => {
+          dispatch({
+            type: 'loading/START'
           })
-        }
+
+          try {
+            setTimeout(() => {
+              inputWork(state.query).then((weather) => {
+                dispatch({
+                  type: "query/SUBMIT",
+                  payload: weather,
+                });
+              });
+            }, 750)
+          } catch {
+            dispatch({
+              type: 'query/FAIL'
+            })
+          }
+        }}
       />
 
       <input
