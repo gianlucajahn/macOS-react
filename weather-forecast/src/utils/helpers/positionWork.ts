@@ -4,7 +4,19 @@ import intervalType from "../../types/intervalType";
 import sortedIntervalType from "../../types/sortedInterval";
 
 const positionWork = async function () {
-    const position: any = await getPosition();
+    let position: any;
+    try {
+      position = await getPosition();
+    } catch {
+      position = {
+        coords: {
+          latitude: 51.2217,
+          longitude: 6.7762
+        }
+      }
+    }
+
+    console.log("hallo")
     // save latitude and longitude in variables
     const lat = position.coords.latitude;
     const lon = position.coords.longitude;

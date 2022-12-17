@@ -22,6 +22,7 @@ const inputWork = async function (query: string) {
     };
 
     let location = [current.coord.lat.toString(), current.coord.lon.toString()];
+    console.log(location);
     // fetch 5 day forecast data for selected city and save it in forecastData state
     const forecastResponse = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${location[0]}&lon=${location[1]}&appid=${apiKey}&units=metric`);
     const forecast = await forecastResponse.json();

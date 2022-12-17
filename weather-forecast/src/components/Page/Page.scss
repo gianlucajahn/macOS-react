@@ -14,7 +14,8 @@
     }
 
     .weather-window {
-        height: 71.6vh;
+        max-height: 690px;
+        min-height: 620px;
         width: 45.785vw;
     }
   
