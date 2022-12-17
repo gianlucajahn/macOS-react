@@ -1,3 +1,13 @@
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 .selected-weather-slice {
   width: inherit;
   border: none;
@@ -19,11 +29,16 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+    animation: 0.4s ease-out 0s 1 appear;
 
     .location-container {
       display: flex;
       gap: 12px;
       align-items: center;
+
+      .text {
+        animation: 0.4s ease-out 0s 1 appear;
+      }
 
       h3 {
         color: white;
@@ -64,6 +79,7 @@
   .details {
     display: flex;
     justify-content: space-between;
+    animation: 0.4s ease-out 0s 1 appear;
 
     h1 {
       color: white;
@@ -78,6 +94,7 @@
       flex-direction: column;
       justify-content: flex-end;
       text-align: end;
+      animation: 0.4s ease-out 0s 1 appear;
 
       h3 {
         color: white;
@@ -127,5 +144,10 @@
     font-family: "SF Light";
     margin-top: -2px;
     margin-bottom: 4px;
+    animation: 0.4s ease-out 0s 1 appear;
+  }
+
+  h1 {
+    animation: 0.4s ease-out 0s 1 appear;
   }
 }

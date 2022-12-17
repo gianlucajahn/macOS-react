@@ -10,7 +10,6 @@ export default function ForecastList() {
 
   const selectDay = (e: React.MouseEvent) => {
     const target = e.target as HTMLElement;
-    console.log("in select day function")
 
     dispatch({
       type: 'select/SELECT',
@@ -26,7 +25,7 @@ export default function ForecastList() {
               (dayArray: sortedIntervalType[], i: number) => {
                 return (
                   <div className="day-container" id={`${i}`} onClick={selectDay}>
-                    <h3>{dayArray[0].dateName}</h3>
+                    <h3 className="day">{dayArray[0].dateName}</h3>
                     <DailyCon day={dayArray} />
                     <DailyTemps day={dayArray} />
                   </div>

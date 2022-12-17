@@ -72,7 +72,7 @@ export default function SelectedWeatherSlice() {
     <div className="selected-weather-slice">
       <nav className="top">
         <div className="location-container">
-          <h3>
+          <h3 className="text">
             {state.weather.current.town}, {state.weather.current.country}
           </h3>
           <Location className="location" fill="white" />

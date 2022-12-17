@@ -63,7 +63,7 @@ export default function SelectedDayForecast() {
 
   return (
     <div className="selected-day-forecast">
-      <section className="intervals">
+      <section className="intervals" id="intervals">
         {state.selected ? 
             state.selected.map((interval: any, i: number) => {
               return (
