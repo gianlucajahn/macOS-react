@@ -40,12 +40,24 @@ export default function InputField() {
         }
         onKeyUp={(e) => {
           if (e.key === "Enter") {
-            inputWork(state.query).then((weather) => {
-              dispatch({
-                type: "query/SUBMIT",
-                payload: weather,
-              });
+            dispatch({
+              type: 'loading/START'
             });
+
+            try {
+              setTimeout(() => {
+                inputWork(state.query).then((weather) => {
+                  dispatch({
+                    type: "query/SUBMIT",
+                    payload: weather,
+                  });
+                });
+              }, 750)
+            } catch {
+              dispatch({
+                type: 'query/FAIL'
+              })
+            }
           }
         }}
       />

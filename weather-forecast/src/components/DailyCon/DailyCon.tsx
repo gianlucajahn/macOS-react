@@ -30,7 +30,7 @@ export default function DailyCon(props: DailyConProps) {
 
   // determine weather condition with highest occurence within
   // the day array
-  const determineDailyConString = (day: any) => {
+  const determineDailyConString = (day: sortedIntervalType[]) => {
     const conditions: string[] = [];
     day.map((interval: any, i: number) => {
       conditions.push(interval.weather);

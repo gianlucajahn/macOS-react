@@ -33,7 +33,7 @@ export default function SelectedWeatherSlice() {
   const returnCurrentCon = (weather: string) => {
     switch (weather) {
       case "Clear":
-        if (nightTimes.includes(state.weather.current.hours)) {
+        if (nightTimes.includes(state.selected ? state.selected[0].hours : state.weather.current.hours)) {
           return <ClearNight />;
         }
         return <Clear />;
@@ -79,33 +79,33 @@ export default function SelectedWeatherSlice() {
         </div>
 
         <div className="current-con">
-          {returnCurrentCon(state.weather.current.weather)}
+          {returnCurrentCon(state.selected ? state.selected[0].weather : state.weather.current.weather)}
         </div>
       </nav>
 
       <div className="details">
         <div className="temps">
           <h3>{state.date[1]}</h3>
-          <h1>{state.weather.current.temp}°</h1>
+          <h1>{state.selected ? state.selected[0].temp : state.weather.current.temp}°</h1>
         </div>
 
         <div className="data">
-          <h3 className="con">{state.weather.current.weather}</h3>
+          <h3 className="con">{state.selected ? state.selected[0].weather : state.weather.current.weather}</h3>
 
           <div className="humidity-container">
-            <h3>Humidity: {state.weather.current.humidity}%</h3>
+            <h3>Humidity: {state.selected ? state.selected[0].humidity : state.weather.current.humidity}%</h3>
           </div>
 
           <div className="rain-container">
-            <h3>Rain Probability: {state.weather.current.rain}%</h3>
+            <h3>Rain Probability: {state.selected ? state.selected[0].rain : state.weather.current.rain}%</h3>
           </div>
 
           <div className="temp-container">
             <Highest className="highest-icon icon" />
-            <h3 className="high">{state.weather.current.maxTemp}°</h3>
+            <h3 className="high">{state.selected ? state.selected[0].maxTemp : state.weather.current.maxTemp}°</h3>
 
             <Lowest className="lowest-icon icon" />
-            <h3>{state.weather.current.minTemp}°</h3>
+            <h3>{state.selected ? state.selected[0].minTemp : state.weather.current.minTemp}°</h3>
           </div>
         </div>
       </div>

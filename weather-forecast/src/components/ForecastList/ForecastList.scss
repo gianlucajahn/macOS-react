@@ -23,6 +23,11 @@
   .day-container {
     display: flex;
     justify-content: space-between;
+    cursor: url("../../resources/images/pointing.png"), auto;
+
+    * {
+      pointer-events: none;
+    }
 
     h3 {
       color: white;

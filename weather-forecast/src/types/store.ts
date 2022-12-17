@@ -1,3 +1,5 @@
+import sortedIntervalType from "./sortedInterval";
+
 interface storeType {
   weather: {
     current: any;
@@ -8,6 +10,8 @@ interface storeType {
   section: string;
   dockItem: number | undefined;
   date: any;
+  selected: undefined | sortedIntervalType[];
+  failed: boolean;
 }
 
 export default storeType;

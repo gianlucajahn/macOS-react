@@ -7,7 +7,20 @@ const inputWork = async function (query: string) {
   const currentResponse = await fetch(
     `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${apiKey}&units=metric`
   );
-  const current = await currentResponse.json();
+  let current: any = 0;
+  try {
+    current = await currentResponse.json();
+  } catch(err) {
+    return;
+  }
+
+  if (current.cod === "404") {
+    const newWeather = {
+      current: undefined,
+      forecast: undefined
+    }
+    return newWeather;
+  }
 
   const currentObject = {
     country: current.sys.country,

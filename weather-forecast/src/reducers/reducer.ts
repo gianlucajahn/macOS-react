@@ -9,18 +9,27 @@ const reducer = (state = sampleStore, action: AnyAction) => {
     case 'query/GEO':
       const newLocation = {
         ...state,
-        weather: action.payload
+        weather: action.payload,
+        loading: false
       }
       // return updated state
       return newLocation; 
     case 'query/SUBMIT':
       const newSubmission = {
         ...state,
-        weather: action.payload
+        weather: action.payload,
+        selected: undefined,
+        loading: false
       }
       // return updated state
-      console.log(newSubmission);
       return newSubmission; 
+    case 'query/FAIL':
+      const failedSubmission = {
+        ...state,
+        loading: false,
+        failed: true
+      };
+      return failedSubmission;
     case 'query/SEARCH':
       const updatedQuery = {
         ...state,
@@ -28,6 +37,12 @@ const reducer = (state = sampleStore, action: AnyAction) => {
       }
       // return updated state
       return updatedQuery; 
+    case 'loading/START':
+      const toggledLoading = {
+        ...state,
+        loading: true
+      };
+      return toggledLoading;
     case 'section/SELECT':
       const updatedSection = {
         ...state,
@@ -41,6 +56,15 @@ const reducer = (state = sampleStore, action: AnyAction) => {
         section: "none"
       };
       return checkedSection;
+    case 'select/SELECT':
+      const id = parseInt(action.payload);
+      const day = state.weather.forecast[id];
+      const selectedDay = {
+        ...state,
+        selected: day
+      }
+      console.log(selectedDay);
+      return selectedDay;
     case 'dock/SELECT':
       const selectedDockItem = {
         ...state,

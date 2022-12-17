@@ -29,7 +29,7 @@
       transition: 0.25s all;
 
       &:hover {
-        transform: scale(1.05);
+        transform: translateY(-10px)
       }
 
       .time {

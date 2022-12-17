@@ -7,7 +7,16 @@ import "./ForecastList.scss";
 
 export default function ForecastList() {
   const [state, dispatch] = useContext(store);
-  console.log(state.weather.forecast);
+
+  const selectDay = (e: React.MouseEvent) => {
+    const target = e.target as HTMLElement;
+    console.log("in select day function")
+
+    dispatch({
+      type: 'select/SELECT',
+      payload: target.id
+    });
+  }
 
   return (
     <div className="forecast-list">
@@ -16,7 +25,7 @@ export default function ForecastList() {
           ? state.weather.forecast.map(
               (dayArray: sortedIntervalType[], i: number) => {
                 return (
-                  <div className="day-container" id={`${i}`}>
+                  <div className="day-container" id={`${i}`} onClick={selectDay}>
                     <h3>{dayArray[0].dateName}</h3>
                     <DailyCon day={dayArray} />
                     <DailyTemps day={dayArray} />
