@@ -100,12 +100,8 @@ export default function SelectedWeatherSlice() {
             <h3>Rain Probability: {state.selected ? state.selected[0].rain : state.weather.current.rain}%</h3>
           </div>
 
-          <div className="temp-container">
-            <Highest className="highest-icon icon" />
-            <h3 className="high">{state.selected ? state.selected[0].maxTemp : state.weather.current.maxTemp}°</h3>
-
-            <Lowest className="lowest-icon icon" />
-            <h3>{state.selected ? state.selected[0].minTemp : state.weather.current.minTemp}°</h3>
+          <div className="rain-container">
+            <h3>Wind Speed: {state.selected ? state.selected[0].wind : state.weather.current.wind}km/h</h3>
           </div>
         </div>
       </div>
