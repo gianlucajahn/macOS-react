@@ -6,6 +6,7 @@ import SelectedWeatherSlice from "../SelectedWeatherSlice/SelectedWeatherSlice";
 import SelectedDayForecast from "../SelectedDayForecast/SelectedDayForecast";
 import ForecastList from "../ForecastList/ForecastList";
 import { ReactComponent as Loading } from "../../resources/images/svg/loading.svg";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function WeatherBoard() {
   const [state, dispatch] = useContext(store);
@@ -20,25 +21,61 @@ export default function WeatherBoard() {
     });
   }, []);
 
+  const animations = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0 },
+  };
+
   return (
     <div className="weather-board">
-      {state.loading ?
-        <Loading className="loading" /> :
-        state.weather.current === undefined ? 
-        <div>
+      <AnimatePresence mode="wait">
+      {state.loading ? (
+        <Loading className="loading" />
+      ) : state.weather.current === undefined ? (
+        <motion.div
+          key="1"
+          variants={animations}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          transition={{ type: "spring", bounce: 0.45 }}
+        >
           <h1 className="fail">City not found</h1>
-          <h2 className="fail-text">Sorry, we couldn't find any weather data for the city you provided. <br />
-          Please try another one.</h2>
-        </div> :
+          <h2 className="fail-text">
+            Sorry, we couldn't find any weather data for the city you provided.
+            <br />
+            Please try another one.
+          </h2>
+        </motion.div>
+      ) : (
         <>
-          <div className="daily">
+          <motion.div
+            key="2"
+            variants={animations}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            className="daily"
+            transition={{ type: "spring", bounce: 0.45 }}
+          >
             <SelectedWeatherSlice />
             <SelectedDayForecast />
-          </div>
+          </motion.div>
 
-          <ForecastList />
+          <motion.div
+            key="3"
+            variants={animations}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{ type: "spring", bounce: 0.45 }}
+          >
+            <ForecastList />
+          </motion.div>
         </>
-      }
+      )}
+      </AnimatePresence>
     </div>
   );
 }
