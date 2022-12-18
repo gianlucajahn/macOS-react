@@ -16,7 +16,6 @@ const positionWork = async function () {
     };
   }
 
-  console.log("hallo");
   // save latitude and longitude in variables
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
@@ -115,7 +114,6 @@ const positionWork = async function () {
     current: currentObject,
     forecast: daysArray,
   };
-  console.log(newWeather);
   return newWeather;
 };
 

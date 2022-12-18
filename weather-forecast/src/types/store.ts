@@ -12,6 +12,7 @@ interface storeType {
   date: any;
   selected: undefined | sortedIntervalType[];
   failed: boolean;
+  booting: boolean;
 }
 
 export default storeType;

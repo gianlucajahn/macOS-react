@@ -84,6 +84,12 @@ const reducer = (state = sampleStore, action: AnyAction) => {
         date: date
       };
       return updatedDate;
+    case 'booting/FINISH':
+      const finishedBooting = {
+        ...state,
+        booting: false
+      };
+      return finishedBooting;
     default:
       return state;
   }

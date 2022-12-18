@@ -1,6 +1,7 @@
-import React, { Children, useContext, MouseEvent } from 'react';
+import React, { Children, useContext, MouseEvent, useEffect } from 'react';
 import { store } from '../../App';
 import checkDropdown from '../../utils/helpers/checkDropdown';
+import BootUpWindow from '../BootUpWindow/BootUpWindow';
 import './Page.scss';
 
 export default function Page ({children}: any) {
@@ -44,9 +45,17 @@ export default function Page ({children}: any) {
     }
   }
 
+  useEffect(() => {
+    setTimeout(() => {
+      const x = document.getElementById('bootAudio') as HTMLAudioElement;
+      x!.play()
+    }, 4000)
+  }, [])
+
   return (
     <div className="page" id="page" onClick={conditionalClick} onContextMenu={openContextMenu}>
       {children}
+      {state.booting ? <BootUpWindow /> : null}
     </div>
   );
 }
