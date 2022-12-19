@@ -29,6 +29,8 @@
 
     .logo {
         height: 109px;
+        -webkit-user-drag: none;
+        pointer-events: none;
         width: 105px;
         justify-self: flex-start;
         margin-top: 7px;
