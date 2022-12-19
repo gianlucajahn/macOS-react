@@ -1,6 +1,7 @@
 .daily-temps {
   display: flex;
   gap: 20px;
+  margin-left: 35px;
 
   div {
     display: flex;
@@ -8,29 +9,29 @@
     align-items: center;
 
     h3 {
-      position: absolute;
     }
 
     .highest-h3 {
-      right: 4.25em;
+      width: 30px;
     }
 
     .lowest-h3 {
-      right: 9.125em;
+      width: 30px;
     }
 
     .icon {
       fill: white;
       height: 17px;
-      position: absolute;
+      margin-right: 10px;
+
     }
 
     .highest-icon {
-      right: 6.75em;
+      width: 16px;
     }
 
     .lowest-icon {
-      right: 11.6875em;
+      width: 16px;
     }
   }
 }
