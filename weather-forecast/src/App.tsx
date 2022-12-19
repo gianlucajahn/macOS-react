@@ -13,6 +13,7 @@ import Page from "./components/Page/Page";
 import Dock from "./components/Dock/Dock";
 import ContextMenu from "./components/ContextMenu/ContextMenu";
 import { AnimatePresence } from "framer-motion";
+import BootSound from "./resources/audio/bootsound.mp3";
 
 // Create store (redux naming convention)
 export const store = createContext<any>(null);
@@ -23,6 +24,12 @@ const StoreProvider = ({ children }: any) => (
     {children}
   </store.Provider>
 );
+
+const playSound = () => {
+  let audio = new Audio(BootSound);
+  audio.volume = 0.4;
+  audio.play();
+}
 
 function App() {
   return (

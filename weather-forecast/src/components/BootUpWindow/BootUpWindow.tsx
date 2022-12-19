@@ -12,6 +12,7 @@ export default function BootUpWindow () {
         const bootUpWindow = document.getElementById('boot');
         bootUpWindow!.classList.remove("bootup-window");
         bootUpWindow!.classList.add('vanished');
+        playSound();
     }, 3350);
 
     setTimeout(() => {
@@ -26,8 +27,27 @@ export default function BootUpWindow () {
     animate: { width: "150px" }
   }
 
+  let audio = new Audio(BootSound);
+  audio.volume = 0.4;
+
+  const playSound = () => {
+    if (!state.soundPlayed) {
+        dispatch({
+            type: 'sound/PLAY'
+        });
+
+        setTimeout(() => {
+            if (document.getElementById('boot') === null) {
+                return;
+            } else {
+              audio.play();
+            }
+        }, 2600);
+    }
+  }
+
   return (
-    <div className="bootup-window boot" id="boot">
+    <div className="bootup-window boot" id="boot" onMouseEnter={playSound}>
       <img className="logo" src={require("../../resources/images/applelogo.png")} />
       <div className="bar-container">
         <div className="bar-background" />

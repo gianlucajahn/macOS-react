@@ -90,6 +90,12 @@ const reducer = (state = sampleStore, action: AnyAction) => {
         booting: false
       };
       return finishedBooting;
+    case 'sound/PLAY':
+      const soundPlay = {
+        ...state,
+        soundPlayed: true
+      };
+      return soundPlay;
     default:
       return state;
   }

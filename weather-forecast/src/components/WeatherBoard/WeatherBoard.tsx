@@ -7,6 +7,7 @@ import SelectedDayForecast from "../SelectedDayForecast/SelectedDayForecast";
 import ForecastList from "../ForecastList/ForecastList";
 import { ReactComponent as Loading } from "../../resources/images/svg/loading.svg";
 import { AnimatePresence, motion } from "framer-motion";
+import uuid from 'react-uuid';
 
 export default function WeatherBoard() {
   const [state, dispatch] = useContext(store);
@@ -30,51 +31,60 @@ export default function WeatherBoard() {
   return (
     <div className="weather-board">
       <AnimatePresence mode="wait">
-      {state.loading ? (
-        <Loading className="loading" />
-      ) : state.weather.current === undefined ? (
-        <motion.div
-          key="1"
-          variants={animations}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          transition={{ type: "spring", bounce: 0.45 }}
-        >
-          <h1 className="fail">City not found</h1>
-          <h2 className="fail-text">
-            Sorry, we couldn't find any weather data for the city you provided.
-            <br />
-            Please try another one.
-          </h2>
-        </motion.div>
-      ) : (
-        <>
+        {state.loading ? (
           <motion.div
-            key="2"
             variants={animations}
             initial="initial"
             animate="animate"
             exit="exit"
-            className="daily"
             transition={{ type: "spring", bounce: 0.45 }}
           >
-            <SelectedWeatherSlice />
-            <SelectedDayForecast />
+            <Loading className="loading" />
           </motion.div>
+        ) : state.weather.current === undefined ? (
+          <motion.div
+            key="failed"
+            variants={animations}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{ type: "spring", bounce: 0.45 }}
+          >
+            <h1 className="fail">City not found</h1>
+            <h2 className="fail-text">
+              Sorry, we couldn't find any weather data for the city you
+              provided.
+              <br />
+              Please try another one.
+            </h2>
+          </motion.div>
+        ) : (
+          <>
+            <motion.div
+              key="daily"
+              variants={animations}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              className="daily"
+              transition={{ type: "spring", bounce: 0.45 }}
+            >
+              <SelectedWeatherSlice />
+              <SelectedDayForecast />
+            </motion.div>
 
-          <motion.div
-            key="3"
-            variants={animations}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            transition={{ type: "spring", bounce: 0.45 }}
-          >
-            <ForecastList />
-          </motion.div>
-        </>
-      )}
+            <motion.div
+              key="weekly"
+              variants={animations}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              transition={{ type: "spring", bounce: 0.45 }}
+            >
+              <ForecastList />
+            </motion.div>
+          </>
+        )}
       </AnimatePresence>
     </div>
   );

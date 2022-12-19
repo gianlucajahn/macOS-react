@@ -1,3 +1,12 @@
+@keyframes load {
+    0% {
+      color: black;
+    }
+    100% {
+      color: grey;
+    }
+  }
+
 .bootup-window {
     background-color: black;
     width: 100vw;
@@ -14,8 +23,9 @@
 }
 
 .boot {
-    transition: 1s all;
+    transition: 1s opacity;
     cursor: none;
+    animation: 0.1s ease-out 0s 1 load !important;
 
     .logo {
         height: 109px;

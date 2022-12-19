@@ -13,6 +13,7 @@ interface storeType {
   selected: undefined | sortedIntervalType[];
   failed: boolean;
   booting: boolean;
+  soundPlayed: boolean;
 }
 
 export default storeType;
