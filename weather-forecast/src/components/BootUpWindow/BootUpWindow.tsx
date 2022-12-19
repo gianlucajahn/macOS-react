@@ -42,7 +42,7 @@ export default function BootUpWindow () {
             } else {
               audio.play();
             }
-        }, 2600);
+        }, 2200);
     }
   }
 
