@@ -14,6 +14,13 @@ interface storeType {
   failed: boolean;
   booting: boolean;
   soundPlayed: boolean;
+  settings: {
+    open: boolean;
+    animations: boolean;
+    color: string;
+    notch: boolean;
+    airdrop: boolean;
+  }
 }
 
 export default storeType;

@@ -5,100 +5,154 @@ import sampleStore from "../utils/keys/samples/sampleStore";
 import getDate from "../utils/helpers/getDate";
 
 const reducer = (state = sampleStore, action: AnyAction) => {
-  switch(action.type) {
-    case 'query/GEO':
+  switch (action.type) {
+    case "query/GEO":
       const newLocation = {
         ...state,
         weather: action.payload,
-        loading: false
-      }
+        loading: false,
+      };
       // return updated state
-      return newLocation; 
-    case 'query/SUBMIT':
+      return newLocation;
+    case "query/SUBMIT":
       const newSubmission = {
         ...state,
         weather: action.payload,
         selected: undefined,
-        loading: false
-      }
+        loading: false,
+      };
       // return updated state
-      return newSubmission; 
-    case 'query/FAIL':
+      return newSubmission;
+    case "query/FAIL":
       const failedSubmission = {
         ...state,
         loading: false,
-        failed: true
+        failed: true,
       };
       return failedSubmission;
-    case 'query/SEARCH':
+    case "query/SEARCH":
       const updatedQuery = {
         ...state,
-        query: action.payload
-      }
+        query: action.payload,
+      };
       // return updated state
-      return updatedQuery; 
-    case 'loading/START':
+      return updatedQuery;
+    case "loading/START":
       const toggledLoading = {
         ...state,
-        loading: true
+        loading: true,
       };
       return toggledLoading;
-    case 'section/SELECT':
+    case "section/SELECT":
       const updatedSection = {
         ...state,
-        section: action.payload
+        section: action.payload,
       };
       // return updated state
       return updatedSection;
-    case 'section/RESET':
+    case "section/RESET":
       const checkedSection = {
         ...state,
-        section: "none"
+        section: "none",
       };
       return checkedSection;
-    case 'select/SELECT':
+    case "select/SELECT":
       const id = parseInt(action.payload);
       const day = state.weather.forecast[id];
       const selectedDay = {
         ...state,
-        selected: day
-      }
+        selected: day,
+      };
       console.log(selectedDay);
       return selectedDay;
-    case 'dock/SELECT':
+    case "dock/SELECT":
       const selectedDockItem = {
         ...state,
-        dockItem: action.payload
+        dockItem: action.payload,
       };
       return selectedDockItem;
-    case 'dock/RESET':
+    case "dock/RESET":
       const resetDockItems = {
         ...state,
-        dockItem: undefined
+        dockItem: undefined,
       };
       return resetDockItems;
-    case 'date/SET':
+    case "date/SET":
       const date = getDate();
       const updatedDate = {
         ...state,
-        date: date
+        date: date,
       };
       return updatedDate;
-    case 'booting/FINISH':
+    case "booting/FINISH":
       const finishedBooting = {
         ...state,
-        booting: false
+        booting: false,
       };
       return finishedBooting;
-    case 'sound/PLAY':
+    case "sound/PLAY":
       const soundPlay = {
         ...state,
-        soundPlayed: true
+        soundPlayed: true,
       };
       return soundPlay;
+    case "settings/CLOSE":
+      const closedSettings = {
+        ...state,
+        settings: {
+          ...state.settings,
+          open: false,
+        },
+      };
+      return closedSettings;
+    case "settings/OPEN":
+      const openedSettings = {
+        ...state,
+        settings: {
+          ...state.settings,
+          open: true,
+        },
+      };
+      return openedSettings;
+    case "settings/SETCOLOR":
+      const setColor = {
+        ...state,
+        settings: {
+          ...state.settings,
+          color: action.payload,
+        },
+      };
+      return setColor;
+    case "settings/AIRDROP":
+      const toggledAirdrop = {
+        ...state,
+        settings: {
+          ...state.settings,
+          airdrop: !state.settings.airdrop,
+        },
+      };
+      return toggledAirdrop;
+    case "settings/ANIMATIONS":
+      const toggledAnimations = {
+        ...state,
+        settings: {
+          ...state.settings,
+          animations: !state.settings.animations,
+        },
+      };
+      return toggledAnimations;
+    case "settings/NOTCH":
+      const toggledNotch = {
+        ...state,
+        settings: {
+          ...state.settings,
+          notch: !state.settings.notch
+        }
+      };
+      return toggledNotch
     default:
       return state;
   }
-}
+};
 
 export default reducer;

@@ -1,6 +1,7 @@
 import React, { Children, useContext, MouseEvent, useEffect } from 'react';
 import { store } from '../../App';
 import checkDropdown from '../../utils/helpers/checkDropdown';
+import checkSettings from '../../utils/helpers/checkSettings';
 import BootUpWindow from '../BootUpWindow/BootUpWindow';
 import './Page.scss';
 
@@ -42,6 +43,14 @@ export default function Page ({children}: any) {
         dispatch({
             type: 'section/RESET'
         });
+    }
+
+    const isSettings = checkSettings(e);
+    if (isSettings === false) {
+      console.log(e.target);
+      dispatch({
+        type: 'settings/CLOSE'
+      });
     }
   }
 

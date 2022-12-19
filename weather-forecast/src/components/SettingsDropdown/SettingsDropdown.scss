@@ -1,0 +1,198 @@
+.settings-dropdown {
+    background-color: hsla(240%, 3%, 11%, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    height: 360px;
+    width: 312px;
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    left: -144px;
+    top: 28px;
+    box-shadow: 0px 0px 4px #1c1c1c;
+    transition: 0.4s all;
+    padding: 11px 11px;
+    gap: 12px;
+
+    .functions {
+        display: flex;
+        gap: 12px;
+
+        .func {
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            background-color: hsla(240%, 3%, 11%, 0.4);
+            color: white;
+            font-family: "SF Bold";
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 19px 16px 16px;
+            cursor: url("../../resources/images/pointing.png"), auto;
+            box-shadow: 0px 0px 2px black;
+
+            .airdrop-btn {
+                * {
+                    margin-bottom: 2px;
+                    pointer-events: none;
+                }
+            }
+
+            button {
+                border: none;
+                border-radius: 9999px;
+                width: 27px;
+                height: 28px;
+                transition: 0.25s all;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 8px;
+                cursor: url("../../resources/images/pointing.png"), auto;
+
+                * {
+                    height: 17px;
+                    width: 17px;
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+
+    .sys-colors,
+    .wallpaper-container,
+    .notch-container {
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 10px;
+        background-color: hsla(240%, 3%, 11%, 0.4);
+        color: white;
+        font-family: "SF Bold";
+        padding: 9px 11px 11px 11px;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: start;
+        box-shadow: 0px 0px 2px black;
+
+        .colors {
+            display: flex;
+            gap: 18px;
+            margin-left: 1px;
+            margin-top: 13px;
+
+            .color {
+                border-radius: 9999px;
+                height: 22px;
+                width: 25px;
+                border: 2px transparent;
+                cursor: url("../../resources/images/pointing.png"), auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .orangey {
+                background-color: #ff9d0a;
+            }
+
+            .greeny {
+                background-color: #2ed157;
+            }
+
+            .babybluey {
+                background-color: #66d4ff;
+            }
+
+            .bluey {
+                background-color: #0a85ff;
+            }
+
+            .purpley {
+                background-color: #5e5ce6;
+            }
+
+            .violety {
+                background-color: #bf5af2;
+            }
+
+            .redy {
+                background-color: #ff3860;
+            }
+        }
+    }
+
+    .wallpaper-container {
+        flex-direction: row;
+        gap: 12px;
+        justify-content: flex-start;
+        padding-top: 12px;
+        padding-bottom: 13px;
+        cursor: url("../../resources/images/pointing.png"), auto;
+
+        .preview {
+            border: none;
+            border-radius: 8px;
+            height: 72px;
+            width: 72px;
+        }
+
+        .desc {
+            padding-top: 3px;
+            padding-left: 3px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h2 {
+                font-size: 16px;
+            }
+
+            h3 {
+                margin-top: -1px;
+                font-size: 13px;
+            }
+        }
+    }
+
+    .notch-container {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 15px 16px 16px 16px;
+        cursor: url("../../resources/images/pointing.png"), auto;
+        
+        button {
+            margin-right: 10px;
+            margin-left: 1px;
+            border: none;
+            border-radius: 9999px;
+            width: 27px;
+            height: 28px;
+            transition: 0.25s all;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 8px;
+            cursor: url("../../resources/images/pointing.png"), auto;
+
+            * {
+                width: 16px;
+                margin-right: 1px;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+.settings-open {
+    opacity: 1;
+}
+
+.settings-closed {
+    opacity: 0;
+    visibility: hidden;
+}
