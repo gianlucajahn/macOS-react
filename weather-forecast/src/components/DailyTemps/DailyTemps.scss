@@ -1,7 +1,7 @@
 .daily-temps {
   display: flex;
   gap: 20px;
-  margin-left: 35px;
+  margin-left: 20px;
 
   div {
     display: flex;
@@ -12,11 +12,11 @@
     }
 
     .highest-h3 {
-      width: 30px;
+      width: 40px;
     }
 
     .lowest-h3 {
-      width: 30px;
+      width: 40px;
     }
 
     .icon {

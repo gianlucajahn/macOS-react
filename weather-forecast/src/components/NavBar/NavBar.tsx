@@ -37,7 +37,7 @@ export default function () {
         <div className="nav-bar">
             <div className="logo section" id="logo" onClick={dispatchAction}>
                 <img className="apple" src={require("../../resources/images/apple.png")} />
-                <div className={`${state.section === "logo" ? "selected-logo" : "not-selected"}`}></div>
+                <div className={`${state.section === "logo" ? "selected-logo" : "not-selected"} bg`}></div>
                 {state.section === "logo" ? <DropdownComponent /> : null} 
             </div>
     
