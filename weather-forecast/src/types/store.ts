@@ -20,6 +20,13 @@ interface storeType {
     color: string;
     notch: boolean;
     airdrop: boolean;
+    wallpaper: {
+      open: boolean;
+      src: string;
+      preview: string;
+      name: string;
+      surname: string;
+    }
   }
 }
 

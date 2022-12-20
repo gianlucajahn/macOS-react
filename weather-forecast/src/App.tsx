@@ -12,6 +12,7 @@ import Page from "./components/Page/Page";
 import Dock from "./components/Dock/Dock";
 import ContextMenu from "./components/ContextMenu/ContextMenu";
 import BootSound from "./resources/audio/bootsound.mp3";
+import WallpaperMenu from "./components/WallpaperMenu/WallpaperMenu";
 
 // Create store (redux naming convention)
 export const store = createContext<any>(null);
@@ -48,7 +49,7 @@ function App() {
                 <WeatherBoard />
               </div>
             </Draggable>
-
+            <WallpaperMenu />
             <ContextMenu />
             <Dock />
           </Page>

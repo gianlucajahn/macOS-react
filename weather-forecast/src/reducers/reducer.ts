@@ -150,6 +150,18 @@ const reducer = (state = sampleStore, action: AnyAction) => {
         }
       };
       return toggledNotch
+    case 'wallpaper/TOGGLE':
+      const toggledWallpaperWindow = {
+        ...state,
+        settings: {
+          ...state.settings,
+          wallpaper: {
+            ...state.settings.wallpaper,
+            open: !state.settings.wallpaper.open
+          }
+        }
+      };
+      return toggledWallpaperWindow;
     default:
       return state;
   }

@@ -1,0 +1,574 @@
+@keyframes border {
+    0% {
+        border: 0px solid transparent;
+        padding: 3px;
+    }
+    33% {
+        border: 1px solid rgb(40, 133, 255);
+        padding: 2px;
+    }
+    66% {
+        border: 2px solid rgb(40, 133, 255);
+        padding: 1px;
+    }
+    100% {
+        border: 3px solid rgb(40, 133, 255);
+        padding: 0px;
+    }
+}
+
+.wallpaper-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    opacity: 1;
+    left: 400px;
+    top: 175px;
+    border: 1px solid #3f3f47;
+    background-color: #1e1f23;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    transition: transform none;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 
+      0px 40px 70px #050505;
+
+    #wallpaper-handle {
+        width: 100%;
+        display: flex;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        height: 56px !important;
+        cursor: url("../../resources//images//grabbing.png"), auto;
+        align-items: center;
+        border-top: 1px solid #696971;
+        border-bottom: 1px solid #141318;
+        border-radius: 4px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        background: rgb(43, 42, 47);
+        background: linear-gradient(
+          360deg,
+          rgba(43, 42, 47, 1) 0%,
+          rgba(53, 53, 55, 1) 100%
+        );
+        box-sizing: border-box;
+        height: 2.55em;
+        padding-left: 13px;
+        color: white;
+        font-family: "SF Bold";
+
+        .dots {
+            margin-right: 276px;
+        }
+    }
+
+    .selection {
+        width: 100%;
+        display: flex;
+        overflow: scroll;
+        overflow-x: hidden;
+        flex-direction: column;
+        padding-top: 12px;
+        padding-right: 19px;
+        margin-right: 10px;
+        margin-top: 7px;
+
+        .prev {
+            padding-left: 155px;
+
+            .current {
+                width: 30.05em;
+                height: 18.7em;
+                border-radius: 14px;
+                user-select: none;
+                -webkit-user-drag: none;
+            }
+    
+            h1 {
+                font-size: 26px;
+                margin-top: 18px;
+                font-family: "SF Light";
+                color: white;
+                letter-spacing: -0.02em;
+            }
+
+            h2 {
+                font-size: 16px;
+                margin-top: -1px;
+                font-family: "SF Regular";
+                color: #b2b2b2;
+                letter-spacing: -0.02em;
+            }
+
+            .check {
+                display: flex;
+                gap: 14px;
+                margin-top: 26px;
+                margin-left: 3px;
+
+                input {
+                    transform: scale(1.45);
+                    cursor: url("../../resources/images/pointing.png"), auto;
+                }
+
+                h2 {
+                    color: white;
+                    margin-top: 2px;
+                }
+            }
+        }
+
+        .wallpaper-selector {
+            margin-top: 62px;
+            margin-left: 20px;
+
+            h1 {
+                font-size: 27px;
+                color: white;
+                margin-bottom: 15px;
+            }
+
+            .grid {
+                flex-wrap: wrap;
+                display: flex;
+                margin-left: -3px;
+                margin-bottom: 22px;
+
+                .item-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    margin-bottom: 10px;
+
+                    .image-wrapper {
+                        padding: 3px;
+                        width: 181px;
+                        height: 181px;
+                        border-radius: 12px;
+                        margin-right: 7px;
+                        cursor: url("../../resources/images/pointing.png"), auto;
+
+                        * {
+                            pointer-events: none;
+                        }
+
+                        img {
+                            height: 175px;
+                            width: 175px;
+                            border-radius: 12px;
+                        }
+                    }
+
+                    .image-wrapper-bordered {
+                        width: 181px;
+                        height: 181px;
+                        animation: border 0.15s;
+                        padding: 0px;
+                        border: 3px solid rgb(40, 133, 255);
+                        border-radius: 16px;
+
+                        * {
+                            pointer-events: none;
+                        }
+
+                        img {
+                            height: 175px;
+                            width: 175px;
+                            border-radius: 12px;
+                        }
+                    }
+
+                    h2 {
+                        font-size: 16px;
+                        color: white;
+                        font-family: "SF Regular";
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wallp {
+    height: 600px !important;
+    width: 41.65vw !important;
+}
+
+.wallpaper-menu-minimized {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    opacity: 0;
+    transition: 0.7s all;
+    margin-top: 360px;
+    left: 352px;
+    top: 175px;
+    transform: scale(0.01) !important;
+    border: 1px solid #3f3f47;
+    background-color: #1e1f23;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    transition: transform none;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 
+      0px 40px 70px #050505;
+
+      #wallpaper-handle {
+        width: 100%;
+        display: flex;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        height: 56px !important;
+        cursor: url("../../resources//images//grabbing.png"), auto;
+        align-items: center;
+        border-top: 1px solid #696971;
+        border-bottom: 1px solid #141318;
+        border-radius: 4px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        background: rgb(43, 42, 47);
+        background: linear-gradient(
+          360deg,
+          rgba(43, 42, 47, 1) 0%,
+          rgba(53, 53, 55, 1) 100%
+        );
+        box-sizing: border-box;
+        height: 2.55em;
+        padding-left: 13px;
+        color: white;
+        font-family: "SF Bold";
+
+        .dots {
+            margin-right: 276px;
+        }
+    }
+
+    .selection {
+        width: 100%;
+        display: flex;
+        overflow: scroll;
+        overflow-x: hidden;
+        flex-direction: column;
+        padding-top: 12px;
+        padding-right: 19px;
+        margin-right: 10px;
+        margin-top: 7px;
+
+        .prev {
+            padding-left: 155px;
+
+            .current {
+                width: 30.05em;
+                height: 18.7em;
+                border-radius: 14px;
+                user-select: none;
+                -webkit-user-drag: none;
+            }
+    
+            h1 {
+                font-size: 26px;
+                margin-top: 18px;
+                font-family: "SF Light";
+                color: white;
+                letter-spacing: -0.02em;
+            }
+
+            h2 {
+                font-size: 16px;
+                margin-top: -1px;
+                font-family: "SF Regular";
+                color: #b2b2b2;
+                letter-spacing: -0.02em;
+            }
+
+            .check {
+                display: flex;
+                gap: 14px;
+                margin-top: 26px;
+                margin-left: 3px;
+
+                input {
+                    transform: scale(1.45);
+                    cursor: url("../../resources/images/pointing.png"), auto;
+                }
+
+                h2 {
+                    color: white;
+                    margin-top: 2px;
+                }
+            }
+        }
+
+        .wallpaper-selector {
+            margin-top: 62px;
+            margin-left: 20px;
+
+            h1 {
+                font-size: 27px;
+                color: white;
+                margin-bottom: 15px;
+            }
+
+            .grid {
+                flex-wrap: wrap;
+                display: flex;
+                margin-left: -3px;
+                margin-bottom: 22px;
+
+                .item-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    margin-bottom: 10px;
+
+                    .image-wrapper {
+                        padding: 3px;
+                        width: 181px;
+                        height: 181px;
+                        border-radius: 12px;
+                        margin-right: 7px;
+                        cursor: url("../../resources/images/pointing.png"), auto;
+
+                        * {
+                            pointer-events: none;
+                        }
+
+                        img {
+                            height: 175px;
+                            width: 175px;
+                            border-radius: 12px;
+                        }
+                    }
+
+                    .image-wrapper-bordered {
+                        width: 181px;
+                        height: 181px;
+                        animation: border 0.15s;
+                        padding: 0px;
+                        border: 3px solid rgb(40, 133, 255);
+                        border-radius: 16px;
+
+                        * {
+                            pointer-events: none;
+                        }
+
+                        img {
+                            height: 175px;
+                            width: 175px;
+                            border-radius: 12px;
+                        }
+                    }
+
+                    h2 {
+                        font-size: 16px;
+                        color: white;
+                        font-family: "SF Regular";
+                    }
+                }
+            }
+        }
+    }
+}
+
+.wallpaper-menu-closed {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    opacity: 0;
+    transition: 0.4s all;
+    left: 400px;
+    top: 175px;
+    transform: scale(0.01) !important;
+    border: 1px solid #3f3f47;
+    background-color: #1e1f23;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    transition: transform none;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 
+      0px 40px 70px #050505;
+    
+      #wallpaper-handle {
+        width: 100%;
+        display: flex;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        height: 56px !important;
+        cursor: url("../../resources//images//grabbing.png"), auto;
+        align-items: center;
+        border-top: 1px solid #696971;
+        border-bottom: 1px solid #141318;
+        border-radius: 4px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        background: rgb(43, 42, 47);
+        background: linear-gradient(
+          360deg,
+          rgba(43, 42, 47, 1) 0%,
+          rgba(53, 53, 55, 1) 100%
+        );
+        box-sizing: border-box;
+        height: 2.55em;
+        padding-left: 13px;
+        color: white;
+        font-family: "SF Bold";
+
+        .dots {
+            margin-right: 276px;
+        }
+    }
+
+    .selection {
+        width: 100%;
+        display: flex;
+        overflow: scroll;
+        overflow-x: hidden;
+        flex-direction: column;
+        padding-top: 12px;
+        padding-right: 19px;
+        margin-right: 10px;
+        margin-top: 7px;
+
+        .prev {
+            padding-left: 155px;
+
+            .current {
+                width: 30.05em;
+                height: 18.7em;
+                border-radius: 14px;
+                user-select: none;
+                -webkit-user-drag: none;
+            }
+    
+            h1 {
+                font-size: 26px;
+                margin-top: 18px;
+                font-family: "SF Light";
+                color: white;
+                letter-spacing: -0.02em;
+            }
+
+            h2 {
+                font-size: 16px;
+                margin-top: -1px;
+                font-family: "SF Regular";
+                color: #b2b2b2;
+                letter-spacing: -0.02em;
+            }
+
+            .check {
+                display: flex;
+                gap: 14px;
+                margin-top: 26px;
+                margin-left: 3px;
+
+                input {
+                    transform: scale(1.45);
+                    cursor: url("../../resources/images/pointing.png"), auto;
+                }
+
+                h2 {
+                    color: white;
+                    margin-top: 2px;
+                }
+            }
+        }
+
+        .wallpaper-selector {
+            margin-top: 62px;
+            margin-left: 20px;
+
+            h1 {
+                font-size: 27px;
+                color: white;
+                margin-bottom: 15px;
+            }
+
+            .grid {
+                flex-wrap: wrap;
+                display: flex;
+                margin-left: -3px;
+                margin-bottom: 22px;
+
+                .item-container {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    margin-bottom: 10px;
+
+                    .image-wrapper {
+                        padding: 3px;
+                        width: 181px;
+                        height: 181px;
+                        border-radius: 12px;
+                        margin-right: 7px;
+                        cursor: url("../../resources/images/pointing.png"), auto;
+
+                        * {
+                            pointer-events: none;
+                        }
+
+                        img {
+                            height: 175px;
+                            width: 175px;
+                            border-radius: 12px;
+                        }
+                    }
+
+                    .image-wrapper-bordered {
+                        width: 181px;
+                        height: 181px;
+                        animation: border 0.15s;
+                        padding: 0px;
+                        border: 3px solid rgb(40, 133, 255);
+                        border-radius: 16px;
+
+                        * {
+                            pointer-events: none;
+                        }
+
+                        img {
+                            height: 175px;
+                            width: 175px;
+                            border-radius: 12px;
+                        }
+                    }
+
+                    h2 {
+                        font-size: 16px;
+                        color: white;
+                        font-family: "SF Regular";
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #1e1f23;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #d1d1d1;
+    border-radius: 9999px;
+  }
+
+
