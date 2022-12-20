@@ -8,11 +8,9 @@ import WeatherBoard from "./components/WeatherBoard/WeatherBoard";
 import QueryBoard from "./components/QueryBoard/QueryBoard";
 import Draggable from "react-draggable";
 import NavBar from "./components/NavBar/NavBar";
-import checkDropdown from "./utils/helpers/checkDropdown";
 import Page from "./components/Page/Page";
 import Dock from "./components/Dock/Dock";
 import ContextMenu from "./components/ContextMenu/ContextMenu";
-import { AnimatePresence } from "framer-motion";
 import BootSound from "./resources/audio/bootsound.mp3";
 
 // Create store (redux naming convention)
@@ -52,7 +50,6 @@ function App() {
             </Draggable>
 
             <ContextMenu />
-
             <Dock />
           </Page>
         </StoreProvider>
