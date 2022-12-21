@@ -6,6 +6,8 @@ import { ReactComponent as Airdrop } from "../../resources/images/svg/airdrop.sv
 import { ReactComponent as Tick } from "../../resources/images/svg/tick.svg";
 import { ReactComponent as Notch } from "../../resources/images/svg/notch.svg";
 import toggleWallpaperVis from "../../utils/helpers/toggleWallpaperVis";
+import returnColor from "../../utils/helpers/returnColor";
+import updateSysColor from "../../utils/helpers/updateSysColor";
 
 export default function SettingsDropdown() {
   const [state, dispatch] = useContext(store);
@@ -17,21 +19,7 @@ export default function SettingsDropdown() {
       payload: target.id,
     });
 
-    if (target.id === "orange") {
-      document.documentElement.style.setProperty('--user-color', "#ff9d0a");
-    } else if (target.id === "green") {
-      document.documentElement.style.setProperty('--user-color', "#2ed157");
-    } else if (target.id === "babyblue") {
-      document.documentElement.style.setProperty('--user-color', "#66d4ff");
-    } else if (target.id === "blue") {
-      document.documentElement.style.setProperty('--user-color', "#0a85ff");
-    } else if (target.id === "purple") {
-      document.documentElement.style.setProperty('--user-color', "#5e5ce6");
-    } else if (target.id === "violet") {
-      document.documentElement.style.setProperty('--user-color', "#bf5af2");
-    } else if (target.id === "red") {
-      document.documentElement.style.setProperty('--user-color', "#ff3860");
-    }
+    updateSysColor(target.id);
   };
 
   const toggleAnimations = () => {
@@ -76,19 +64,7 @@ export default function SettingsDropdown() {
             style={{
               backgroundColor: !state.settings.airdrop
                 ? "#2f3541"
-                : state.settings.color === "blue"
-                ? "#0a85ff"
-                : state.settings.color === "orange"
-                ? "#ff9d0a"
-                : state.settings.color === "green"
-                ? "#2ed157"
-                : state.settings.color === "babyblue"
-                ? "#66d4ff"
-                : state.settings.color === "purple"
-                ? "#5e5ce6"
-                : state.settings.color === "violet"
-                ? "#bf5af2"
-                : "#ff3860",
+                : returnColor(state.settings.color)
             }}
           >
             <Airdrop fill={state.settings.airdrop ? "black" : "white"} style={{ transition: "0.25s all" }}/>
@@ -103,19 +79,7 @@ export default function SettingsDropdown() {
             style={{
               backgroundColor: !state.settings.animations
                 ? "#2f3541"
-                : state.settings.color === "blue"
-                ? "#0a85ff"
-                : state.settings.color === "orange"
-                ? "#ff9d0a"
-                : state.settings.color === "green"
-                ? "#2ed157"
-                : state.settings.color === "babyblue"
-                ? "#66d4ff"
-                : state.settings.color === "purple"
-                ? "#5e5ce6"
-                : state.settings.color === "violet"
-                ? "#bf5af2"
-                : "#ff3860",
+                : returnColor(state.settings.color)
             }}
           >
             <Animations fill={state.settings.animations ? "black" : "white"} style={{ transition: "0.25s all" }}/>

@@ -8,6 +8,8 @@ import { ReactComponent as Stretch } from "../../resources/images/svg/stretch.sv
 import wallpapers from "../../utils/helpers/wallpapers";
 import toggleWallpaperVis from "../../utils/helpers/toggleWallpaperVis";
 import toggleWallpaperMin from "../../utils/helpers/toggleWallpaperMin";
+import wallpaperObjectType from "../../types/wallpaperObjectType";
+import returnColor from "../../utils/helpers/returnColor";
 
 export default function WallpaperMenu() {
   const [state, dispatch] = useContext(store);
@@ -86,7 +88,7 @@ export default function WallpaperMenu() {
               <h1>Dynamic Wallpapers</h1>
 
               <div className="grid">
-                {wallpapers.map((wallpaperObject: any, i: number) => {
+                {wallpapers.map((wallpaperObject: wallpaperObjectType, i: number) => {
                   return (
                     <div className="item-container">
                       <img
@@ -97,19 +99,7 @@ export default function WallpaperMenu() {
                         onClick={() => changeWallpaper(wallpaperObject)}
                         style={{
                           borderColor:
-                            state.settings.color === "blue"
-                              ? "#0a85ff"
-                              : state.settings.color === "orange"
-                              ? "#ff9d0a"
-                              : state.settings.color === "green"
-                              ? "#2ed157"
-                              : state.settings.color === "babyblue"
-                              ? "#66d4ff"
-                              : state.settings.color === "purple"
-                              ? "#5e5ce6"
-                              : state.settings.color === "violet"
-                              ? "#bf5af2"
-                              : "#ff3860",
+                            returnColor(state.settings.color)
                         }}
                       />
                       <h2>{wallpaperObject.name}</h2>
