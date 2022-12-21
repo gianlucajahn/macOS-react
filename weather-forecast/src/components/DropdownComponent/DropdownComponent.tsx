@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import getDropdownContent from "../../utils/helpers/getDropdownContent";
 import { store } from "../../App";
 import "./DropdownComponent.scss";
+import clearStorage from "../../utils/helpers/clearStorage";
 
 export default function DropdownComponent() {
   const [state, dispatch] = useContext(store);
@@ -59,6 +60,11 @@ export default function DropdownComponent() {
               color: item.available ? "white" : "rgba(255, 255, 255, 0.55)",
             }}
             onClick={(e) => {
+              if (item.name === "Restart") {
+                localStorage.clear();
+                window.location.reload();
+              }
+
               dispatch({
                 type: "section/CHECK",
                 payload: e.target,

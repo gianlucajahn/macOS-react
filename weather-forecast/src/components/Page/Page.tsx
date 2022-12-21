@@ -60,13 +60,6 @@ export default function Page ({children}: any) {
     let color = localStorage.getItem('color');
     let boot = JSON.parse(sessionStorage.getItem('boot')!);
     let wallpaper = JSON.parse(localStorage.getItem('wallpaper')!);
-    let updatedWallpaper = {
-      open: false,
-      name: wallpaper.name,
-      surname: wallpaper.surname,
-      preview: wallpaper.preview,
-      src: wallpaper.src
-    };
     if (boot !== null && boot !== undefined) {
       dispatch({
         type: 'state/BOOT',
@@ -74,6 +67,14 @@ export default function Page ({children}: any) {
       });
     }
     if (wallpaper !== null && wallpaper !== undefined) {
+      let updatedWallpaper = {
+        open: false,
+        name: wallpaper.name,
+        surname: wallpaper.surname,
+        preview: wallpaper.preview,
+        src: wallpaper.src
+      };
+
       dispatch({
         type: 'state/LOCAL',
         payload: updatedWallpaper
