@@ -1,18 +1,20 @@
+@import "../Page/Page.scss";
+
 @keyframes border {
     0% {
         border: 0px solid transparent;
         padding: 3px;
     }
     33% {
-        border: 1px solid rgb(40, 133, 255);
+        border: 1px solid $systemColor;
         padding: 2px;
     }
     66% {
-        border: 2px solid rgb(40, 133, 255);
+        border: 2px solid $systemColor;
         padding: 1px;
     }
     100% {
-        border: 3px solid rgb(40, 133, 255);
+        border: 3px solid $systemColor;
         padding: 0px;
     }
 }
@@ -168,7 +170,7 @@
                         height: 181px;
                         animation: border 0.15s;
                         padding: 0px;
-                        border: 3px solid rgb(40, 133, 255);
+                        border: 3px solid;
                         border-radius: 16px;
 
                         * {

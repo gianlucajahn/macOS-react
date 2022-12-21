@@ -55,6 +55,8 @@ export default function Page ({children}: any) {
   }
 
   useEffect(() => {
+    // preload images to avoid flashing white background when switching to a
+    // wallpaper that hasn't yet been loaded
     wallpapers.forEach((picture) => {
       let img = new Image();
       img.src = picture.src

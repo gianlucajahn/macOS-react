@@ -16,6 +16,22 @@ export default function SettingsDropdown() {
       type: "settings/SETCOLOR",
       payload: target.id,
     });
+
+    if (target.id === "orange") {
+      document.documentElement.style.setProperty('--user-color', "#ff9d0a");
+    } else if (target.id === "green") {
+      document.documentElement.style.setProperty('--user-color', "#2ed157");
+    } else if (target.id === "babyblue") {
+      document.documentElement.style.setProperty('--user-color', "#66d4ff");
+    } else if (target.id === "blue") {
+      document.documentElement.style.setProperty('--user-color', "#0a85ff");
+    } else if (target.id === "purple") {
+      document.documentElement.style.setProperty('--user-color', "#5e5ce6");
+    } else if (target.id === "violet") {
+      document.documentElement.style.setProperty('--user-color', "#bf5af2");
+    } else if (target.id === "red") {
+      document.documentElement.style.setProperty('--user-color', "#ff3860");
+    }
   };
 
   const toggleAnimations = () => {

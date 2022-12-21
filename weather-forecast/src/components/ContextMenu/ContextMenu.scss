@@ -1,3 +1,5 @@
+@import "../Page/Page.scss";
+
 .context-menu {
     width: 16em;
     display: flex;
@@ -31,7 +33,7 @@
         border-radius: 4px;
 
         &:hover {
-            background-color: #0a85ff;
+            background-color: $systemColor;
             color: black !important;
             cursor: url("../../resources/images/pointing.png"), auto;
         }

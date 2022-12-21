@@ -25,12 +25,6 @@ const StoreProvider = ({ children }: any) => (
   </store.Provider>
 );
 
-const playSound = () => {
-  let audio = new Audio(BootSound);
-  audio.volume = 0.4;
-  audio.play();
-}
-
 function App() {
   return (
     <ChakraProvider>

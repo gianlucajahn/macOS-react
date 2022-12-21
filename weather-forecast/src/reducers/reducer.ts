@@ -177,6 +177,12 @@ const reducer = (state = sampleStore, action: AnyAction) => {
         }
       };
       return changedWallpaper;
+    case 'onTop/SET':
+      const changedIndices = {
+        ...state,
+        onTop: action.payload
+      };
+      return changedIndices;
     default:
       return state;
   }

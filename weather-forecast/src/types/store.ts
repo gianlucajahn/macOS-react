@@ -13,6 +13,7 @@ interface storeType {
   selected: undefined | sortedIntervalType[];
   failed: boolean;
   booting: boolean;
+  onTop: string;
   soundPlayed: boolean;
   settings: {
     open: boolean;

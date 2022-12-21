@@ -23,16 +23,16 @@ export default function WallpaperMenu() {
 
   const changeWallpaper = (wallpaper: any) => {
     dispatch({
-        type: 'wallpaper/CHANGE',
-        payload: {
-            name: wallpaper.name,
-            surname: wallpaper.surname,
-            preview: `../../resources/images/preview_${wallpaper.surname}.jpg`,
-            src: `../../resources/images/${wallpaper.surname}.jpg`
-        }
+      type: "wallpaper/CHANGE",
+      payload: {
+        name: wallpaper.name,
+        surname: wallpaper.surname,
+        preview: `../../resources/images/preview_${wallpaper.surname}.jpg`,
+        src: `../../resources/images/${wallpaper.surname}.jpg`,
+      },
     });
 
-    const page = document.getElementById('page');
+    const page = document.getElementById("page");
     const url = require(`../../resources/images/${wallpaper.surname}.jpg`);
     page!.style.backgroundImage = `url(${url})`;
   };
@@ -67,7 +67,11 @@ export default function WallpaperMenu() {
             <div className="prev">
               <img
                 className="current"
-                src={state.settings.wallpaper.name === "Catalina" ? require("../../resources/images/catalina_day.jpg") : require(`../../resources/images/${state.settings.wallpaper.surname}.jpg`)}
+                src={
+                  state.settings.wallpaper.name === "Catalina"
+                    ? require("../../resources/images/catalina_day.jpg")
+                    : require(`../../resources/images/${state.settings.wallpaper.surname}.jpg`)
+                }
               />
               <h1>{state.settings.wallpaper.name}</h1>
               <h2>Dynamic Wallpaper</h2>
@@ -91,6 +95,22 @@ export default function WallpaperMenu() {
                         onMouseLeave={toggleBorder}
                         src={require(`../../resources/images/preview_${wallpaperObject.surname}.jpg`)}
                         onClick={() => changeWallpaper(wallpaperObject)}
+                        style={{
+                          borderColor:
+                            state.settings.color === "blue"
+                              ? "#0a85ff"
+                              : state.settings.color === "orange"
+                              ? "#ff9d0a"
+                              : state.settings.color === "green"
+                              ? "#2ed157"
+                              : state.settings.color === "babyblue"
+                              ? "#66d4ff"
+                              : state.settings.color === "purple"
+                              ? "#5e5ce6"
+                              : state.settings.color === "violet"
+                              ? "#bf5af2"
+                              : "#ff3860",
+                        }}
                       />
                       <h2>{wallpaperObject.name}</h2>
                     </div>
