@@ -55,6 +55,26 @@ export default function Page ({children}: any) {
   }
 
   useEffect(() => {
+    // check localStorage
+
+    let wallpaper = JSON.parse(localStorage.getItem('wallpaper')!);
+    let updatedWallpaper = {
+      open: false,
+      name: wallpaper.name,
+      surname: wallpaper.surname,
+      preview: wallpaper.preview,
+      src: wallpaper.src
+    };
+    if (wallpaper !== null && wallpaper !== undefined) {
+      dispatch({
+        type: 'state/LOCAL',
+        payload: updatedWallpaper
+      });
+      const page = document.getElementById("page");
+      const url = require(`../../resources/images/${wallpaper.surname}.jpg`);
+      page!.style.backgroundImage = `url(${url})`;
+    }
+
     // preload images to avoid flashing white background when switching to a
     // wallpaper that hasn't yet been loaded
     wallpapers.forEach((picture) => {
@@ -62,6 +82,18 @@ export default function Page ({children}: any) {
       img.src = picture.src
     });
   }, [])
+
+  useEffect(() => {
+    // update localStorage
+    
+    if (!state.settings.wallpaper.open) {
+      return
+    }
+
+    localStorage.setItem('wallpaper', JSON.stringify(state.settings.wallpaper));
+    const test = JSON.parse(localStorage.getItem('wallpaper')!);
+    console.log(test);
+  }, [state])
 
   return (
     <div className="page" id="page" onClick={conditionalClick} onContextMenu={openContextMenu}>

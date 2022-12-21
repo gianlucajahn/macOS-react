@@ -183,6 +183,15 @@ const reducer = (state = sampleStore, action: AnyAction) => {
         onTop: action.payload
       };
       return changedIndices;
+    case 'state/LOCAL':
+      const localWallpaper = {
+        ...state,
+        settings: {
+          ...state.settings,
+          wallpaper: action.payload
+        }
+      };
+      return localWallpaper;
     default:
       return state;
   }
