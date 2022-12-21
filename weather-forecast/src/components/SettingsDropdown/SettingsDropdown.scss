@@ -133,6 +133,10 @@
         padding-bottom: 13px;
         cursor: url("../../resources/images/pointing.png"), auto;
 
+        * {
+            pointer-events: none;
+        }
+
         .preview {
             border: none;
             border-radius: 8px;

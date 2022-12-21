@@ -2,6 +2,7 @@ import React, { MouseEvent, useContext } from 'react';
 import { store } from '../../App';
 import identifyDockItem from '../../utils/helpers/identifyDockItem';
 import openWeatherApp from '../../utils/helpers/openWeatherApp';
+import toggleWallpaperVis from '../../utils/helpers/toggleWallpaperVis';
 import './Dock.scss';
 
 export default function Dock () {
@@ -30,9 +31,10 @@ export default function Dock () {
               <div className="point" />
             </div>
             <div className="division" />
-            <div className={`dock-item no-point ${state.dockItem === 1 ? "hovered" : ""} ${state.dockItem === 0 ? "distance-1" : state.dockItem === 2 ? "distance-1" : state.dockItem === 3 ? "distance-2" : ""}`} id="1" onMouseEnter={selectDockItem} onMouseLeave={resetDock}>
+            <div className={`dock-item ${state.dockItem === 1 ? "hovered" : ""} ${state.dockItem === 0 ? "distance-1" : state.dockItem === 2 ? "distance-1" : state.dockItem === 3 ? "distance-2" : ""}`} id="1" onMouseEnter={selectDockItem} onMouseLeave={resetDock} onClick={toggleWallpaperVis}>
               <div className="tool-tip">Photos</div>
               <img className="dock-icon" src={require("../../resources/images/webp/photos.png")} />
+              <div className="point" style={{ visibility: document.getElementById('wallpaper-menu')?.classList.contains('wallpaper-menu') ? "visible" : "hidden" }} />
             </div>
             <div className={`dock-item no-point ${state.dockItem === 2 ? "hovered" : ""} ${state.dockItem === 0 ? "distance-2" : state.dockItem === 1 ? "distance-1" : state.dockItem === 3 ? "distance-1" : state.dockItem === 4 ? "distance-2" : ""}`} id="2" onMouseEnter={selectDockItem} onMouseLeave={resetDock}>
               <div className="tool-tip">Calculator</div>

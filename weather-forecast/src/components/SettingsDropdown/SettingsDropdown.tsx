@@ -5,6 +5,7 @@ import { ReactComponent as Animations } from "../../resources/images/svg/animati
 import { ReactComponent as Airdrop } from "../../resources/images/svg/airdrop.svg";
 import { ReactComponent as Tick } from "../../resources/images/svg/tick.svg";
 import { ReactComponent as Notch } from "../../resources/images/svg/notch.svg";
+import toggleWallpaperVis from "../../utils/helpers/toggleWallpaperVis";
 
 export default function SettingsDropdown() {
   const [state, dispatch] = useContext(store);
@@ -128,11 +129,11 @@ export default function SettingsDropdown() {
         </div>
       </section>
 
-      <section className="wallpaper-container set">
-        <img className="preview set" src={require(`../../resources/images/preview_catalina.png`)} />
-        <div className="desc set">
-            <h2 className="title set">Catalina</h2>
-            <h3 className="type set">Dynamic Wallpaper</h3>
+      <section className="wallpaper-container" id="opener" onClick={toggleWallpaperVis}>
+        <img className="preview" src={require(`../../resources/images/preview_catalina.png`)} />
+        <div className="desc">
+            <h2 className="title">Catalina</h2>
+            <h3 className="type">Dynamic Wallpaper</h3>
         </div>
       </section>
 

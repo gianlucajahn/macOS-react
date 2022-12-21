@@ -31,7 +31,7 @@ export default function WallpaperMenu() {
       }}
     >
       {state.settings.wallpaper.open ? (
-        <div className="wallpaper-menu wallp" id="wallpaper-menu">
+        <div className="wallpaper-menu-closed wallp" id="wallpaper-menu">
           <section className="handle" id="wallpaper-handle">
             <div className="dots">
               <div className="dot red" onClick={toggleWallpaperVis}>
