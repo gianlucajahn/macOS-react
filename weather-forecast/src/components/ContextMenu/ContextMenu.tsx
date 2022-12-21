@@ -1,4 +1,5 @@
 import React from 'react';
+import toggleWallpaperVis from '../../utils/helpers/toggleWallpaperVis';
 import './ContextMenu.scss';
 
 export default function ContextMenu () {
@@ -14,7 +15,7 @@ export default function ContextMenu () {
             Get Info
         </div>
 
-        <div className="dropdown-item context-item">
+        <div className="dropdown-item context-item" id="in-context" onClick={toggleWallpaperVis}>
             Change Desktop Background
         </div>
 

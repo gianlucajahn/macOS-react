@@ -6,6 +6,9 @@ const toggleWallpaperVis = (e: React.MouseEvent) => {
     if (eventTarget.id === "opener") {
       return;
     }
+    if (eventTarget.id === "in-context") {
+      return;
+    }
     target.classList.remove("wallpaper-menu");
     target.classList.add("wallpaper-menu-closed");
   } else if (target?.classList.contains("wallpaper-menu-closed")) {
