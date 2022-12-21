@@ -192,6 +192,21 @@ const reducer = (state = sampleStore, action: AnyAction) => {
         }
       };
       return localWallpaper;
+    case 'state/LOCALCOLOR':
+      const localColor = {
+        ...state,
+        settings: {
+          ...state.settings,
+          color: action.payload
+        }
+      };
+      return localColor;
+    case 'state/BOOT':
+      const afterBoot = {
+        ...state,
+        booting: action.payload
+      };
+      return afterBoot;
     default:
       return state;
   }

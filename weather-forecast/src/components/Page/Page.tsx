@@ -57,6 +57,8 @@ export default function Page ({children}: any) {
   useEffect(() => {
     // check localStorage
 
+    let color = localStorage.getItem('color');
+    let boot = JSON.parse(sessionStorage.getItem('boot')!);
     let wallpaper = JSON.parse(localStorage.getItem('wallpaper')!);
     let updatedWallpaper = {
       open: false,
@@ -65,6 +67,12 @@ export default function Page ({children}: any) {
       preview: wallpaper.preview,
       src: wallpaper.src
     };
+    if (boot !== null && boot !== undefined) {
+      dispatch({
+        type: 'state/BOOT',
+        payload: boot.status
+      });
+    }
     if (wallpaper !== null && wallpaper !== undefined) {
       dispatch({
         type: 'state/LOCAL',
@@ -74,6 +82,13 @@ export default function Page ({children}: any) {
       const url = require(`../../resources/images/${wallpaper.surname}.jpg`);
       page!.style.backgroundImage = `url(${url})`;
     }
+    if (color !== null && color !== undefined) {
+      dispatch({
+        type: 'state/LOCALCOLOR',
+        payload: color
+      });
+    }
+
 
     // preload images to avoid flashing white background when switching to a
     // wallpaper that hasn't yet been loaded
@@ -85,14 +100,15 @@ export default function Page ({children}: any) {
 
   useEffect(() => {
     // update localStorage
-    
-    if (!state.settings.wallpaper.open) {
+
+    if (state.booting) {
       return
     }
-
+    localStorage.setItem('color', state.settings.color);
+    sessionStorage.setItem('boot', JSON.stringify({
+      status: state.booting
+    }));
     localStorage.setItem('wallpaper', JSON.stringify(state.settings.wallpaper));
-    const test = JSON.parse(localStorage.getItem('wallpaper')!);
-    console.log(test);
   }, [state])
 
   return (
