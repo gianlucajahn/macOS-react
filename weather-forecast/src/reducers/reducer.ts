@@ -162,6 +162,21 @@ const reducer = (state = sampleStore, action: AnyAction) => {
         }
       };
       return toggledWallpaperWindow;
+    case 'wallpaper/CHANGE':
+      const changedWallpaper = {
+        ...state,
+        settings: {
+          ...state.settings,
+          wallpaper: {
+            open: true,
+            preview: action.payload.preview,
+            src: action.payload.src,
+            name: action.payload.name,
+            surname: action.payload.surname
+          }
+        }
+      };
+      return changedWallpaper;
     default:
       return state;
   }

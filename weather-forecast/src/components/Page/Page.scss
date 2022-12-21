@@ -5,8 +5,10 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
-  overflow: hidden;
+  -webkit-transition: background-image 0.3s ease-in-out;
+  transition: background-image 0.3s ease-in-out;
   background-image: url("../../resources/images/catalina.jpg");
+  overflow: hidden;
   background-repeat: no-repeat;
 
   * {

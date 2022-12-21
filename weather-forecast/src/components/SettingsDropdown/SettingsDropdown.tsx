@@ -140,9 +140,9 @@ export default function SettingsDropdown() {
       </section>
 
       <section className="wallpaper-container" id="opener" onClick={openWallpaperWindow}>
-        <img className="preview" src={require(`../../resources/images/preview_catalina.png`)} />
+        <img className="preview" src={require(`../../resources/images/preview_${state.settings.wallpaper.surname}.jpg`)} />
         <div className="desc">
-            <h2 className="title">Catalina</h2>
+            <h2 className="title">{state.settings.wallpaper.name}</h2>
             <h3 className="type">Dynamic Wallpaper</h3>
         </div>
       </section>

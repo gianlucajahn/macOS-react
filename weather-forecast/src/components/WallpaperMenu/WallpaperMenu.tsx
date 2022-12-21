@@ -14,12 +14,28 @@ export default function WallpaperMenu() {
 
   const toggleBorder = (e: React.MouseEvent) => {
     const target = e.target as HTMLImageElement;
-    if (target.classList.contains('image-wrapper-bordered')) {
-        target.classList.remove('image-wrapper-bordered');
+    if (target.classList.contains("image-wrapper-bordered")) {
+      target.classList.remove("image-wrapper-bordered");
     } else {
-        target.classList.add('image-wrapper-bordered');
+      target.classList.add("image-wrapper-bordered");
     }
-  }
+  };
+
+  const changeWallpaper = (wallpaper: any) => {
+    dispatch({
+        type: 'wallpaper/CHANGE',
+        payload: {
+            name: wallpaper.name,
+            surname: wallpaper.surname,
+            preview: `../../resources/images/preview_${wallpaper.surname}.jpg`,
+            src: `../../resources/images/${wallpaper.surname}.jpg`
+        }
+    });
+
+    const page = document.getElementById('page');
+    const url = require(`../../resources/images/${wallpaper.surname}.jpg`);
+    page!.style.backgroundImage = `url(${url})`;
+  };
 
   return (
     <Draggable
@@ -51,9 +67,9 @@ export default function WallpaperMenu() {
             <div className="prev">
               <img
                 className="current"
-                src={require("../../resources/images/catalina.jpg")}
+                src={state.settings.wallpaper.name === "Catalina" ? require("../../resources/images/catalina_day.jpg") : require(`../../resources/images/${state.settings.wallpaper.surname}.jpg`)}
               />
-              <h1>Catalina</h1>
+              <h1>{state.settings.wallpaper.name}</h1>
               <h2>Dynamic Wallpaper</h2>
 
               <div className="check">
@@ -63,18 +79,24 @@ export default function WallpaperMenu() {
             </div>
 
             <div className="wallpaper-selector">
-                <h1>Dynamic Wallpapers</h1>
+              <h1>Dynamic Wallpapers</h1>
 
-                <div className="grid">
-                    {wallpapers.map((wallpaperObject: any, i: number) => {
-                        return (
-                            <div className="item-container">
-                                <img className={`image-wrapper`} onMouseEnter={toggleBorder} onMouseLeave={toggleBorder} src={require(`../../resources/images/preview_${wallpaperObject.surname}.jpg`)} />
-                                <h2>{wallpaperObject.name}</h2>
-                            </div>
-                        )
-                    })}
-                </div>
+              <div className="grid">
+                {wallpapers.map((wallpaperObject: any, i: number) => {
+                  return (
+                    <div className="item-container">
+                      <img
+                        className={`image-wrapper`}
+                        onMouseEnter={toggleBorder}
+                        onMouseLeave={toggleBorder}
+                        src={require(`../../resources/images/preview_${wallpaperObject.surname}.jpg`)}
+                        onClick={() => changeWallpaper(wallpaperObject)}
+                      />
+                      <h2>{wallpaperObject.name}</h2>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </section>
         </div>

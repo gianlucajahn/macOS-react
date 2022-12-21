@@ -2,6 +2,7 @@ import React, { Children, useContext, MouseEvent, useEffect } from 'react';
 import { store } from '../../App';
 import checkDropdown from '../../utils/helpers/checkDropdown';
 import checkSettings from '../../utils/helpers/checkSettings';
+import wallpapers from '../../utils/helpers/wallpapers';
 import BootUpWindow from '../BootUpWindow/BootUpWindow';
 import './Page.scss';
 
@@ -52,6 +53,13 @@ export default function Page ({children}: any) {
       });
     }
   }
+
+  useEffect(() => {
+    wallpapers.forEach((picture) => {
+      let img = new Image();
+      img.src = picture.src
+    });
+  }, [])
 
   return (
     <div className="page" id="page" onClick={conditionalClick} onContextMenu={openContextMenu}>

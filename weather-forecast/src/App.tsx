@@ -1,6 +1,6 @@
 // Imports
 import "./App.scss";
-import React, { createContext, useReducer } from "react";
+import React, { createContext, useReducer, useEffect } from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 import reducer from "./reducers/reducer";
 import sampleStore from "./utils/keys/samples/sampleStore";
@@ -13,6 +13,7 @@ import Dock from "./components/Dock/Dock";
 import ContextMenu from "./components/ContextMenu/ContextMenu";
 import BootSound from "./resources/audio/bootsound.mp3";
 import WallpaperMenu from "./components/WallpaperMenu/WallpaperMenu";
+import wallpapers from "./utils/helpers/wallpapers";
 
 // Create store (redux naming convention)
 export const store = createContext<any>(null);
