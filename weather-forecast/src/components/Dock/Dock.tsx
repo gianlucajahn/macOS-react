@@ -22,6 +22,16 @@ export default function Dock () {
     });
   }
 
+  const openWallpaperWindow = (e: React.MouseEvent) => {
+    if (state.settings.wallpaper.open) {
+      toggleWallpaperVis(e);
+    }
+
+    dispatch({
+      type: 'wallpaper/TOGGLE'
+    });
+  }
+
   return (
     <>
         <div className="dock">
@@ -31,7 +41,7 @@ export default function Dock () {
               <div className="point" />
             </div>
             <div className="division" />
-            <div className={`dock-item ${state.dockItem === 1 ? "hovered" : ""} ${state.dockItem === 0 ? "distance-1" : state.dockItem === 2 ? "distance-1" : state.dockItem === 3 ? "distance-2" : ""}`} id="1" onMouseEnter={selectDockItem} onMouseLeave={resetDock} onClick={toggleWallpaperVis}>
+            <div className={`dock-item ${state.dockItem === 1 ? "hovered" : ""} ${state.dockItem === 0 ? "distance-1" : state.dockItem === 2 ? "distance-1" : state.dockItem === 3 ? "distance-2" : ""}`} id="1" onMouseEnter={selectDockItem} onMouseLeave={resetDock} onClick={openWallpaperWindow}>
               <div className="tool-tip">Photos</div>
               <img className="dock-icon" src={require("../../resources/images/webp/photos.png")} />
               <div className="point" style={{ visibility: document.getElementById('wallpaper-menu')?.classList.contains('wallpaper-menu') ? "visible" : "hidden" }} />

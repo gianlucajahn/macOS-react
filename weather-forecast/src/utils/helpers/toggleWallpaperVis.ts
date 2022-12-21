@@ -1,6 +1,11 @@
 const toggleWallpaperVis = (e: React.MouseEvent) => {
   const target = document.getElementById("wallpaper-menu");
   const eventTarget = e.target as HTMLDivElement
+  console.log(eventTarget);
+
+  if (eventTarget.id === "wallpaper-handle") {
+    return;
+  }
 
   if (target?.classList.contains("wallpaper-menu")) {
     if (eventTarget.id === "opener") {

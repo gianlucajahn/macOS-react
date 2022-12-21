@@ -47,19 +47,11 @@ export default function Page ({children}: any) {
 
     const isSettings = checkSettings(e);
     if (isSettings === false) {
-      console.log(e.target);
       dispatch({
         type: 'settings/CLOSE'
       });
     }
   }
-
-  useEffect(() => {
-    setTimeout(() => {
-      const x = document.getElementById('bootAudio') as HTMLAudioElement;
-      x!.play()
-    }, 4000)
-  }, [])
 
   return (
     <div className="page" id="page" onClick={conditionalClick} onContextMenu={openContextMenu}>

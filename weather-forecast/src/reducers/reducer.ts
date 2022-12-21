@@ -157,7 +157,7 @@ const reducer = (state = sampleStore, action: AnyAction) => {
           ...state.settings,
           wallpaper: {
             ...state.settings.wallpaper,
-            open: !state.settings.wallpaper.open
+            open: true
           }
         }
       };

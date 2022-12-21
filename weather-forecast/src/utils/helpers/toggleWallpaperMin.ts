@@ -1,4 +1,7 @@
 const toggleWallpaperMin = (e: React.MouseEvent) => {
+    const eventTarget = e.target as HTMLDivElement;
+    console.log(eventTarget);
+
     const target = document.getElementById("wallpaper-menu");
     if (target?.classList.contains("wallpaper-menu")) {
       target.classList.remove("wallpaper-menu");

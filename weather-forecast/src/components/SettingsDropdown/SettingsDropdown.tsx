@@ -36,6 +36,16 @@ export default function SettingsDropdown() {
     });
   }
 
+  const openWallpaperWindow = (e: React.MouseEvent) => {
+    if (state.settings.wallpaper.open) {
+      toggleWallpaperVis(e);
+    }
+
+    dispatch({
+      type: 'wallpaper/TOGGLE'
+    });
+  }
+
   return (
     <div
       className={`settings-dropdown set ${
@@ -129,7 +139,7 @@ export default function SettingsDropdown() {
         </div>
       </section>
 
-      <section className="wallpaper-container" id="opener" onClick={toggleWallpaperVis}>
+      <section className="wallpaper-container" id="opener" onClick={openWallpaperWindow}>
         <img className="preview" src={require(`../../resources/images/preview_catalina.png`)} />
         <div className="desc">
             <h2 className="title">Catalina</h2>
