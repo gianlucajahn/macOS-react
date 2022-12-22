@@ -51,6 +51,7 @@ export default function () {
       <div className="nav-bar">
         <div className="logo section" id="logo" onClick={dispatchAction}>
           <img
+            alt="Apple Logo"
             className="apple"
             src={require("../../resources/images/apple.png")}
           />
