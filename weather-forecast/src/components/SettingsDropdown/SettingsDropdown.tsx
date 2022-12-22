@@ -143,6 +143,7 @@ export default function SettingsDropdown() {
         onClick={openWallpaperWindow}
       >
         <img
+          alt="Wallpaper Preview"
           className="preview"
           src={require(`../../resources/images/preview_${state.settings.wallpaper.surname}.jpg`)}
         />
