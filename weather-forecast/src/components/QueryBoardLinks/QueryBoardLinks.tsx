@@ -34,6 +34,7 @@ export default function QueryBoardLinks() {
       <a href="https://www.linkedin.com/in/gianlucajahn/" target="_blank">
         <button className="nav chat-btn">
           <img
+            alt="Chat"
             className="chat"
             src={require("../../resources/images/linkedin.png")}
           />
