@@ -29,6 +29,7 @@ export default function QueryBoard() {
         }}
       >
         <img
+          alt="Fullscreen Icon"
           className="fullscreen"
           src={require("../../resources/images/fullscreen.png")}
         />
