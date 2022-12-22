@@ -13,6 +13,7 @@ export default function InputField() {
       <Search className="search" />
       <Lock className="lock" />
       <img
+        alt="Refresh"
         className="refresh"
         src={require("../../resources/images/refresh.png")}
         onClick={(e) => {
