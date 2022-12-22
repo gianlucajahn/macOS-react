@@ -26,7 +26,13 @@ export default function SelectedDayForecast() {
   const returnCurrentCon = (weather: string, i: number) => {
     switch (weather) {
       case "Clear":
-        if (nightTimes.includes(state.selected ? state.selected[i].hours : state.weather.forecast[0][i].hours)) {
+        if (
+          nightTimes.includes(
+            state.selected
+              ? state.selected[i].hours
+              : state.weather.forecast[0][i].hours
+          )
+        ) {
           return <ClearNight />;
         }
         return <Clear />;
@@ -64,8 +70,8 @@ export default function SelectedDayForecast() {
   return (
     <div className="selected-day-forecast">
       <section className="intervals" id="intervals">
-        {state.selected ? 
-            state.selected.map((interval: any, i: number) => {
+        {state.selected
+          ? state.selected.map((interval: any, i: number) => {
               return (
                 <div className="interval-container">
                   <h3 className="time">{interval.hours}</h3>

@@ -28,27 +28,27 @@ const StoreProvider = ({ children }: any) => (
 function App() {
   return (
     <ChakraProvider>
-        <StoreProvider>
-          <Page>
-            <NavBar />
-            <Draggable
-              handle="#handle"
-              onStart={(e: any) => {
-                if (e.target.id !== "handle") {
-                  return false;
-                }
-              }}
-            >
-              <div className={`window weather-window`} id="weather-window">
-                <QueryBoard />
-                <WeatherBoard />
-              </div>
-            </Draggable>
-            <WallpaperMenu />
-            <ContextMenu />
-            <Dock />
-          </Page>
-        </StoreProvider>
+      <StoreProvider>
+        <Page>
+          <NavBar />
+          <Draggable
+            handle="#handle"
+            onStart={(e: any) => {
+              if (e.target.id !== "handle") {
+                return false;
+              }
+            }}
+          >
+            <div className={`window weather-window`} id="weather-window">
+              <QueryBoard />
+              <WeatherBoard />
+            </div>
+          </Draggable>
+          <WallpaperMenu />
+          <ContextMenu />
+          <Dock />
+        </Page>
+      </StoreProvider>
     </ChakraProvider>
   );
 }

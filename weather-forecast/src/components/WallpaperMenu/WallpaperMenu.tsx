@@ -10,18 +10,10 @@ import toggleWallpaperVis from "../../utils/helpers/toggleWallpaperVis";
 import toggleWallpaperMin from "../../utils/helpers/toggleWallpaperMin";
 import wallpaperObjectType from "../../types/wallpaperObjectType";
 import returnColor from "../../utils/helpers/returnColor";
+import toggleBorder from "../../utils/helpers/toggleBorder";
 
 export default function WallpaperMenu() {
   const [state, dispatch] = useContext(store);
-
-  const toggleBorder = (e: React.MouseEvent) => {
-    const target = e.target as HTMLImageElement;
-    if (target.classList.contains("image-wrapper-bordered")) {
-      target.classList.remove("image-wrapper-bordered");
-    } else {
-      target.classList.add("image-wrapper-bordered");
-    }
-  };
 
   const changeWallpaper = (wallpaper: any) => {
     dispatch({
@@ -88,24 +80,25 @@ export default function WallpaperMenu() {
               <h1>Dynamic Wallpapers</h1>
 
               <div className="grid">
-                {wallpapers.map((wallpaperObject: wallpaperObjectType, i: number) => {
-                  return (
-                    <div className="item-container">
-                      <img
-                        className={`image-wrapper`}
-                        onMouseEnter={toggleBorder}
-                        onMouseLeave={toggleBorder}
-                        src={require(`../../resources/images/preview_${wallpaperObject.surname}.jpg`)}
-                        onClick={() => changeWallpaper(wallpaperObject)}
-                        style={{
-                          borderColor:
-                            returnColor(state.settings.color)
-                        }}
-                      />
-                      <h2>{wallpaperObject.name}</h2>
-                    </div>
-                  );
-                })}
+                {wallpapers.map(
+                  (wallpaperObject: wallpaperObjectType, i: number) => {
+                    return (
+                      <div className="item-container">
+                        <img
+                          className={`image-wrapper`}
+                          onMouseEnter={toggleBorder}
+                          onMouseLeave={toggleBorder}
+                          src={require(`../../resources/images/preview_${wallpaperObject.surname}.jpg`)}
+                          onClick={() => changeWallpaper(wallpaperObject)}
+                          style={{
+                            borderColor: returnColor(state.settings.color),
+                          }}
+                        />
+                        <h2>{wallpaperObject.name}</h2>
+                      </div>
+                    );
+                  }
+                )}
               </div>
             </div>
           </section>

@@ -27,8 +27,8 @@ interface storeType {
       preview: string;
       name: string;
       surname: string;
-    }
-  }
+    };
+  };
 }
 
 export default storeType;

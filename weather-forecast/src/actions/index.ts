@@ -1,5 +1,5 @@
 export const geolocate = () => {
-    return {
-        type: 'GEO'
-    }
-}
+  return {
+    type: "GEO",
+  };
+};

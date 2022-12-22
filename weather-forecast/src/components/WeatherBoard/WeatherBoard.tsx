@@ -7,7 +7,7 @@ import SelectedDayForecast from "../SelectedDayForecast/SelectedDayForecast";
 import ForecastList from "../ForecastList/ForecastList";
 import { ReactComponent as Loading } from "../../resources/images/svg/loading.svg";
 import { AnimatePresence, motion } from "framer-motion";
-import uuid from 'react-uuid';
+import uuid from "react-uuid";
 
 export default function WeatherBoard() {
   const [state, dispatch] = useContext(store);

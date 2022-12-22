@@ -24,21 +24,21 @@ export default function SettingsDropdown() {
 
   const toggleAnimations = () => {
     dispatch({
-        type: 'settings/ANIMATIONS'
+      type: "settings/ANIMATIONS",
     });
-  }
+  };
 
   const toggleAirdrop = () => {
     dispatch({
-        type: 'settings/AIRDROP'
+      type: "settings/AIRDROP",
     });
-  }
+  };
 
   const toggleNotch = () => {
     dispatch({
-        type: 'settings/NOTCH'
+      type: "settings/NOTCH",
     });
-  }
+  };
 
   const openWallpaperWindow = (e: React.MouseEvent) => {
     if (state.settings.wallpaper.open) {
@@ -46,9 +46,9 @@ export default function SettingsDropdown() {
     }
 
     dispatch({
-      type: 'wallpaper/TOGGLE'
+      type: "wallpaper/TOGGLE",
     });
-  }
+  };
 
   return (
     <div
@@ -64,10 +64,13 @@ export default function SettingsDropdown() {
             style={{
               backgroundColor: !state.settings.airdrop
                 ? "#2f3541"
-                : returnColor(state.settings.color)
+                : returnColor(state.settings.color),
             }}
           >
-            <Airdrop fill={state.settings.airdrop ? "black" : "white"} style={{ transition: "0.25s all" }}/>
+            <Airdrop
+              fill={state.settings.airdrop ? "black" : "white"}
+              style={{ transition: "0.25s all" }}
+            />
           </button>
           Airdrop
         </div>
@@ -79,10 +82,13 @@ export default function SettingsDropdown() {
             style={{
               backgroundColor: !state.settings.animations
                 ? "#2f3541"
-                : returnColor(state.settings.color)
+                : returnColor(state.settings.color),
             }}
           >
-            <Animations fill={state.settings.animations ? "black" : "white"} style={{ transition: "0.25s all" }}/>
+            <Animations
+              fill={state.settings.animations ? "black" : "white"}
+              style={{ transition: "0.25s all" }}
+            />
           </button>
           Animations
         </div>
@@ -91,7 +97,11 @@ export default function SettingsDropdown() {
       <section className="sys-colors set">
         System Color
         <div className="colors set">
-          <div className="color orangey set" id="orange" onClick={setSystemColor}>
+          <div
+            className="color orangey set"
+            id="orange"
+            onClick={setSystemColor}
+          >
             {state.settings.color === "orange" ? <Tick /> : null}
           </div>
           <div className="color greeny set" id="green" onClick={setSystemColor}>
@@ -107,10 +117,18 @@ export default function SettingsDropdown() {
           <div className="color bluey set" id="blue" onClick={setSystemColor}>
             {state.settings.color === "blue" ? <Tick /> : null}
           </div>
-          <div className="color purpley set" id="purple" onClick={setSystemColor}>
+          <div
+            className="color purpley set"
+            id="purple"
+            onClick={setSystemColor}
+          >
             {state.settings.color === "purple" ? <Tick /> : null}
           </div>
-          <div className="color violety set" id="violet" onClick={setSystemColor}>
+          <div
+            className="color violety set"
+            id="violet"
+            onClick={setSystemColor}
+          >
             {state.settings.color === "violet" ? <Tick /> : null}
           </div>
           <div className="color redy set" id="red" onClick={setSystemColor}>
@@ -119,16 +137,23 @@ export default function SettingsDropdown() {
         </div>
       </section>
 
-      <section className="wallpaper-container" id="opener" onClick={openWallpaperWindow}>
-        <img className="preview" src={require(`../../resources/images/preview_${state.settings.wallpaper.surname}.jpg`)} />
+      <section
+        className="wallpaper-container"
+        id="opener"
+        onClick={openWallpaperWindow}
+      >
+        <img
+          className="preview"
+          src={require(`../../resources/images/preview_${state.settings.wallpaper.surname}.jpg`)}
+        />
         <div className="desc">
-            <h2 className="title">{state.settings.wallpaper.name}</h2>
-            <h3 className="type">Dynamic Wallpaper</h3>
+          <h2 className="title">{state.settings.wallpaper.name}</h2>
+          <h3 className="type">Dynamic Wallpaper</h3>
         </div>
       </section>
 
       <section className="notch-container set" onClick={toggleNotch}>
-        <button 
+        <button
           className="notch-btn set"
           style={{
             backgroundColor: !state.settings.notch
@@ -148,7 +173,10 @@ export default function SettingsDropdown() {
               : "#ff3860",
           }}
         >
-            <Notch fill={state.settings.notch ? "black" : "white"} style={{ transition: "0.25s all" }}/>
+          <Notch
+            fill={state.settings.notch ? "black" : "white"}
+            style={{ transition: "0.25s all" }}
+          />
         </button>
         Notch
       </section>

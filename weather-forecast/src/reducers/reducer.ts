@@ -146,23 +146,23 @@ const reducer = (state = sampleStore, action: AnyAction) => {
         ...state,
         settings: {
           ...state.settings,
-          notch: !state.settings.notch
-        }
+          notch: !state.settings.notch,
+        },
       };
-      return toggledNotch
-    case 'wallpaper/TOGGLE':
+      return toggledNotch;
+    case "wallpaper/TOGGLE":
       const toggledWallpaperWindow = {
         ...state,
         settings: {
           ...state.settings,
           wallpaper: {
             ...state.settings.wallpaper,
-            open: true
-          }
-        }
+            open: true,
+          },
+        },
       };
       return toggledWallpaperWindow;
-    case 'wallpaper/CHANGE':
+    case "wallpaper/CHANGE":
       const changedWallpaper = {
         ...state,
         settings: {
@@ -172,39 +172,39 @@ const reducer = (state = sampleStore, action: AnyAction) => {
             preview: action.payload.preview,
             src: action.payload.src,
             name: action.payload.name,
-            surname: action.payload.surname
-          }
-        }
+            surname: action.payload.surname,
+          },
+        },
       };
       return changedWallpaper;
-    case 'onTop/SET':
+    case "onTop/SET":
       const changedIndices = {
         ...state,
-        onTop: action.payload
+        onTop: action.payload,
       };
       return changedIndices;
-    case 'state/LOCAL':
+    case "state/LOCAL":
       const localWallpaper = {
         ...state,
         settings: {
           ...state.settings,
-          wallpaper: action.payload
-        }
+          wallpaper: action.payload,
+        },
       };
       return localWallpaper;
-    case 'state/LOCALCOLOR':
+    case "state/LOCALCOLOR":
       const localColor = {
         ...state,
         settings: {
           ...state.settings,
-          color: action.payload
-        }
+          color: action.payload,
+        },
       };
       return localColor;
-    case 'state/BOOT':
+    case "state/BOOT":
       const afterBoot = {
         ...state,
-        booting: action.payload
+        booting: action.payload,
       };
       return afterBoot;
     default:
