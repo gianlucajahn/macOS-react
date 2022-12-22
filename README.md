@@ -4,6 +4,7 @@
 <p align="center">
   MacOS Clone built with TypeScript React, SCSS and Framer Motion
 </p>
+<br />
 
 ## Short Description
 A MacOS Clone built with React. Imitates the usual desktop features, wallpaper settings, system settings, an integrated weather app (and more to come). Detailed feature-list can be found below.
