@@ -38,13 +38,7 @@ My initial motivation in building this was honestly not to build it at all. Beca
 - Component Library: none
 - Stylesheet: SCSS
 
-
-## What I learned:
-- Using motion libraries (e.g. Framer Motion) to achieve much smoother user experiences while maintaining clean code
-- Working with a CDN (Cloud Delivery Network) to improve performance by accelerating bundle delivery
-- organizing and connecting a project with React Router Dom
-
 ## Credits
-[nekusu](https://github.com/nekusu): UI/UX for the game pages and cart popup
+[PuruVJ](https://github.com/PuruVJ): I built this clone entirely inspired by this MacOS Clone in Svelte, although I reverse-engineered it and didn't re-use anything from the project.
 
-All rights to all pictures, products and names on this website belong to the respective publishers of the games displayed. I only used them to build an environment for myself to learn coding in React with. This page is not being used commercially. If you are an owner of the copyrighted material, please let me know if you have any issues with this page and I'll take it down immediately.
+All rights to all pictures, products and names on this website belong to Apple Inc. I only used them to build an environment for myself to learn coding in React with. This page is not being used commercially. If you are an owner of the copyrighted material, please let me know if you have any issues with this page and I'll take it down immediately.
