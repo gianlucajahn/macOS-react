@@ -39,7 +39,7 @@ My initial motivation in building this was honestly not to build it at all. Beca
 - Component Library: none
 - Stylesheet: SCSS
 
-## Contributions
+## 🤝 Contributions
 This project is open to contributions! I am still working on some features (Calculator, Calendar, VSCode, Music App) and there's probably a ton of things to add/change/fix. Feel free to fork it and create a PR!
 
 ## Credits
