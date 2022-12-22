@@ -49,6 +49,7 @@ export default function Dock() {
         >
           <div className="tool-tip">Finder</div>
           <img
+            alt="Finder"
             className={`dock-icon finder`}
             src={require("../../resources/images/webp/finder.png")}
           />
@@ -72,6 +73,7 @@ export default function Dock() {
         >
           <div className="tool-tip">Photos</div>
           <img
+            alt="Photos"
             className="dock-icon"
             src={require("../../resources/images/webp/photos.png")}
           />
@@ -106,6 +108,7 @@ export default function Dock() {
         >
           <div className="tool-tip">Calculator</div>
           <img
+            alt="Calculator"
             className="dock-icon"
             src={require("../../resources/images/webp/calculator.png")}
           />
@@ -130,6 +133,7 @@ export default function Dock() {
         >
           <div className="tool-tip">Calendar</div>
           <img
+            alt="Calendar"
             className="dock-icon"
             src={require("../../resources/images/webp/calendar.png")}
           />
@@ -157,6 +161,7 @@ export default function Dock() {
         >
           <div className="tool-tip">VSCode</div>
           <img
+            alt="VSCode"
             className="dock-icon"
             src={require("../../resources/images/webp/vscode.png")}
           />
@@ -184,6 +189,7 @@ export default function Dock() {
         >
           <div className="tool-tip">Music</div>
           <img
+            alt="Apple Music"
             className="dock-icon"
             src={require("../../resources/images/webp/applemusic.png")}
           />
@@ -208,6 +214,7 @@ export default function Dock() {
         >
           <div className="tool-tip">Weather</div>
           <img
+            alt="Weather App"
             className="dock-icon"
             src={require("../../resources/images/webp/weather.png")}
           />
@@ -243,6 +250,7 @@ export default function Dock() {
         >
           <div className="tool-tip">GitHub</div>
           <img
+            alt="GitHub"
             className="dock-icon"
             src={require("../../resources/images/webp/github.png")}
           />
@@ -266,6 +274,7 @@ export default function Dock() {
         >
           <div className="tool-tip">Scalable</div>
           <img
+            alt="Scalable Capital"
             className="dock-icon"
             src={require("../../resources/images/webp/scalable.png")}
           />
@@ -287,6 +296,7 @@ export default function Dock() {
         >
           <div className="tool-tip">Twitter</div>
           <img
+            alt="Twitter"
             className="dock-icon"
             src={require("../../resources/images/webp/twitter.png")}
           />

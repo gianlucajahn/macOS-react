@@ -60,6 +60,7 @@ export default function WallpaperMenu() {
           <section className="selection">
             <div className="prev">
               <img
+                alt="Current Wallpaper"
                 className="current"
                 src={
                   state.settings.wallpaper.name === "Catalina"
@@ -85,6 +86,7 @@ export default function WallpaperMenu() {
                     return (
                       <div className="item-container">
                         <img
+                          alt="wallpaper"
                           className={`image-wrapper`}
                           onMouseEnter={toggleBorder}
                           onMouseLeave={toggleBorder}
