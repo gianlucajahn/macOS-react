@@ -49,6 +49,7 @@ export default function BootUpWindow() {
   return (
     <div className="bootup-window boot" id="boot" onMouseEnter={playSound}>
       <img
+        alt="Logo"
         className="logo"
         src={require("../../resources/images/applelogo.png")}
       />
