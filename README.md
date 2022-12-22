@@ -20,9 +20,6 @@ You can see images and a GIF of the project in user interaction below. The GIF d
 ![](https://i.imgur.com/mCU5H4l.png)
 ![](/weather-forecast/src/resources/images/showcase.gif)
 
-## Motivation
-My initial motivation in building this was honestly not to build it at all. Because as you can see by this project's folder structure, it was in fact not supposed to be a mac os clone but just a simple weather app when I was starting out. I was trying to revisit API usage to get muscle memory and a better understanding of working with APIs in general down but ended up being a bit bored and built a MacOS around it.
-
 ## Features
 - Bootup Window similar to the original MacOS
 - System Settings, Color and Wallpaper preferences
@@ -38,6 +35,9 @@ My initial motivation in building this was honestly not to build it at all. Beca
 - Motion Library: Framer Motion
 - Component Library: none
 - Stylesheet: SCSS
+
+## Motivation
+My initial motivation in building this was honestly not to build it at all. Because as you can see by this project's folder structure, it was in fact not supposed to be a mac os clone but just a simple weather app when I was starting out. I was trying to revisit API usage to get muscle memory and a better understanding of working with APIs in general down but ended up being a bit bored and built a MacOS around it.
 
 ## 🤝 Contributions
 This project is open to contributions! I am still working on some features (Calculator, Calendar, VSCode, Music App) and there's probably a ton of things to add/change/fix. Feel free to fork it and create a PR!
