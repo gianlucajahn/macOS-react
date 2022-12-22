@@ -1,9 +1,6 @@
 <h1 align="center"> macOS in React</h1>
 
-![](/src/Resources/image/preview1.png)
+![](https://i.ibb.co/S0S9bN3/banner.png)
 <p align="center">
-  A macOS clone built with TypeScript React, SCSS and Framer Motion
-</p>
-<p align="center">
-  Work in Progress!
+  macOS Clone built with TypeScript React, SCSS and Framer Motion
 </p>
