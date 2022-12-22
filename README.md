@@ -20,7 +20,7 @@ You can see images and a GIF of the project in user interaction below. The GIF d
 ![](/src/Resources/image/showcase.gif)
 
 ## Motivation
-My initial motivation in building this was honestly not to build it at all. Because as you can see by this project's folder structure, it was infact not supposed to be a mac os clone but just a simple weather app when I was starting out. I was trying to revisit API usage to get muscle memory and a better understanding of working with APIs in general down but ended up being a bit bored and built a MacOS around it.
+My initial motivation in building this was honestly not to build it at all. Because as you can see by this project's folder structure, it was in fact not supposed to be a mac os clone but just a simple weather app when I was starting out. I was trying to revisit API usage to get muscle memory and a better understanding of working with APIs in general down but ended up being a bit bored and built a MacOS around it.
 
 ## Features
 - Bootup Window similar to the original MacOS
