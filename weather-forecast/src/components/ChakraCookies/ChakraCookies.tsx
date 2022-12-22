@@ -8,6 +8,7 @@ export default function ChakraCookies() {
       <button className="nav cookies-btn">
         <div className="tooltip">No cookies!</div>
         <img
+          alt="Cookies"
           className="cookies"
           src={require("../../resources/images/cookies.png")}
         />
