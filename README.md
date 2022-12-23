@@ -4,7 +4,7 @@
 <p align="center">A MacOS Clone built in TypeScript React with SASS and Framer Motion, tested with Jest.</p>
 
 ![](https://img.shields.io/badge/contributors-2-white)
-![](https://img.shields.io/badge/commits-167-white)
+![](https://img.shields.io/badge/commits-168-white)
 ![](https://img.shields.io/badge/test%20coverage-96%25-brightgreen)
 ![](https://img.shields.io/badge/open%20source-true-brightgreen)
 ![](https://img.shields.io/npm/types/chalk)
@@ -18,7 +18,7 @@
 
 ![](https://i.ibb.co/S0S9bN3/banner.png)
 <p align="center">
-  Desktop showcase with an open dropdown for system preferances
+  Desktop showcase without any modals
 </p>
 <br />
 
