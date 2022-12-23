@@ -9,7 +9,6 @@
 ![](https://img.shields.io/badge/open%20source-true-grey)
 ![](https://img.shields.io/npm/types/chalk)
 ![](https://img.shields.io/badge/completion-54%25-red)  
-
 ![](https://img.shields.io/github/stars/gianlucajahn/macOS-react?style=social)
 ![](https://img.shields.io/github/followers/gianlucajahn?style=social)
 ![](https://img.shields.io/twitter/follow/0xGianni?style=social)
