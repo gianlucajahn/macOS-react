@@ -1,6 +1,6 @@
 <div align="center">
   
-![]([https://i.imgur.com/9pcJykZ.png](https://i.imgur.com/dMm65GE.png))
+![](https://i.imgur.com/dMm65GE.png)
 <p align="center">MacOS Clone in React</p>
   
 </div>
