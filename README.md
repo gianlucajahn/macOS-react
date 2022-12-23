@@ -1,7 +1,7 @@
 <div align="center">
   
 ![](https://i.imgur.com/dMm65GE.png)
-<h1 align="center">MacOS Web Clone</h1>
+<h1 align="center">MacOS Web</h1>
 <p align="center">A MacOS Clone built in TypeScript React with SASS and Framer Motion, tested with Jest.</p>
   
 </div>
