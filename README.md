@@ -8,9 +8,11 @@
   
 </div>
 
+<br />
+
 ![](https://i.ibb.co/S0S9bN3/banner.png)
 <p align="center">
-  MacOS Clone built with TypeScript React, SCSS and Framer Motion
+  Desktop showcase with an open dropdown for system preferances
 </p>
 <br />
 
