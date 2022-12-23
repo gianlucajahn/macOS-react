@@ -37,13 +37,14 @@ You can see images and a GIF of the project in user interaction below. The GIF d
 ![](/weather-forecast/src/resources/images/showcase.gif)
 
 ## Features
-- Bootup Window similar to the original MacOS
-- System Settings, Color and Wallpaper preferences
-- Local storage and session storage saving user preferences
-- Integrated Weather App including geolocation to fetch forecasts for the user's location
-- Wallpaper Selection window to switch desktop backgrounds
-- Custom Context Menu and System Navigation Bar
-- Smooth Animations w/ [Framer Motion](https://github.com/framer/motion)
+✔️ Bootup Window similar to the original MacOS
+✔️ System Settings, Color and Wallpaper preferences
+✔️ Local storage and session storage saving user preferences
+✔️ Integrated Weather App including geolocation to fetch forecasts for the user's location
+✔️ Wallpaper Selection window to switch desktop backgrounds
+✔️ Custom Context Menu and System Navigation Bar
+✔️ Smooth Animations w/ [Framer Motion](https://github.com/framer/motion)
+❌ (WIP) Calculator and Calendar Apps
 
 ## Stack
 - Framework: React
