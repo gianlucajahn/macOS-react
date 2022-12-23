@@ -62,4 +62,4 @@ This project is open to contributions! I am still working on some features (Calc
 ## Credits
 [PuruVJ](https://github.com/PuruVJ): I built this clone entirely inspired by this MacOS Clone in Svelte, although I reverse-engineered it, meaning I didn't re-use anything from the project.
 
-All rights to all pictures, products and names on this website belong to Apple Inc. I only used them to build an environment for myself to learn coding in React with. This page is not being used commercially. If you are an owner of the copyrighted material, please let me know if you have any issues with this page and I'll take it down immediately.
+All rights to all pictures, products and names on this website belong to Apple Inc. I only used them to build an environment for myself to learn coding in React with. This page is not being used commercially. If you are an owner of the copyrighted material, please let me know if you have any issues with this page and I'll take it down immediately
