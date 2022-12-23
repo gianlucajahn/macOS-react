@@ -12,7 +12,6 @@
 ![](https://img.shields.io/badge/tests-96%25-brightgreen)
 
 </div>
-<br />
 
 ![](https://i.ibb.co/S0S9bN3/banner.png)
 <p align="center">
