@@ -4,7 +4,7 @@
 <p align="center">A MacOS Clone built in TypeScript React with SASS and Framer Motion, tested with Jest.</p>
 
 ![](https://img.shields.io/badge/contributors-2-white)
-![](https://img.shields.io/badge/commits-168-white)
+![](https://img.shields.io/badge/commits-172-white)
 ![](https://img.shields.io/badge/test%20coverage-96%25-brightgreen)
 ![](https://img.shields.io/badge/open%20source-true-brightgreen)
 ![](https://img.shields.io/npm/types/chalk)
@@ -37,14 +37,14 @@ You can see images and a GIF of the project in user interaction below. The GIF d
 ![](/weather-forecast/src/resources/images/showcase.gif)
 
 ## Features
-✔️ - Bootup Window similar to the original MacOS
-✔️ - System Settings, Color and Wallpaper preferences
-✔️ - Local storage and session storage saving user preferences
-✔️ - Integrated Weather App including geolocation to fetch forecasts for the user's location
-✔️ - Wallpaper Selection window to switch desktop backgrounds
-✔️ - Custom Context Menu and System Navigation Bar
-✔️ - Smooth Animations w/ [Framer Motion](https://github.com/framer/motion)
-❌ - (WIP) Calculator and Calendar Apps
+- ✔️ Bootup Window similar to the original MacOS
+- ✔️ System Settings, Color and Wallpaper preferences
+- ✔️ Local storage and session storage saving user preferences
+- ✔️ Integrated Weather App including geolocation to fetch forecasts for the user's location
+- ✔️ Wallpaper Selection window to switch desktop backgrounds
+- ✔️ Custom Context Menu and System Navigation Bar
+- ✔️ Smooth Animations w/ [Framer Motion](https://github.com/framer/motion)
+- ❌ (WIP) Calculator and Calendar Apps
 
 ## Stack
 - Framework: React
