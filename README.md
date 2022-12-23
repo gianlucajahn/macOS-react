@@ -11,6 +11,10 @@
 ![](https://img.shields.io/npm/types/chalk)
 ![](https://img.shields.io/badge/commit%20status-in%20master-blue)
 ![](https://img.shields.io/badge/completion-54%25-red)
+![](https://img.shields.io/github/stars/gianlucajahn/macOS-react?style=social)
+![](https://img.shields.io/github/followers/gianlucajahn?style=social)
+![](https://img.shields.io/twitter/follow/0xGianni?style=social)
+![](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fgianlucajahn.github.io%2FmacOS-react%2F)
 
 </div>
 
