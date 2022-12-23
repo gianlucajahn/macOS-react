@@ -1,7 +1,7 @@
 <div align="center">
   
-![](https://i.imgur.com/9pcJykZ.png)
-<h2 align="center">MacOS Clone in React</h2>
+![]([https://i.imgur.com/9pcJykZ.png](https://i.imgur.com/dMm65GE.png))
+<p align="center">MacOS Clone in React</p>
   
 </div>
 <br />
