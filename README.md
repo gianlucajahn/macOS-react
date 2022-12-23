@@ -14,10 +14,6 @@
 <br />
 
 ![](https://img.shields.io/badge/completion-54%25-red)
-![](https://img.shields.io/badge/commit%20status-in%20master-blue)
-![](https://img.shields.io/badge/commit%20status-in%20master-blue)
-![](https://img.shields.io/badge/commit%20status-in%20master-blue)
-![](https://img.shields.io/badge/commit%20status-in%20master-blue)
 
 </div>
 
