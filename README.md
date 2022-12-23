@@ -1,14 +1,9 @@
-![](https://i.imgur.com/zoZIVGZ.png)
-<h1 align="center">🍎 MacOS Ventura Web</h1>
-<p align="center">
-  MacOS Clone built with TypeScript React, SCSS and Framer Motion
-</p>
 <div align="center">
   
-  ![](https://img.shields.io/badge/contributors-2-orange)
+![]([https://i.imgur.com/zoZIVGZ.png](https://i.imgur.com/9pcJykZ.png))
+<h2 align="center">MacOS Clone in React</h2>
   
 </div>
-
 <br />
 
 ![](https://i.ibb.co/S0S9bN3/banner.png)
