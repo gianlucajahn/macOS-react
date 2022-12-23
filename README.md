@@ -1,3 +1,4 @@
+![](https://i.imgur.com/zoZIVGZ.png)
 <h1 align="center">🍎 MacOS Ventura Web</h1>
 <p align="center">
   MacOS Clone built with TypeScript React, SCSS and Framer Motion
