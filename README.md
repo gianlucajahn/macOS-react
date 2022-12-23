@@ -7,7 +7,7 @@
 ![](https://img.shields.io/badge/contributors-2-white)
 ![](https://img.shields.io/badge/commits-149-white)
 ![](https://img.shields.io/badge/tests-96%25-brightgreen)
-![](https://img.shields.io/badge/version-1.0.0.2-grey)
+![](https://img.shields.io/badge/version-1.0.0.2-brightgreen)
 ![](https://img.shields.io/badge/open%20source-true-grey)
 ![](https://img.shields.io/npm/types/chalk)
 ![](https://img.shields.io/badge/tests-96%25-brightgreen)
