@@ -6,10 +6,19 @@
 ![](https://img.shields.io/badge/contributors-2-white)
 ![](https://img.shields.io/badge/commits-149-white)
 ![](https://img.shields.io/badge/tests-96%25-brightgreen)
-![](https://img.shields.io/badge/version-1.0.0.2-brightgreen)
+![](https://img.shields.io/badge/w3c-validated-brightgreen)
 ![](https://img.shields.io/badge/open%20source-true-grey)
 ![](https://img.shields.io/npm/types/chalk)
 ![](https://img.shields.io/badge/commit%20status-in%20master-blue)
+
+<br />
+
+![](https://img.shields.io/badge/completion-54%25-red)
+![](https://img.shields.io/badge/commit%20status-in%20master-blue)
+![](https://img.shields.io/badge/commit%20status-in%20master-blue)
+![](https://img.shields.io/badge/commit%20status-in%20master-blue)
+![](https://img.shields.io/badge/commit%20status-in%20master-blue)
+
 </div>
 
 ![](https://i.ibb.co/S0S9bN3/banner.png)
