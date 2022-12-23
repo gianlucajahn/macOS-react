@@ -1,4 +1,8 @@
 <h1 align="center">🍎 MacOS Ventura Web</h1>
+<p align="center">
+  MacOS Clone built with TypeScript React, SCSS and Framer Motion
+</p>
+
 
 ![](https://img.shields.io/badge/contributors-2-orange)
 ![](https://i.ibb.co/S0S9bN3/banner.png)
