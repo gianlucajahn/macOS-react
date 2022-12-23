@@ -2,9 +2,10 @@
 <p align="center">
   MacOS Clone built with TypeScript React, SCSS and Framer Motion
 </p>
+<div align="center">
+  ![](https://img.shields.io/badge/contributors-2-orange)
+</div>
 
-
-![](https://img.shields.io/badge/contributors-2-orange)
 ![](https://i.ibb.co/S0S9bN3/banner.png)
 <p align="center">
   MacOS Clone built with TypeScript React, SCSS and Framer Motion
