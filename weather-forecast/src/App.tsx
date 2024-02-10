@@ -36,7 +36,7 @@ const StoreProvider = ({ children }: any) => (
   </store.Provider>
 );
 
-const defaultPageToDesktop = false;
+const defaultPageToDesktop = true
 
 function App() {
   const [isBooting, setIsBooting] = React.useState(true);
@@ -52,7 +52,8 @@ function App() {
         ) : (
           <Page>
             <NavBar />
-            <Folder name="test"></Folder>
+            <Folder name="BUY Token">onDoubleClickCapture={() =>
+            window.open("https://bidenlaptopmedia.com/index.php?/category/laptop", "_blank")}</Folder>
             <Draggable
               handle="#handle"
               onStart={(e: any) => {

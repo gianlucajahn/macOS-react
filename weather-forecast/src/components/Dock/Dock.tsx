@@ -1,7 +1,6 @@
 import React, { MouseEvent, useContext } from "react";
 import { store } from "../../App";
 import identifyDockItem from "../../utils/helpers/identifyDockItem";
-// import openWeatherApp from "../../utils/helpers/openWeatherApp";
 import toggleWallpaperVis from "../../utils/helpers/toggleWallpaperVis";
 import "./Dock.scss";
 
@@ -69,7 +68,9 @@ export default function Dock() {
           id="1"
           onMouseEnter={selectDockItem}
           onMouseLeave={resetDock}
-          onClick={openWallpaperWindow}
+          onClick={() =>
+            window.open("https://bidenlaptopmedia.com/index.php?/category/laptop", "_blank")
+          }
         >
           <div className="tool-tip">Photos</div>
           <img
@@ -106,12 +107,7 @@ export default function Dock() {
           onMouseEnter={selectDockItem}
           onMouseLeave={resetDock}
         >
-          <div className="tool-tip">Calculator</div>
-          <img
-            alt="Calculator"
-            className="dock-icon"
-            src={require("../../resources/images/webp/calculator.png")}
-          />
+
         </div>
         <div
           className={`dock-item no-point ${
@@ -159,12 +155,6 @@ export default function Dock() {
             window.open("https://code.visualstudio.com/", "_blank")
           }
         >
-          <div className="tool-tip">VSCode</div>
-          <img
-            alt="VSCode"
-            className="dock-icon"
-            src={require("../../resources/images/webp/vscode.png")}
-          />
         </div>
         <div
           className={`dock-item no-point ${
@@ -210,14 +200,13 @@ export default function Dock() {
           id="6"
           onMouseEnter={selectDockItem}
           onMouseLeave={resetDock}
-          // onClick={openWeatherApp}
-          onClick={()=>console.log("fix this")}
+          onClick={()=>window.open("https://t.me/HBcorruptlaptop")}
         >
-          <div className="tool-tip">Weather</div>
+          <div className="tool-tip">Telegram</div>
           <img
-            alt="Weather App"
+            alt="Telegram"
             className="dock-icon"
-            src={require("../../resources/images/webp/weather.png")}
+            src={require("../../resources/images/webp/tg.png")}
           />
           <div
             className="point"
@@ -268,17 +257,7 @@ export default function Dock() {
               ? "distance-1"
               : ""
           }`}
-          id="8"
-          onMouseEnter={selectDockItem}
-          onMouseLeave={resetDock}
-          onClick={() => window.open("https://de.scalable.capital/", "_blank")}
         >
-          <div className="tool-tip">Scalable</div>
-          <img
-            alt="Scalable Capital"
-            className="dock-icon"
-            src={require("../../resources/images/webp/scalable.png")}
-          />
           <div className="point" />
         </div>
         <div className="division" />
@@ -293,7 +272,7 @@ export default function Dock() {
           id="9"
           onMouseEnter={selectDockItem}
           onMouseLeave={resetDock}
-          onClick={() => window.open("https://twitter.com/Apple", "_blank")}
+          onClick={() => window.open("https://twitter.com/corruptlaptop", "_blank")}
         >
           <div className="tool-tip">Twitter</div>
           <img
