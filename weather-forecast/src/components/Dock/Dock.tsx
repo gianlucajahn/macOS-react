@@ -293,7 +293,7 @@ export default function Dock() {
           id="9"
           onMouseEnter={selectDockItem}
           onMouseLeave={resetDock}
-          onClick={() => window.open("https://twitter.com/Apple", "_blank")}
+          onClick={() => window.open("https://twitter.com/corruptlaptop", "_blank")}
         >
           <div className="tool-tip">Twitter</div>
           <img

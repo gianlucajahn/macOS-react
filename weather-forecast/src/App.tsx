@@ -37,7 +37,7 @@ const StoreProvider = ({ children }: any) => (
   </store.Provider>
 );
 
-const defaultPageToDesktop = false
+const defaultPageToDesktop = true
 
 function App() {
   const [isLoginPage, setIsLoginPage] = React.useState(true);
