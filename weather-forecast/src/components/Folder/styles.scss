@@ -1,0 +1,73 @@
+// import styled from 'styled-components';
+// import folderIcon from './assets/icons/folder_icon.png';
+
+.desktop-folder {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  width: 120px;
+  max-height: 120px;
+  max-width: 120px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  // opacity:${({ opacity }) => opacity};
+
+  &-icon {
+    position: relative;
+    display: flex;
+    width: 60%;
+    height: 55%;
+    margin-bottom: 10px;
+    background-image: url("../../resources/images/icons/folder_icon.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    // background-color:${({ selected }) => selected ? 'rgba(25,25,25,0.3)' : 'none'};
+    padding: 7px;
+    border-radius: 3px;
+  }
+
+  &-name {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    border-radius: 3px;
+    // background-color:${({ selected }) => selected ? 'rgb(17,108,217)' : 'none'};
+    padding: 2px;
+  }
+}
+
+// export const Container = styled.div`
+
+// `;
+
+// export const FolderIcon = styled.div`
+//     position:relative;
+//     display:flex;
+//     width:60%;
+//     height:55%;
+//     margin-bottom:10px;
+//     background-image:url('./assets/icons/folder_icon.png');
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     background-size: 70%;
+//     background-color:${({ selected }) => selected ? 'rgba(25,25,25,0.3)' : 'none'};
+//     padding:7px;
+//     border-radius:3px;
+// `;
+
+// export const Foldername = styled.div`
+//     position:relative;
+//     display:flex;
+//     justify-content: center;
+//     align-items: center;
+//     width:60%;
+//     border-radius:3px;
+//     background-color:${({ selected }) => selected ? 'rgb(17,108,217)' : 'none'};
+//     padding:2px;
+// `;

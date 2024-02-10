@@ -59,7 +59,8 @@ export default function Page({ children }: any) {
         payload: updatedWallpaper,
       });
       const page = document.getElementById("page");
-      const url = require(`../../resources/images/${wallpaper.surname}.jpg`);
+      // const url = require(`../../resources/images/${wallpaper.surname}.jpg`);
+      const url = require(`../../resources/images/catalina.jpg`);
       page!.style.backgroundImage = `url(${url})`;
     }
     if (color !== null && color !== undefined) {

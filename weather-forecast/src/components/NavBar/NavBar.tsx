@@ -5,7 +5,7 @@ import { ReactComponent as Settings } from "../../resources/images/svg/settings.
 import getDate from "../../utils/helpers/getDate";
 import DropdownComponent from "../DropdownComponent/DropdownComponent";
 import SettingsDropdown from "../SettingsDropdown/SettingsDropdown";
-import { AnimatePresence, motion } from "framer-motion";
+// import { AnimatePresence, motion } from "framer-motion";
 
 export default function () {
   const [state, dispatch] = useContext(store);
@@ -137,8 +137,8 @@ export default function () {
             <Settings className="settings set" onClick={toggleSettings} />
             <SettingsDropdown />
           </div>
-          <h3 className="date">{state.date[0]}</h3>
-          <h3>{state.date[1]}</h3>
+          {/* <h3 className="date">{state?.date[0]}</h3>
+          <h3>{state?.date[1]}</h3> */}
         </div>
       </div>
     </>

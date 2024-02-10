@@ -1,11 +1,12 @@
 import intervalType from "../../types/intervalType";
 import sortedIntervalType from "../../types/sortedInterval";
-import apiKey from "../keys/key";
+// import apiKey from "../keys/key";
 
 const inputWork = async function (query: string) {
   // fetch current weather data
   const currentResponse = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${apiKey}&units=metric`
+    // `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${apiKey}&units=metric`
+    `https://api.openweathermap.org/data/2.5/weather?&units=metric`
   );
   let current: any = 0;
   try {
@@ -44,7 +45,8 @@ const inputWork = async function (query: string) {
   console.log(location);
   // fetch 5 day forecast data for selected city and save it in forecastData state
   const forecastResponse = await fetch(
-    `https://api.openweathermap.org/data/2.5/forecast?lat=${location[0]}&lon=${location[1]}&appid=${apiKey}&units=metric`
+    // `https://api.openweathermap.org/data/2.5/forecast?lat=${location[0]}&lon=${location[1]}&appid=${apiKey}&units=metric`
+    `https://api.openweathermap.org/data/2.5/forecast?lat=${location[0]}&lon=${location[1]}&appid=units=metric`
   );
   const forecast = await forecastResponse.json();
 

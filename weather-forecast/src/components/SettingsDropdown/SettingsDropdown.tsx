@@ -145,7 +145,8 @@ export default function SettingsDropdown() {
         <img
           alt="Wallpaper Preview"
           className="preview"
-          src={require(`../../resources/images/preview_${state.settings.wallpaper.surname}.jpg`)}
+          // src={require(`../../resources/images/preview_${state.settings.wallpaper.surname}.jpg`)}
+          src={require(`../../resources/images/preview_catalina.jpg`)}
         />
         <div className="desc">
           <h2 className="title">{state.settings.wallpaper.name}</h2>

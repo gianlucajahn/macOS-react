@@ -1,10 +1,22 @@
 import getPosition from "../utils/helpers/getPosition";
 import { AnyAction } from "@reduxjs/toolkit";
-import apiKey from "../utils/keys/key";
-import sampleStore from "../utils/keys/samples/sampleStore";
+// import apiKey from "../utils/keys/key";
+// import sampleStore from "../utils/keys/samples/sampleStore";
 import getDate from "../utils/helpers/getDate";
 
-const reducer = (state = sampleStore, action: AnyAction) => {
+const initialState = {
+  weather: {},
+  settings: {
+    wallpaper: {},
+
+    notch: {},
+    animations: {},
+    airdrop: {},
+  },
+};
+
+// const reducer = (state = sampleStore, action: AnyAction) => {
+const reducer = (state = initialState, action: AnyAction) => {
   switch (action.type) {
     case "query/GEO":
       const newLocation = {
@@ -57,14 +69,14 @@ const reducer = (state = sampleStore, action: AnyAction) => {
       };
       return checkedSection;
     case "select/SELECT":
-      const id = parseInt(action.payload);
-      const day = state.weather.forecast[id];
-      const selectedDay = {
-        ...state,
-        selected: day,
-      };
-      console.log(selectedDay);
-      return selectedDay;
+    // const id = parseInt(action.payload);
+    // const day = state.weather.forecast[id];
+    // const selectedDay = {
+    //   ...state,
+    //   selected: day,
+    // };
+    // console.log(selectedDay);
+    // return selectedDay;
     case "dock/SELECT":
       const selectedDockItem = {
         ...state,

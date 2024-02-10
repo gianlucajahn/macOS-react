@@ -1,5 +1,5 @@
 import getPosition from "./getPosition";
-import apiKey from "../keys/key";
+// import apiKey from "../keys/key";
 import intervalType from "../../types/intervalType";
 import sortedIntervalType from "../../types/sortedInterval";
 
@@ -22,7 +22,8 @@ const positionWork = async function () {
 
   // fetch current weather data and save it in current const
   const currentResponse = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`
+    // `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`
+    `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=&units=metric`
   );
   const current = await currentResponse.json();
 
@@ -45,7 +46,8 @@ const positionWork = async function () {
 
   // fetch 5 day forecast data for user location and save it in forecast const
   const forecastResponse = await fetch(
-    `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`
+    // `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`
+    `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=&units=metric`
   );
   const forecast = await forecastResponse.json();
 
