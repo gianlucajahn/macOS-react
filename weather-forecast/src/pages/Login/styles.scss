@@ -1,0 +1,88 @@
+.login-page {
+  width: 100%;
+  height: 100vh;
+  background: url("../../resources/images/ventura.jpg") center/cover no-repeat;
+  display: flex;
+
+  &-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin: auto;
+  }
+
+  &-avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    /* margin-bottom: 20px; */
+    border: 3px solid white;
+    object-fit: cover;
+  }
+
+  &-username {
+    color: white;
+    opacity: 0.8;
+    font-size: 22px;
+    font-weight: 600;
+    padding: 10px;
+  }
+
+  &-page-ca {
+    color: white;
+    opacity: 0.8;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px;
+    white-space: nowrap;
+
+    span {
+      font-weight: 900;
+      opacity: 1;
+      font-size: 16px;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 12px;
+
+      span {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      font-size: 10px;
+
+      span {
+        font-size: 10px;
+      }
+    }
+  }
+
+  &-input-field {
+    padding: 8px 12px;
+    margin: 10px 0;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    font-family: "San Francisco", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+
+    &:focus {
+      border-color: #007aff;
+      box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.3);
+    }
+
+    &::placeholder {
+      color: #999;
+    }
+  }
+
+  &-hint {
+    color: white;
+    opacity: 0.75;
+    margin-top: 20px;
+  }
+}

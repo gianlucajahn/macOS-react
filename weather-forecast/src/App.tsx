@@ -1,6 +1,5 @@
-// Imports
 import "./App.scss";
-import React, { createContext, useReducer, useEffect } from "react";
+import React from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 import reducer from "./reducers/reducer";
 // import sampleStore from "./utils/keys/samples/sampleStore";
@@ -13,10 +12,11 @@ import ContextMenu from "./components/ContextMenu/ContextMenu";
 import BootSound from "./resources/audio/bootsound.mp3";
 import WallpaperMenu from "./components/WallpaperMenu/WallpaperMenu";
 import wallpapers from "./utils/helpers/wallpapers";
-import Folder from "./components/Folder"
+import Folder from "./components/Folder";
+import LoginPage from "./pages/Login";
 
 // Create store (redux naming convention)
-export const store = createContext<any>(null);
+export const store = React.createContext<any>(null);
 
 const initialState = {
   weather: {},
@@ -32,38 +32,45 @@ const initialState = {
 // Create store provider to wrap subcomponents in
 const StoreProvider = ({ children }: any) => (
   // <store.Provider value={useReducer(reducer, sampleStore)}>
-  <store.Provider value={useReducer(reducer, initialState)}>
+  <store.Provider value={React.useReducer(reducer, initialState)}>
     {children}
   </store.Provider>
 );
 
+const defaultPageToDesktop = false
+
 function App() {
+  const [isLoginPage, setIsLoginPage] = React.useState(true);
+
   return (
     <ChakraProvider>
       <StoreProvider>
-        <Page>
-          <NavBar />
-          <Folder name="test"></Folder>
-          <Draggable
-            handle="#handle"
-            onStart={(e: any) => {
-              if (e.target.id !== "handle") {
-                return false;
-              }
-            }}
-          >
-            <div className={`window weather-window`} id="weather-window">
-              {/* <QueryBoard /> */}
-     
-            </div>
-          </Draggable>
+        {isLoginPage && !defaultPageToDesktop ? (
+          <LoginPage />
+        ) : (
+          <Page>
+            <NavBar />
+            <Folder name="test"></Folder>
+            <Draggable
+              handle="#handle"
+              onStart={(e: any) => {
+                if (e.target.id !== "handle") {
+                  return false;
+                }
+              }}
+            >
+              <div className={`window weather-window`} id="weather-window">
+                {/* <QueryBoard /> */}
+              </div>
+            </Draggable>
 
-          {/* <WallpaperMenu /> */}
+            {/* <WallpaperMenu /> */}
 
-          <ContextMenu />
+            <ContextMenu />
 
-          <Dock />
-        </Page>
+            <Dock />
+          </Page>
+        )}
       </StoreProvider>
     </ChakraProvider>
   );
