@@ -148,12 +148,7 @@ export default function Dock() {
               ? "distance-2"
               : ""
           }`}
-          id="4"
-          onMouseEnter={selectDockItem}
-          onMouseLeave={resetDock}
-          onClick={() =>
-            window.open("https://code.visualstudio.com/", "_blank")
-          }
+
         >
         </div>
         <div
@@ -231,19 +226,7 @@ export default function Dock() {
               ? "distance-2"
               : ""
           }`}
-          id="7"
-          onMouseEnter={selectDockItem}
-          onMouseLeave={resetDock}
-          onClick={() =>
-            window.open("https://github.com/gianlucajahn/macOS-react", "_blank")
-          }
         >
-          <div className="tool-tip">GitHub</div>
-          <img
-            alt="GitHub"
-            className="dock-icon"
-            src={require("../../resources/images/webp/github.png")}
-          />
           <div className="point" />
         </div>
         <div className="division" />

@@ -36,7 +36,7 @@ const StoreProvider = ({ children }: any) => (
   </store.Provider>
 );
 
-const defaultPageToDesktop = true
+const defaultPageToDesktop = false
 
 function App() {
   const [isBooting, setIsBooting] = React.useState(true);

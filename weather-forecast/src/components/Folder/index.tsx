@@ -23,6 +23,7 @@ const Folder = (props:any) => {
           e.stopPropagation();
         //   selectItem(name);
         }}
+        onDoubleClickCapture={() => window.open("")}
       >
         <div className="desktop-folder-icon"
         //  selected={selected} 
