@@ -4,7 +4,7 @@ import React, { createContext, useReducer, useEffect } from "react";
 import { ChakraProvider } from "@chakra-ui/react";
 import reducer from "./reducers/reducer";
 // import sampleStore from "./utils/keys/samples/sampleStore";
-import QueryBoard from "./components/QueryBoard/QueryBoard";
+// import QueryBoard from "./components/QueryBoard/QueryBoard";
 import Draggable from "react-draggable";
 import NavBar from "./components/NavBar/NavBar";
 import Page from "./components/Page/Page";
@@ -53,7 +53,7 @@ function App() {
             }}
           >
             <div className={`window weather-window`} id="weather-window">
-              <QueryBoard />
+              {/* <QueryBoard /> */}
      
             </div>
           </Draggable>

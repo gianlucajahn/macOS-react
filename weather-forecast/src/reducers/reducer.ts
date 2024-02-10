@@ -18,37 +18,37 @@ const initialState = {
 // const reducer = (state = sampleStore, action: AnyAction) => {
 const reducer = (state = initialState, action: AnyAction) => {
   switch (action.type) {
-    case "query/GEO":
-      const newLocation = {
-        ...state,
-        weather: action.payload,
-        loading: false,
-      };
-      // return updated state
-      return newLocation;
-    case "query/SUBMIT":
-      const newSubmission = {
-        ...state,
-        weather: action.payload,
-        selected: undefined,
-        loading: false,
-      };
-      // return updated state
-      return newSubmission;
-    case "query/FAIL":
-      const failedSubmission = {
-        ...state,
-        loading: false,
-        failed: true,
-      };
-      return failedSubmission;
-    case "query/SEARCH":
-      const updatedQuery = {
-        ...state,
-        query: action.payload,
-      };
-      // return updated state
-      return updatedQuery;
+    // case "query/GEO":
+    //   const newLocation = {
+    //     ...state,
+    //     weather: action.payload,
+    //     loading: false,
+    //   };
+    //   // return updated state
+    //   return newLocation;
+    // case "query/SUBMIT":
+    //   const newSubmission = {
+    //     ...state,
+    //     weather: action.payload,
+    //     selected: undefined,
+    //     loading: false,
+    //   };
+    //   // return updated state
+    //   return newSubmission;
+    // case "query/FAIL":
+    //   const failedSubmission = {
+    //     ...state,
+    //     loading: false,
+    //     failed: true,
+    //   };
+    //   return failedSubmission;
+    // case "query/SEARCH":
+    //   const updatedQuery = {
+    //     ...state,
+    //     query: action.payload,
+    //   };
+    //   // return updated state
+    //   return updatedQuery;
     case "loading/START":
       const toggledLoading = {
         ...state,
