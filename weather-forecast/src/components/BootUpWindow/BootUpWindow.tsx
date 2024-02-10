@@ -15,11 +15,11 @@ export default function BootUpWindow() {
       playSound();
     }, 3350);
 
-    setTimeout(() => {
-      dispatch({
-        type: "booting/FINISH",
-      });
-    }, 4350);
+    // setTimeout(() => {
+    //   dispatch({
+    //     type: "booting/FINISH",
+    //   });
+    // }, 4350);
   }, []);
 
   const animations = {
@@ -32,9 +32,9 @@ export default function BootUpWindow() {
 
   const playSound = () => {
     if (!state.soundPlayed) {
-      dispatch({
-        type: "sound/PLAY",
-      });
+      // dispatch({
+      //   type: "sound/PLAY",
+      // });
 
       setTimeout(() => {
         if (document.getElementById("boot") === null) {

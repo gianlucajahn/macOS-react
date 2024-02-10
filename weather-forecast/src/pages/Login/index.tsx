@@ -1,14 +1,15 @@
 import React from "react";
 import "./styles.scss";
+import BootUpWindow from "../../components/BootUpWindow/BootUpWindow";
 
-export default function Password() {
+
+export default function LoginPage({ setIsLoginPage }: any) {
   const [password, setPassword] = React.useState("");
-  const [showDialog, setShowDialog] = React.useState(false);
 
   const handleKeyDown = (e: any) => {
     if (e.key === "Enter") {
       setPassword("");
-      setShowDialog(true);
+      setIsLoginPage(false);
     }
   };
 
@@ -19,6 +20,7 @@ export default function Password() {
 
   return (
     <div className="login-page">
+      <BootUpWindow/>
       <div className="login-page-input">
         <img
           className="login-page-avatar"
@@ -26,9 +28,9 @@ export default function Password() {
           alt="Avatar"
         />
         <p className="login-page-username">Hunter Biden's Laptop</p>
-        <p className="login-page-ca">
+        {/* <p className="login-page-ca">
           <span>CA:</span> HLwEJQVzs7SvjXuXpBTRHaLp5S6uWoWTUhLjJxBfy1c7
-        </p>
+        </p> */}
 
         <input
           className="login-page-input-field"

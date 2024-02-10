@@ -22,7 +22,6 @@ const initialState = {
   weather: {},
   settings: {
     wallpaper: {},
-
     notch: {},
     animations: {},
     airdrop: {},
@@ -37,16 +36,19 @@ const StoreProvider = ({ children }: any) => (
   </store.Provider>
 );
 
-const defaultPageToDesktop = false
+const defaultPageToDesktop = false;
 
 function App() {
+  const [isBooting, setIsBooting] = React.useState(true);
   const [isLoginPage, setIsLoginPage] = React.useState(true);
 
   return (
     <ChakraProvider>
       <StoreProvider>
         {isLoginPage && !defaultPageToDesktop ? (
-          <LoginPage />
+          <>
+            <LoginPage setIsLoginPage={setIsLoginPage} />
+          </>
         ) : (
           <Page>
             <NavBar />

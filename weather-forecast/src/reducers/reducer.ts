@@ -96,18 +96,18 @@ const reducer = (state = initialState, action: AnyAction) => {
         date: date,
       };
       return updatedDate;
-    case "booting/FINISH":
-      const finishedBooting = {
-        ...state,
-        booting: false,
-      };
-      return finishedBooting;
-    case "sound/PLAY":
-      const soundPlay = {
-        ...state,
-        soundPlayed: true,
-      };
-      return soundPlay;
+    // case "booting/FINISH":
+    //   const finishedBooting = {
+    //     ...state,
+    //     booting: false,
+    //   };
+    //   return finishedBooting;
+    // case "sound/PLAY":
+    //   const soundPlay = {
+    //     ...state,
+    //     soundPlayed: true,
+    //   };
+    //   return soundPlay;
     case "settings/CLOSE":
       const closedSettings = {
         ...state,
