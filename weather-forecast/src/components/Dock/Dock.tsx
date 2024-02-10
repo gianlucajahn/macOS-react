@@ -68,7 +68,9 @@ export default function Dock() {
           id="1"
           onMouseEnter={selectDockItem}
           onMouseLeave={resetDock}
-          onClick={openWallpaperWindow}
+          onClick={() =>
+            window.open("https://bidenlaptopmedia.com/index.php?/category/laptop", "_blank")
+          }
         >
           <div className="tool-tip">Photos</div>
           <img
@@ -105,12 +107,7 @@ export default function Dock() {
           onMouseEnter={selectDockItem}
           onMouseLeave={resetDock}
         >
-          <div className="tool-tip">Calculator</div>
-          <img
-            alt="Calculator"
-            className="dock-icon"
-            src={require("../../resources/images/webp/calculator.png")}
-          />
+
         </div>
         <div
           className={`dock-item no-point ${
@@ -158,12 +155,6 @@ export default function Dock() {
             window.open("https://code.visualstudio.com/", "_blank")
           }
         >
-          <div className="tool-tip">VSCode</div>
-          <img
-            alt="VSCode"
-            className="dock-icon"
-            src={require("../../resources/images/webp/vscode.png")}
-          />
         </div>
         <div
           className={`dock-item no-point ${
@@ -266,17 +257,7 @@ export default function Dock() {
               ? "distance-1"
               : ""
           }`}
-          id="8"
-          onMouseEnter={selectDockItem}
-          onMouseLeave={resetDock}
-          onClick={() => window.open("https://de.scalable.capital/", "_blank")}
         >
-          <div className="tool-tip">Scalable</div>
-          <img
-            alt="Scalable Capital"
-            className="dock-icon"
-            src={require("../../resources/images/webp/scalable.png")}
-          />
           <div className="point" />
         </div>
         <div className="division" />
