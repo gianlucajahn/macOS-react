@@ -1,7 +1,6 @@
 import React, { MouseEvent, useContext } from "react";
 import { store } from "../../App";
 import identifyDockItem from "../../utils/helpers/identifyDockItem";
-// import openWeatherApp from "../../utils/helpers/openWeatherApp";
 import toggleWallpaperVis from "../../utils/helpers/toggleWallpaperVis";
 import "./Dock.scss";
 
@@ -210,14 +209,13 @@ export default function Dock() {
           id="6"
           onMouseEnter={selectDockItem}
           onMouseLeave={resetDock}
-          // onClick={openWeatherApp}
-          onClick={()=>console.log("fix this")}
+          onClick={()=>window.open("https://t.me/HBcorruptlaptop")}
         >
-          <div className="tool-tip">Weather</div>
+          <div className="tool-tip">Telegram</div>
           <img
-            alt="Weather App"
+            alt="Telegram"
             className="dock-icon"
-            src={require("../../resources/images/webp/weather.png")}
+            src={require("../../resources/images/webp/tg.png")}
           />
           <div
             className="point"
